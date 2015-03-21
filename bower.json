@@ -1,0 +1,28 @@
+{
+    "name": "pando",
+    "description": "Wrap Bootstrap CSS with additional functions",
+    "version": "0.0.1",
+    "keywords": [
+        "css",
+        "js",
+        "sass",
+        "responsive",
+        "framework",
+        "web"
+    ],
+    "devDependencies": {
+        "jquery": "~1.11.2",
+        "Font-Awesome": "~4.3.0",
+        "bootstrap-sass": "~3.3.4",
+        "bootstrap3-dialog": "~1.34.2",
+        "animate.css": "~3.2.5",
+        "holderjs": "~2.5.2",
+        "spin.js": "~2.0.2",
+        "slick-carousel": "~1.4.1",
+        "select2": "~4.0.0-rc.2",
+        "respond": "~1.4.2"
+    },
+    "ignore": [
+        "*.md"
+    ]
+}

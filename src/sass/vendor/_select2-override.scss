@@ -1,0 +1,85 @@
+@import "bootstrap/bootstrap/mixins/forms";
+@import "bootstrap/bootstrap/mixins/vendor-prefixes";
+
+.select2-search__field {
+    box-shadow: none;
+    border: none;
+}
+
+.select2 {
+    .select2-selection {
+        height: $input-height-base;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        color: $input-color;
+        background-color: $input-bg;
+        background-image: none;
+        border: 1px solid $input-border;
+        border-radius: $input-border-radius;
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+        @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+        .select2-selection__rendered {
+            line-height: $line-height-base;
+            padding-left: 0;
+        }
+
+        &.select2-selection--multiple {
+            padding: 0 $padding-base-horizontal;
+
+            .select2-selection__choice {
+                background-color: lighten($input-border, 15%);
+                border: 1px solid $input-border;
+            }
+        }
+
+        &.select2-selection--single {
+            .select2-selection__arrow {
+                top: 4px;
+            }
+        }
+    }
+
+    &.select2-container--open,
+    &.select2-container--focus {
+        .select2-selection {
+            $color-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
+            border-color: $input-border-focus;
+            outline: 0;
+            @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+        }
+    }
+}
+
+.select2-dropdown {
+    color: $text-color;
+    border: 1px solid $input-border;
+
+    .select2-results__option--highlighted[aria-selected] {
+        background: $brand-primary;
+    }
+    .select2-results__option[aria-selected="true"] {
+        background: #eee;
+        color: $text-color;
+    }
+
+    .select2-search__field {
+        display: block;
+        width: 100%;
+        height: $input-height-base - 4;
+        padding: $padding-base-vertical - 2 $padding-base-horizontal;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        color: $input-color;
+        background-color: $input-bg;
+        background-image: none;
+        border: 1px solid $input-border;
+        border-radius: $input-border-radius;
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+        @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+        @include form-control-focus;
+        @include placeholder;
+    }
+}
+

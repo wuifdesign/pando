@@ -1,0 +1,245 @@
+html {
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.no-col-padding {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.text-xs {
+  font-size: 0.7em;
+}
+
+.text-sm {
+  font-size: 0.85em;
+}
+
+.text-lg {
+  font-size: 1.3em;
+}
+
+.text-xl {
+  font-size: 1.6em;
+}
+
+.margin-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: $default-margin-top;
+}
+
+.margin-bottom {
+  margin-bottom: $default-margin-bottom;
+}
+
+.margin-top-bottom {
+  margin-top: $default-margin-top;
+  margin-bottom: $default-margin-bottom;
+}
+
+@each $types in $margin-types {
+  .margin-top-#{nth($types, 1)} {
+    margin-top: nth($types, 2);
+  }
+  .margin-bottom-#{nth($types, 1)} {
+    margin-bottom: nth($types, 3);
+  }
+  .margin-top-bottom-#{nth($types, 1)} {
+    margin-top: nth($types, 2);
+    margin-bottom: nth($types, 3);
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .margin-lg-none {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .margin-lg-top {
+    margin-top: $default-margin-top;
+  }
+  .margin-lg-bottom {
+    margin-bottom: $default-margin-bottom;
+  }
+  .margin-lg-top-bottom {
+    margin-top: $default-margin-top;
+    margin-bottom: $default-margin-bottom;
+  }
+
+  @each $types in $margin-types {
+    .margin-lg-top-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+    }
+    .margin-lg-bottom-#{nth($types, 1)} {
+      margin-bottom: nth($types, 3);
+    }
+    .margin-lg-top-bottom-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+      margin-bottom: nth($types, 3);
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .margin-md-none {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .margin-md-top {
+    margin-top: $default-margin-top;
+  }
+  .margin-md-bottom {
+    margin-bottom: $default-margin-bottom;
+  }
+  .margin-md-top-bottom {
+    margin-top: $default-margin-top;
+    margin-bottom: $default-margin-bottom;
+  }
+
+  @each $types in $margin-types {
+    .margin-md-top-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+    }
+    .margin-md-bottom-#{nth($types, 1)} {
+      margin-bottom: nth($types, 3);
+    }
+    .margin-md-top-bottom-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+      margin-bottom: nth($types, 3);
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .margin-sm-none {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .margin-sm-top {
+    margin-top: $default-margin-top;
+  }
+  .margin-sm-bottom {
+    margin-bottom: $default-margin-bottom;
+  }
+  .margin-sm-top-bottom {
+    margin-top: $default-margin-top;
+    margin-bottom: $default-margin-bottom;
+  }
+
+  @each $types in $margin-types {
+    .margin-sm-top-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+    }
+    .margin-sm-bottom-#{nth($types, 1)} {
+      margin-bottom: nth($types, 3);
+    }
+    .margin-sm-top-bottom-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+      margin-bottom: nth($types, 3);
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .margin-xs-none {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .margin-xs-top {
+    margin-top: $default-margin-top;
+  }
+  .margin-xs-bottom {
+    margin-bottom: $default-margin-bottom;
+  }
+  .margin-xs-top-bottom {
+    margin-top: $default-margin-top;
+    margin-bottom: $default-margin-bottom;
+  }
+
+  @each $types in $margin-types {
+    .margin-xs-top-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+    }
+    .margin-xs-bottom-#{nth($types, 1)} {
+      margin-bottom: nth($types, 3);
+    }
+    .margin-xs-top-bottom-#{nth($types, 1)} {
+      margin-top: nth($types, 2);
+      margin-bottom: nth($types, 3);
+    }
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-justify {
+    text-align: justify;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .text-xs-left {
+    text-align: left;
+  }
+  .text-xs-right {
+    text-align: right;
+  }
+  .text-xs-center {
+    text-align: center;
+  }
+  .text-xs-justify {
+    text-align: justify;
+  }
+}
