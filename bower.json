@@ -1,7 +1,7 @@
 {
     "name": "pando",
     "description": "Wrap Bootstrap CSS with additional functions",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "keywords": [
         "css",
         "js",
@@ -20,7 +20,9 @@
         "spin.js": "~2.0.2",
         "slick-carousel": "~1.4.1",
         "select2": "~4.0.0-rc.2",
-        "respond": "~1.4.2"
+        "respond": "~1.4.2",
+        "anijs": "~0.9.3",
+        "toastr": "~2.1.1"
     },
     "ignore": [
         "*.md"

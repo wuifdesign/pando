@@ -1,5 +1,5 @@
-/*! Wrap Bootstrap CSS with additional functions - v0.0.1
-* 2015-03-21
+/*! Wrap Bootstrap CSS with additional functions - v0.1.0
+* 2015-03-23
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
 */ 
@@ -319,8 +319,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?1426953011);
-  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?&1426953011#iefix) format("embedded-opentype"), url(../fonts/../fonts/glyphicons-halflings-regular.woff2?1426953011) format("woff2"), url(../fonts/../fonts/glyphicons-halflings-regular.woff?1426953011) format("woff"), url(../fonts/../fonts/glyphicons-halflings-regular.ttf?1426953011) format("truetype"), url(../fonts/../fonts/glyphicons-halflings-regular.svg?1426953011#glyphicons_halflingsregular) format("svg");
+  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?1427139949);
+  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?&1427139949#iefix) format("embedded-opentype"), url(../fonts/../fonts/glyphicons-halflings-regular.woff2?1427139949) format("woff2"), url(../fonts/../fonts/glyphicons-halflings-regular.woff?1427139949) format("woff"), url(../fonts/../fonts/glyphicons-halflings-regular.ttf?1427139949) format("truetype"), url(../fonts/../fonts/glyphicons-halflings-regular.svg?1427139949#glyphicons_halflingsregular) format("svg");
 }
 .glyphicon {
   position: relative;
@@ -5532,7 +5532,7 @@ a.thumbnail.active {
 .progress-bar-striped {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 40px 40px;
 }
 
@@ -5549,7 +5549,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-info {
@@ -5558,7 +5558,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-warning {
@@ -5567,7 +5567,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .progress-bar-danger {
@@ -5576,7 +5576,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 .media {
@@ -7145,6 +7145,56 @@ button.close {
     display: none !important;
   }
 }
+.bg-primary-full {
+  background-color: #458ecc;
+  color: #fff;
+}
+
+a.bg-primary-full:hover {
+  background-color: #3074ae;
+  color: #fff;
+}
+
+.bg-success-full {
+  background-color: #76c279;
+  color: #fff;
+}
+
+a.bg-success-full:hover {
+  background-color: #53b256;
+  color: #fff;
+}
+
+.bg-info-full {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+a.bg-info-full:hover {
+  background-color: #31b0d5;
+  color: #fff;
+}
+
+.bg-warning-full {
+  background-color: #faaf3e;
+  color: #fff;
+}
+
+a.bg-warning-full:hover {
+  background-color: #f99a0c;
+  color: #fff;
+}
+
+.bg-danger-full {
+  background-color: #d14d38;
+  color: #fff;
+}
+
+a.bg-danger-full:hover {
+  background-color: #ae3b28;
+  color: #fff;
+}
+
 html {
   height: 100%;
 }
@@ -7178,6 +7228,22 @@ body {
   font-size: 1.6em;
 }
 
+.padding-xs {
+  padding: 4px;
+}
+
+.padding-sm {
+  padding: 8px;
+}
+
+.padding-lg {
+  padding: 30px;
+}
+
+.padding-xl {
+  padding: 60px;
+}
+
 .margin-none {
   margin-top: 0;
   margin-bottom: 0;
@@ -7196,6 +7262,19 @@ body {
   margin-bottom: 15px;
 }
 
+.margin-right {
+  margin-right: 15px;
+}
+
+.margin-left {
+  margin-left: 15px;
+}
+
+.margin-right-left {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 .margin-top-xs {
   margin-top: 4px;
 }
@@ -7207,6 +7286,19 @@ body {
 .margin-top-bottom-xs {
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+.margin-right-xs {
+  margin-right: 4px;
+}
+
+.margin-left-xs {
+  margin-left: 4px;
+}
+
+.margin-right-left-xs {
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
 .margin-top-sm {
@@ -7222,6 +7314,19 @@ body {
   margin-bottom: 8px;
 }
 
+.margin-right-sm {
+  margin-right: 8px;
+}
+
+.margin-left-sm {
+  margin-left: 8px;
+}
+
+.margin-right-left-sm {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
 .margin-top-lg {
   margin-top: 30px;
 }
@@ -7235,6 +7340,19 @@ body {
   margin-bottom: 30px;
 }
 
+.margin-right-lg {
+  margin-right: 30px;
+}
+
+.margin-left-lg {
+  margin-left: 30px;
+}
+
+.margin-right-left-lg {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
 .margin-top-xl {
   margin-top: 60px;
 }
@@ -7246,6 +7364,19 @@ body {
 .margin-top-bottom-xl {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.margin-right-xl {
+  margin-right: 60px;
+}
+
+.margin-left-xl {
+  margin-left: 60px;
+}
+
+.margin-right-left-xl {
+  margin-right: 60px;
+  margin-left: 60px;
 }
 
 @media (max-width: 1200px) {
@@ -9117,23 +9248,51 @@ body.footer-fixed .footer {
     border-right: 0;
   }
 }
-.pando-animation-auto,
-.pando-animation {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.pando-animation-auto.animated,
-.pando-animation.animated {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
 .row [class^="col-"].centered,
 .row [class*=" col-"].centered {
   margin-left: auto;
   margin-right: auto;
   float: none;
+}
+
+.widget {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+}
+.widget h2, .widget h3 {
+  margin-bottom: 0;
+  margin-top: 3px;
+}
+.widget.no-padding {
+  padding: 0;
+}
+.widget.widget-white {
+  border-radius: 0;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-top: 2px solid #ccc;
+}
+
+.widget-head {
+  border-radius: 5px 5px 0 0;
+}
+
+.widget-text {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-top: 0;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.progress-sm {
+  height: 10px;
+}
+
+.progress-lg, .progress-lg .progress-bar {
+  height: 30px;
 }
 
 .bg-dark {
@@ -9142,6 +9301,33 @@ body.footer-fixed .footer {
 
 a.bg-dark:hover {
   background-color: #2b2b2b;
+}
+
+.list-inline-separate {
+  display: block;
+  padding: 0;
+}
+.list-inline-separate li {
+  display: inline-block;
+}
+.list-inline-separate li:after {
+  content: '|';
+  margin: 0 10px;
+}
+.list-inline-separate li:last-child:after {
+  content: ' ';
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+.font-italic {
+  font-style: italic;
 }
 
 .hover-opacity {
@@ -9243,3 +9429,5 @@ a.bg-dark:hover {
     height: auto !important;
   }
 }
+
+/*# sourceMappingURL=pando.css.map */

@@ -1,5 +1,35 @@
 @include bg-variant('.bg-dark', $brand-dark);
 
+.list-inline-separate {
+  display:block;
+  padding: 0;
+
+  li {
+    display:inline-block;
+
+    &:after {
+      content:'|';
+      margin:0 10px;
+    }
+
+    &:last-child:after {
+      content: ' ';
+    }
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
 .hover-opacity {
   @include opacity(1);
   @include transition(opacity 0.15s ease-in-out);

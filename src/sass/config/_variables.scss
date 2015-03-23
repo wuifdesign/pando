@@ -13,15 +13,14 @@ $brand-warning: #faaf3e;
 $brand-danger:  #d14d38;
 $brand-dark:    #444;
 
-$default-margin-top: 15px;
-$default-margin-bottom: $default-margin-top;
+$default-margin: 15px;
 
 $pepper-sizes: (xs, sm, lg, xl);
 $margin-types: (
-    xs round($default-margin-top / 4) round($default-margin-bottom / 4),
-    sm round($default-margin-top / 2) round($default-margin-bottom / 2),
-    lg round($default-margin-top * 2) round($default-margin-bottom * 2),
-    xl round($default-margin-top * 4) round($default-margin-bottom * 4)
+    xs round($default-margin / 4),
+    sm round($default-margin / 2),
+    lg round($default-margin * 2),
+    xl round($default-margin * 4)
 );
 
 $default-text-shadow-color:    #000;
