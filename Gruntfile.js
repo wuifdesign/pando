@@ -27,9 +27,6 @@ module.exports = function(grunt) {
                 separator: ';\n\n'
             },
             pando: {
-                options: {
-                    banner: '<%= banner %>'
-                },
                 src: [
                     '<%= js_src_path %>/main.js',
                     '<%= js_src_path %>/elements/**/*.js'
@@ -51,7 +48,7 @@ module.exports = function(grunt) {
                     '<%= js_src_path %>/vendor/bootstrap/tab.js',
                     '<%= js_src_path %>/vendor/bootstrap/affix.js'
                 ],
-                dest: '<%= js_path %>/bootstrap.js'
+                dest: '<%= js_path %>/vendor/bootstrap.js'
             },
             vendor: {
                 src: [
@@ -59,9 +56,14 @@ module.exports = function(grunt) {
                     '<%= js_src_path %>/vendor/slick.min.js',
                     '<%= js_src_path %>/vendor/select2.min.js',
                     '<%= js_src_path %>/vendor/spin.js',
-                    '<%= js_src_path %>/vendor/jquery/jquery.spin.js'
+                    '<%= js_src_path %>/vendor/jquery/jquery.spin.js',
+                    '<%= js_src_path %>/vendor/toastr.min.js',
+                    '<%= js_src_path %>/vendor/anijs.min.js',
+                    '<%= js_src_path %>/vendor/anijs-helper-dom.min.js',
+                    '<%= js_src_path %>/vendor/anijs-helper-scrollreveal.min.js',
+                    '<%= js_src_path %>/vendor/anijs-jquery-event-system.min.js'
                 ],
-                dest: '<%= js_path %>/vendor.min.js'
+                dest: '<%= js_path %>/vendor/vendor.min.js'
             }
         },
 
@@ -70,7 +72,6 @@ module.exports = function(grunt) {
                 options:{
                     mangle: false,
                     report: 'min',
-                    banner: '<%= banner %>',
                     sourceMap: true
                 },
                 src: ['<%= concat.pando.dest %>'],
@@ -83,38 +84,28 @@ module.exports = function(grunt) {
                     sourceMap: true
                 },
                 src: ['<%= concat.bootstrap.dest %>'],
-                dest: '<%= js_path %>/bootstrap.min.js'
+                dest: '<%= js_path %>/vendor/bootstrap.min.js'
             }
         },
 
-        compass: {
+        sass: {
             options: {
-                cssDir: '<%= css_path %>',
-                sassDir: '<%= sass_path %>',
-                imagesDir: '<%= img_path %>',
-                fontsDir: '<%= fonts_path %>',
-
-                generatedImagesDir: '<%= sprite_path %>',
-                spriteLoadPath: '<%= sprite_path %>',
-
-                relativeAssets: true,
-                noLineComments: true,
-                outputStyle: 'expanded' //nested, expanded, compact, compressed
+                compass: true,
+                style: 'expanded'
             },
             pando: {
-                options: {
-                    banner: '<%= banner %>',
-                    specify: ['<%= sass_path %>/pando.scss']
+                files: {
+                    '<%= css_path %>/pando.css': '<%= sass_path %>/pando.scss'
                 }
             },
             vendor: {
-                options: {
-                    specify: ['<%= sass_path %>/vendor.scss']
+                files: {
+                    '<%= css_path %>/vendor.css': '<%= sass_path %>/vendor.scss'
                 }
             },
             animate: {
-                options: {
-                    specify: ['<%= sass_path %>/vendor/animate.scss']
+                files: {
+                    '<%= css_path %>/animate.css': '<%= sass_path %>/vendor/animate.scss'
                 }
             }
         },
@@ -133,8 +124,31 @@ module.exports = function(grunt) {
                 dest: '<%= css_path %>/vendor.min.css'
             },
             animate: {
-                src: ['<%= css_path %>/vendor/animate.css'],
-                dest: '<%= css_path %>/vendor/animate.min.css'
+                src: ['<%= css_path %>/animate.css'],
+                dest: '<%= css_path %>/animate.min.css'
+            }
+        },
+
+        usebanner: {
+            css: {
+                options: {
+                    position: 'top',
+                    banner: '<%= banner %>',
+                    linebreak: true
+                },
+                files: {
+                    src: [ '<%= css_path %>/pando.css', '<%= css_path %>/pando.min.css' ]
+                }
+            },
+            js: {
+                options: {
+                    position: 'top',
+                    banner: '<%= banner %>',
+                    linebreak: true
+                },
+                files: {
+                    src: [ '<%= js_path %>/pando.js', '<%= js_path %>/pando.min.js' ]
+                }
             }
         },
 
@@ -151,8 +165,14 @@ module.exports = function(grunt) {
                     'bootstrap-dialog.min.js': 'bootstrap3-dialog/dist/js/bootstrap-dialog.min.js',
                     'slick.min.js': 'slick-carousel/slick/slick.min.js',
                     'select2.min.js': 'select2/dist/js/select2.min.js',
+                    'toastr.min.js': 'toastr/toastr.min.js',
                     'jquery/jquery.spin.js': 'spin.js/jquery.spin.js',
-                    'spin.js': 'spin.js/spin.js'
+                    'spin.js': 'spin.js/spin.js',
+
+                    'anijs.min.js': 'anijs/dist/anijs-min.js',
+                    'anijs-helper-dom.min.js': 'anijs/dist/helpers/dom/anijs-helper-dom-min.js',
+                    'anijs-helper-scrollreveal.min.js': 'anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js',
+                    'anijs-jquery-event-system.min.js': 'anijs/dist/event_systems/jquery/anijs-jquery-event-system-min.js'
                 }
             },
             css_dev: {
@@ -166,7 +186,8 @@ module.exports = function(grunt) {
                     'animate.scss': 'animate.css/animate.css',
                     '_slick.scss': 'slick-carousel/slick/slick.scss',
                     '_slick-theme.scss': 'slick-carousel/slick/slick-theme.scss',
-                    '_select2.scss': 'select2/dist/css/select2.css'
+                    '_select2.scss': 'select2/dist/css/select2.css',
+                    '_toastr.scss': 'toastr/toastr.scss'
                 }
             },
             public: {
@@ -174,17 +195,17 @@ module.exports = function(grunt) {
                     destPrefix: '<%= public_path %>'
                 },
                 files: {
-                    'js/respond.min.js': 'respond/dest/respond.min.js',
-                    'js/holder.min.js':  'holderjs/holder.min.js',
+                    'js/vendor/respond.min.js': 'respond/dest/respond.min.js',
+                    'js/vendor/holder.min.js':  'holderjs/holder.min.js',
 
-                    'js/jquery.min.js':  'jquery/dist/jquery.min.js',
-                    'js/jquery.min.map':  'jquery/dist/jquery.min.map',
+                    'js/vendor/jquery.min.js':  'jquery/dist/jquery.min.js',
+                    'js/vendor/jquery.min.map':  'jquery/dist/jquery.min.map',
 
                     'fonts/slick.eot':  'slick-carousel/slick/fonts/slick.eot',
                     'fonts/slick.svg':  'slick-carousel/slick/fonts/slick.svg',
                     'fonts/slick.ttf':  'slick-carousel/slick/fonts/slick.ttf',
                     'fonts/slick.woff': 'slick-carousel/slick/fonts/slick.woff',
-                    'img/vendor/ajax-loader.gif': 'slick-carousel/slick/ajax-loader.gif',
+                    'img/ajax-loader.gif': 'slick-carousel/slick/ajax-loader.gif',
 
                     'fonts/glyphicons-halflings-regular.eot':  'bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
                     'fonts/glyphicons-halflings-regular.svg':  'bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
@@ -203,7 +224,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['<%= concat.pando.src %>'],
-                tasks: ['concat:pando', 'uglify:pando']
+                tasks: ['concat:pando', 'uglify:pando', 'usebanner:js']
             },
             scripts_vendor: {
                 files: ['<%= concat.vendor.src %>', '<%= concat.bootstrap.src %>'],
@@ -211,11 +232,11 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['<%= sass_path %>/*.scss', '<%= sass_path %>/config/*.scss', '<%= sass_path %>/pando/*.scss', '<%= sass_path %>/custom/*.scss'],
-                tasks: ['compass:pando', 'cssmin:pando']
+                tasks: ['sass:pando', 'cssmin:pando', 'usebanner:css']
             },
             sass_vendor: {
                 files: ['<%= sass_path %>/vendor.scss', '<%= sass_path %>/vendor/**/*.scss', '<%= sass_path %>/config/**/*.scss'],
-                tasks: ['compass:vendor', 'cssmin:vendor', 'compass:animate', 'cssmin:animate']
+                tasks: ['sass:vendor', 'cssmin:vendor', 'sass:animate', 'cssmin:animate']
             }
         }
     });
@@ -223,14 +244,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.loadNpmTasks('grunt-bowercopy');
 
-    // Default task.
-    grunt.registerTask('default', ['concat', 'uglify', 'compass', 'cssmin']);
-    grunt.registerTask('css',     ['compass', 'cssmin']);
-    grunt.registerTask('js',      ['concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'usebanner']);
+    grunt.registerTask('css',     ['sass', 'cssmin', 'usebanner:css']);
+    grunt.registerTask('js',      ['concat', 'uglify', 'usebanner:js']);
     grunt.registerTask('bower',   ['bowercopy']);
 };

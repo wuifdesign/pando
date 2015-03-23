@@ -1,9 +1,12 @@
+@import "compass/css3";
+
 @import "config/variables";
 @import "mixins/pepper";
 @import "custom/custom-mixins";
 
 @import "bootstrap";
 
+@import "pando/colors";
 @import "pando/layout";
 @import "pando/buttons";
 @import "pando/navbar";
@@ -11,8 +14,9 @@
 @import "pando/alert";
 @import "pando/circle";
 @import "pando/footer";
-@import "pando/animations";
 @import "pando/grid";
+@import "pando/widgets";
+@import "pando/progress";
 @import "pando/random-stuff";
 
 @import "custom/custom";

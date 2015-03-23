@@ -1,9 +1,0 @@
-.pando-animation-auto,
-.pando-animation {
-    @include opacity(0);
-}
-
-.pando-animation-auto.animated,
-.pando-animation.animated {
-    @include opacity(1);
-}

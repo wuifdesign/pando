@@ -1,3 +1,17 @@
+$(document).ready(function() {
+    if(isDefined(AniJS)) {
+        AniJS.run();
+    }
+    if(isDefined(toastr)) {
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right"
+        };
+    }
+});
+
+
 function isDefined(variable) {
     if(typeof variable === 'undefined') {
         return false;

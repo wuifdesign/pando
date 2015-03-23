@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 @import "config/variables";
 @import "vendor/bootstrap/bootstrap/variables";
 
@@ -13,3 +15,6 @@ $slick-arrow-color: $text-color;
 @import "vendor/select2-override";
 
 @import "vendor/bootstrap-dialog";
+
+@import "vendor/toastr";
+@import "vendor/toastr-override";
