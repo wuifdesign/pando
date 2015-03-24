@@ -4,9 +4,9 @@ $(document).ready(function() {
     }
     if(isDefined(toastr)) {
         toastr.options = {
-            "closeButton": true,
-            "progressBar": true,
-            "positionClass": "toast-top-right"
+            'closeButton': true,
+            'progressBar': true,
+            'positionClass': 'toast-top-right'
         };
     }
 });

@@ -1,5 +1,5 @@
 /*! Wrap Bootstrap CSS with additional functions - v0.1.0
-* 2015-03-23
+* 2015-03-24
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
 */ 
@@ -319,8 +319,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?1427139949);
-  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?&1427139949#iefix) format("embedded-opentype"), url(../fonts/../fonts/glyphicons-halflings-regular.woff2?1427139949) format("woff2"), url(../fonts/../fonts/glyphicons-halflings-regular.woff?1427139949) format("woff"), url(../fonts/../fonts/glyphicons-halflings-regular.ttf?1427139949) format("truetype"), url(../fonts/../fonts/glyphicons-halflings-regular.svg?1427139949#glyphicons_halflingsregular) format("svg");
+  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?1427207921);
+  src: url(../fonts/../fonts/glyphicons-halflings-regular.eot?&1427207921#iefix) format("embedded-opentype"), url(../fonts/../fonts/glyphicons-halflings-regular.woff2?1427207921) format("woff2"), url(../fonts/../fonts/glyphicons-halflings-regular.woff?1427207921) format("woff"), url(../fonts/../fonts/glyphicons-halflings-regular.ttf?1427207921) format("truetype"), url(../fonts/../fonts/glyphicons-halflings-regular.svg?1427207921#glyphicons_halflingsregular) format("svg");
 }
 .glyphicon {
   position: relative;
@@ -1791,7 +1791,7 @@ dd {
 .dl-horizontal dd:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -4050,7 +4050,7 @@ tbody.collapse.in {
   margin-bottom: 2px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -4554,7 +4554,7 @@ tbody.collapse.in {
 .navbar:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar {
     border-radius: 4px;
   }
@@ -4567,7 +4567,7 @@ tbody.collapse.in {
 .navbar-header:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-header {
     float: left;
   }
@@ -4591,7 +4591,7 @@ tbody.collapse.in {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4630,7 +4630,7 @@ tbody.collapse.in {
   margin-right: -15px;
   margin-left: -15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -4644,7 +4644,7 @@ tbody.collapse.in {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -4657,7 +4657,7 @@ tbody.collapse.in {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -4688,7 +4688,7 @@ tbody.collapse.in {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
@@ -4718,7 +4718,7 @@ tbody.collapse.in {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-toggle {
     display: none;
   }
@@ -4732,7 +4732,7 @@ tbody.collapse.in {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4753,7 +4753,7 @@ tbody.collapse.in {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4828,7 +4828,7 @@ tbody.collapse.in {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -4836,7 +4836,7 @@ tbody.collapse.in {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -4880,7 +4880,7 @@ tbody.collapse.in {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-text {
     float: left;
     margin-left: 15px;
@@ -4888,7 +4888,7 @@ tbody.collapse.in {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-left {
     float: left !important;
   }
@@ -4947,7 +4947,7 @@ tbody.collapse.in {
   background-color: #e7e7e7;
   color: #555;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
@@ -5026,7 +5026,7 @@ tbody.collapse.in {
   background-color: #090909;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #090909;
   }
@@ -7197,9 +7197,6 @@ a.bg-danger-full:hover {
 
 html {
   height: 100%;
-}
-
-body {
   overflow-y: scroll;
 }
 
@@ -7820,6 +7817,7 @@ body {
 
 .btn-link {
   border: none;
+  background: transparent;
 }
 .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
   border-color: transparent;
@@ -7828,8 +7826,130 @@ body {
   background-color: transparent;
 }
 
+.btn-app {
+  padding: 12px;
+  min-width: 90px;
+}
+.btn-app span,
+.btn-app i {
+  display: block;
+  font-size: 1.8em;
+  line-height: 1em;
+  margin: 0 0 2px;
+  padding: 0;
+}
+.btn-app.btn-xs, .btn-group-xs > .btn-app.btn {
+  padding: 5px;
+  min-width: 65px;
+}
+.btn-app.btn-xs span, .btn-group-xs > .btn-app.btn span,
+.btn-app.btn-xs i,
+.btn-group-xs > .btn-app.btn i {
+  font-size: 1.5em;
+}
+.btn-app.btn-sm, .btn-group-sm > .btn-app.btn {
+  padding: 8px;
+  min-width: 70px;
+}
+.btn-app.btn-lg, .btn-group-lg > .btn-app.btn {
+  padding: 15px;
+  min-width: 100px;
+}
+.btn-app.btn-lg span, .btn-group-lg > .btn-app.btn span,
+.btn-app.btn-lg i,
+.btn-group-lg > .btn-app.btn i {
+  font-size: 2em;
+}
+.btn-app.btn-link, .btn-app.btn-link:hover, .btn-app.btn-link:focus, .btn-app.btn-link:active, .btn-app.btn-link.active, .btn-app.btn-link[disabled], fieldset[disabled] .btn-app.btn-link {
+  text-decoration: none;
+}
+
 .navbar {
   margin-bottom: 0;
+}
+
+.navbar-primary {
+  background-color: #458ecc;
+  border-color: #3581c2;
+}
+.navbar-primary .navbar-brand {
+  color: #fff;
+}
+.navbar-primary .navbar-brand:hover, .navbar-primary .navbar-brand:focus {
+  color: #eee;
+}
+.navbar-primary .navbar-text {
+  color: #fff;
+}
+.navbar-primary .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-primary .navbar-nav > li > a:hover, .navbar-primary .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #599ad1;
+}
+.navbar-primary .navbar-nav > .active > a, .navbar-primary .navbar-nav > .active > a:hover, .navbar-primary .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #599ad1;
+}
+.navbar-primary .navbar-nav > .disabled > a, .navbar-primary .navbar-nav > .disabled > a:hover, .navbar-primary .navbar-nav > .disabled > a:focus {
+  color: #fff;
+  background-color: #599ad1;
+}
+.navbar-primary .navbar-toggle {
+  border-color: #fff;
+}
+.navbar-primary .navbar-toggle:hover, .navbar-primary .navbar-toggle:focus {
+  background-color: #599ad1;
+}
+.navbar-primary .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-primary .navbar-collapse,
+.navbar-primary .navbar-form {
+  border-color: #337cba;
+}
+.navbar-primary .navbar-nav > .open > a, .navbar-primary .navbar-nav > .open > a:hover, .navbar-primary .navbar-nav > .open > a:focus {
+  background-color: #3581c2;
+  color: #fff;
+}
+@media (max-width: 999px) {
+  .navbar-primary .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #3581c2;
+  }
+  .navbar-primary .navbar-nav .open .dropdown-menu .divider {
+    background-color: #3581c2;
+  }
+  .navbar-primary .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .navbar-primary .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-primary .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #599ad1;
+  }
+  .navbar-primary .navbar-nav .open .dropdown-menu > .active > a, .navbar-primary .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-primary .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #599ad1;
+  }
+  .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #fff;
+    background-color: #599ad1;
+  }
+}
+.navbar-primary .navbar-link {
+  color: #fff;
+}
+.navbar-primary .navbar-link:hover {
+  color: #eee;
+}
+.navbar-primary .btn-link {
+  color: #fff;
+}
+.navbar-primary .btn-link:hover, .navbar-primary .btn-link:focus {
+  color: #eee;
+}
+.navbar-primary .btn-link[disabled]:hover, .navbar-primary .btn-link[disabled]:focus, fieldset[disabled] .navbar-primary .btn-link:hover, fieldset[disabled] .navbar-primary .btn-link:focus {
+  color: #eee;
 }
 
 .form-add {
@@ -9301,6 +9421,15 @@ body.footer-fixed .footer {
 
 a.bg-dark:hover {
   background-color: #2b2b2b;
+}
+
+.navbar-brand-text {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-brand-text img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .list-inline-separate {

@@ -1,5 +1,15 @@
 @include bg-variant('.bg-dark', $brand-dark);
 
+.navbar-brand-text {
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .list-inline-separate {
   display:block;
   padding: 0;

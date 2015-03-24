@@ -15,7 +15,6 @@ module.exports = function(grunt) {
         fonts_path:  '<%= public_path %>/fonts',
         sprite_path: '<%= public_path %>/img/sprites',
 
-
         banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version + "\\n" %>' +
             '* <%= grunt.template.today("yyyy-mm-dd") + "\\n" %>' +
             '* <%= pkg.homepage + "\\n" %>' +
@@ -57,11 +56,11 @@ module.exports = function(grunt) {
                     '<%= js_src_path %>/vendor/select2.min.js',
                     '<%= js_src_path %>/vendor/spin.js',
                     '<%= js_src_path %>/vendor/jquery/jquery.spin.js',
+                    '<%= js_src_path %>/vendor/jquery/jquery.magnific-popup.min.js',
                     '<%= js_src_path %>/vendor/toastr.min.js',
                     '<%= js_src_path %>/vendor/anijs.min.js',
                     '<%= js_src_path %>/vendor/anijs-helper-dom.min.js',
-                    '<%= js_src_path %>/vendor/anijs-helper-scrollreveal.min.js',
-                    '<%= js_src_path %>/vendor/anijs-jquery-event-system.min.js'
+                    '<%= js_src_path %>/vendor/anijs-helper-scrollreveal.min.js'
                 ],
                 dest: '<%= js_path %>/vendor/vendor.min.js'
             }
@@ -168,11 +167,11 @@ module.exports = function(grunt) {
                     'toastr.min.js': 'toastr/toastr.min.js',
                     'jquery/jquery.spin.js': 'spin.js/jquery.spin.js',
                     'spin.js': 'spin.js/spin.js',
+                    'jquery/jquery.magnific-popup.min.js': 'magnific-popup/dist/jquery.magnific-popup.min.js',
 
                     'anijs.min.js': 'anijs/dist/anijs-min.js',
                     'anijs-helper-dom.min.js': 'anijs/dist/helpers/dom/anijs-helper-dom-min.js',
-                    'anijs-helper-scrollreveal.min.js': 'anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js',
-                    'anijs-jquery-event-system.min.js': 'anijs/dist/event_systems/jquery/anijs-jquery-event-system-min.js'
+                    'anijs-helper-scrollreveal.min.js': 'anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js'
                 }
             },
             css_dev: {
@@ -187,7 +186,8 @@ module.exports = function(grunt) {
                     '_slick.scss': 'slick-carousel/slick/slick.scss',
                     '_slick-theme.scss': 'slick-carousel/slick/slick-theme.scss',
                     '_select2.scss': 'select2/dist/css/select2.css',
-                    '_toastr.scss': 'toastr/toastr.scss'
+                    '_toastr.scss': 'toastr/toastr.scss',
+                    '_magnific-popup.scss': 'magnific-popup/dist/magnific-popup.css'
                 }
             },
             public: {
