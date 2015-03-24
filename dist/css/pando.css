@@ -1,5 +1,5 @@
 /*! Wrap Bootstrap CSS with additional functions - v0.1.0
-* 2015-03-24
+* 2015-03-25
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
 */ 
@@ -9415,12 +9415,44 @@ body.footer-fixed .footer {
   height: 30px;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-xs {
+  font-size: 0.7em;
+}
+
+.text-sm {
+  font-size: 0.85em;
+}
+
+.text-lg {
+  font-size: 1.3em;
+}
+
+.text-xl {
+  font-size: 1.6em;
+}
+
 .bg-dark {
   background-color: #444;
 }
 
 a.bg-dark:hover {
   background-color: #2b2b2b;
+}
+
+.label-as-badge {
+  border-radius: 1em;
 }
 
 .navbar-brand-text {
@@ -9445,18 +9477,6 @@ a.bg-dark:hover {
 }
 .list-inline-separate li:last-child:after {
   content: ' ';
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.font-underline {
-  text-decoration: underline;
-}
-
-.font-italic {
-  font-style: italic;
 }
 
 .hover-opacity {
