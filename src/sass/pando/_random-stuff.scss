@@ -1,5 +1,9 @@
 @include bg-variant('.bg-dark', $brand-dark);
 
+.label-as-badge {
+  @include border-radius(1em);
+}
+
 .navbar-brand-text {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -26,18 +30,6 @@
       content: ' ';
     }
   }
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.font-underline {
-  text-decoration: underline;
-}
-
-.font-italic {
-  font-style: italic;
 }
 
 .hover-opacity {
