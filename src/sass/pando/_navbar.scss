@@ -1,3 +1,135 @@
 .navbar {
   margin-bottom: 0;
 }
+
+.navbar-primary {
+  background-color: $brand-primary;
+  border-color: darken($brand-primary, 5%);
+
+  .navbar-brand {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: #eee;
+    }
+  }
+
+  .navbar-text {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: lighten($brand-primary, 5%);
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: lighten($brand-primary, 5%);
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: lighten($brand-primary, 5%);
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: #fff;
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-primary, 5%);
+    }
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($brand-primary, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: darken($brand-primary, 5%);
+        color: #fff;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: darken($brand-primary, 5%);
+        }
+        .divider {
+          background-color: darken($brand-primary, 5%);
+        }
+        > li > a {
+          color: #fff;
+          &:hover,
+          &:focus {
+            color: #fff;
+            background-color: lighten($brand-primary, 5%);
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: #fff;
+            background-color: lighten($brand-primary, 5%);
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: #fff;
+            background-color: lighten($brand-primary, 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: #fff;
+    &:hover {
+      color: #eee;
+    }
+  }
+
+  .btn-link {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: #eee;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: #eee;
+      }
+    }
+  }
+}

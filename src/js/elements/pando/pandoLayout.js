@@ -10,8 +10,14 @@
     });
 
     var fixedCheck = function() {
-        if($('body').hasClass('footer-fixed') || $('body').hasClass('footer-bottom')) {
+        var body = $('body');
+        var fixedTop = $('.navbar-fixed-top');
+
+        if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
             $('.footer-push').css('height', $('.footer').outerHeight(true));
+        }
+        if(fixedTop.length > 0) {
+            body.css('padding-top', fixedTop.outerHeight(true));
         }
     }
 

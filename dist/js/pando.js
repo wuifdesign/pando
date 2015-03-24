@@ -1,5 +1,5 @@
 /*! Wrap Bootstrap CSS with additional functions - v0.1.0
-* 2015-03-23
+* 2015-03-24
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
 */ 
@@ -11,9 +11,9 @@ $(document).ready(function() {
     }
     if(isDefined(toastr)) {
         toastr.options = {
-            "closeButton": true,
-            "progressBar": true,
-            "positionClass": "toast-top-right"
+            'closeButton': true,
+            'progressBar': true,
+            'positionClass': 'toast-top-right'
         };
     }
 });
@@ -35,6 +35,46 @@ function str_shorten(text, maxLength) {
 }
 
 ;
+
+(function ($) {
+    'use strict';
+
+    /**
+     * Override for the magnificPopup open dialog
+     *
+     * @param data
+     */
+    $.magnificPopup.instance.open = function (data) {
+        if(data.type == 'inline') {
+            data.removalDelay = 300;
+            data.mainClass ='pando-overlay-zoom-in';
+        }
+        var scrollBarWidth = $.magnificPopup.instance._getScrollbarSize();
+        $('.navbar-fixed-top').css('padding-right', scrollBarWidth + 'px');
+        $('.footer-fixed .footer').css('padding-right', scrollBarWidth + 'px');
+        $.magnificPopup.proto.open.call(this, data);
+    };
+
+    /**
+     * Override for the magnificPopup close dialog
+     *
+     * @param data
+     */
+    $.magnificPopup.instance.close = function () {
+        var removalDelay = $.magnificPopup.instance.st.removalDelay;
+        if(removalDelay) {
+            setTimeout(function() {
+                $('.navbar-fixed-top').css('padding-right', '');
+                $('.footer-fixed .footer').css('padding-right', '');
+            }, removalDelay);
+        } else {
+            $('.navbar-fixed-top').css('padding-right', '');
+            $('.footer-fixed .footer').css('padding-right', '');
+        }
+        $.magnificPopup.proto.close.call(this);
+    };
+
+}(jQuery));;
 
 (function($) {
     'use strict';
@@ -111,8 +151,14 @@ function str_shorten(text, maxLength) {
     });
 
     var fixedCheck = function() {
-        if($('body').hasClass('footer-fixed') || $('body').hasClass('footer-bottom')) {
+        var body = $('body');
+        var fixedTop = $('.navbar-fixed-top');
+
+        if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
             $('.footer-push').css('height', $('.footer').outerHeight(true));
+        }
+        if(fixedTop.length > 0) {
+            body.css('padding-top', fixedTop.outerHeight(true));
         }
     }
 

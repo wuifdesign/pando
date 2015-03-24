@@ -1,7 +1,7 @@
 #toast-container {
   & > div {
     @include box-shadow(0 0 3px #888);
-    @include opacity(0.9);
+    @include opacity(0.92);
 
     &:hover {
       box-shadow: 0 0 4px #888;

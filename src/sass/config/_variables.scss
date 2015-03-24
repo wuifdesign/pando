@@ -1,6 +1,8 @@
 $font-awesome-path: '../fonts';
 $icon-font-path: '../fonts/';
 
+$grid-float-breakpoint: 1000px;
+
 $font-family-sans-serif: 'Open Sans', sans-serif;
 
 $body-bg: #fdfdfd;
@@ -15,7 +17,7 @@ $brand-dark:    #444;
 
 $default-margin: 15px;
 
-$pepper-sizes: (xs, sm, lg, xl);
+$pando-sizes: (xs, sm, lg, xl);
 $margin-types: (
     xs round($default-margin / 4),
     sm round($default-margin / 2),
