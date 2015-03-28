@@ -1,4 +1,4 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
     if(isDefined(AniJS)) {
         AniJS.run();
     }
