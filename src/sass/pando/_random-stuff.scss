@@ -80,6 +80,23 @@
   }
 }
 
+.gradient-bg {
+  color: #fff;
+  @include gradient-directional-free(135deg, #000, darken($brand-primary, 50%) 15%, darken($brand-primary, 30%) 40%, $brand-primary 70%, lighten($brand-primary, 20%) 95%, lighten($brand-primary, 30%));
+}
+
+.inner-col {
+  position: relative;
+
+  .text {
+    bottom: 0;
+    margin: auto 0;
+    position: absolute;
+    @include text-shadow-default(rgba(0, 0, 0, 0.2), 0, 1px, 2px);
+    top: 0;
+  }
+}
+
 .table-display {
   display: table;
   width: 100%;
