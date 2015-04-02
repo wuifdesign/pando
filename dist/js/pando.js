@@ -1,5 +1,5 @@
 /*! Wrap Bootstrap CSS with additional functions - v0.1.0
-* 2015-03-28
+* 2015-03-31
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
 */ 
@@ -157,15 +157,33 @@ function str_shorten(text, maxLength) {
             fixedCheck();
         });
 
+        $(window).scroll(function() {
+            scrollCheck();
+        });
+
         var fixedCheck = function() {
             var body = $('body');
-            var fixedTop = $('.navbar-fixed-top');
+            var fixedTop = $('.navbar-fixed-top.auto-padding');
 
             if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
                 $('.footer-push').css('height', $('.footer').outerHeight(true));
             }
             if(fixedTop.length > 0) {
                 body.css('padding-top', fixedTop.outerHeight(true));
+            }
+        };
+
+        var scrollCheck = function() {
+            var fixedTop = $('.navbar-fixed-top');
+
+            if(fixedTop.length > 0) {
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+                if(scrollTop > 5) {
+                    fixedTop.addClass('is-scrolled');
+                } else {
+                    fixedTop.removeClass('is-scrolled');
+                }
             }
         }
     }

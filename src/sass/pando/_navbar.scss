@@ -46,7 +46,6 @@
     }
   }
 
-  // Darken the responsive nav toggle
   .navbar-toggle {
     border-color: #fff;
     &:hover,
@@ -63,7 +62,6 @@
     border-color: darken($brand-primary, 7%);
   }
 
-  // Dropdowns
   .navbar-nav {
     > .open > a {
       &,
@@ -75,7 +73,6 @@
     }
 
     @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
           border-color: darken($brand-primary, 5%);
@@ -91,14 +88,7 @@
             background-color: lighten($brand-primary, 5%);
           }
         }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: #fff;
-            background-color: lighten($brand-primary, 5%);
-          }
-        }
+        > .active > a,
         > .disabled > a {
           &,
           &:hover,
@@ -129,6 +119,162 @@
       &:hover,
       &:focus {
         color: #eee;
+      }
+    }
+  }
+}
+
+$nav-transparent-color: rgba(255, 255, 255, 0.7);
+$nav-transparent-color-hover: #fff;
+$nav-transparent-bg: rgba(0, 0, 0, 0.85);
+.navbar-transparent {
+  @include transition(background 0.3s ease-in);
+  background-color: rgba(0, 0, 0, 0);
+  border-color: transparent;
+
+  &.is-scrolled {
+    background: $nav-transparent-bg;
+  }
+
+  .navbar-brand {
+    color: $nav-transparent-color;
+    &:hover,
+    &:focus {
+      color: $nav-transparent-color-hover;
+    }
+  }
+
+  .navbar-text {
+    color: $nav-transparent-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $nav-transparent-color;
+      &:hover,
+      &:focus {
+        color: $nav-transparent-color-hover;
+        background-color: transparent;
+      }
+    }
+    > .disabled > a,
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-transparent-color-hover;
+        background: transparent;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $nav-transparent-color;
+    .icon-bar {
+      background-color: $nav-transparent-color;
+    }
+    &:hover,
+    &:focus {
+      border-color: $nav-transparent-color-hover;
+      background: transparent;
+      .icon-bar {
+        background-color: $nav-transparent-color-hover;
+      }
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: transparent;
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    .navbar-collapse,
+    .navbar-form {
+      @include transition(all 0.3s ease-in);
+      border-color: $nav-transparent-color;
+      background: $nav-transparent-bg;
+      border-bottom: 1px solid #000;
+    }
+    &.is-scrolled {
+      .navbar-collapse,
+      .navbar-form {
+        background: transparent;
+      }
+    }
+
+  }
+
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $nav-transparent-color-hover;
+      }
+    }
+
+    > .open > .dropdown-menu {
+      @include border-radius(3px);
+      &:after {
+        position: absolute;
+        left: 20px;
+        bottom: 100%;
+        @include caret('top', 10px);
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      .open .dropdown-menu {
+        &:after {
+          display: none;
+        }
+        > .dropdown-header {
+          border-color: $nav-transparent-color;
+        }
+        .divider {
+          background-color: $nav-transparent-color;
+        }
+        > li > a {
+          color: $nav-transparent-color;
+          &:hover,
+          &:focus {
+            color: $nav-transparent-color-hover;
+            background-color: transparent;
+          }
+        }
+        > .active > a,
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $nav-transparent-color-hover;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $nav-transparent-color;
+    &:hover {
+      color: $nav-transparent-color-hover;
+    }
+  }
+
+  .btn-link {
+    color: $nav-transparent-color;
+    &:hover,
+    &:focus {
+      color: $nav-transparent-color-hover;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $nav-transparent-color;
       }
     }
   }
