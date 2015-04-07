@@ -1,0 +1,9 @@
+.progress-sm {
+  height: 10px;
+}
+
+.progress-lg {
+  &, & .progress-bar {
+    height: 30px;
+  }
+}

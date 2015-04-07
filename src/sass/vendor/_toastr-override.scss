@@ -1,0 +1,53 @@
+#toast-container {
+  & > div {
+    @include box-shadow(0 0 3px #888);
+    @include opacity(0.92);
+
+    &:hover {
+      box-shadow: 0 0 4px #888;
+      @include opacity(1);
+    }
+  }
+
+  & > .toast {
+    background-image: none !important;
+  }
+
+  & > .toast:before {
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 24px;
+    line-height: 24px;
+    margin: auto 0.5em auto -1.5em;
+    position: fixed;
+  }
+
+  & > .toast-warning:before {
+    content: "\f075";
+  }
+  & > .toast-error:before {
+    content: "\f071";
+  }
+  & > .toast-info:before {
+    content: "\f1cd";
+  }
+  & > .toast-success:before {
+    content: "\f00C";
+  }
+
+  & > .toast-error {
+    background-color: darken($brand-danger, 5%);
+  }
+
+  & > .toast-warning {
+    background-color: darken($brand-warning, 5%);
+  }
+
+  & > .toast-success {
+    background-color: darken($brand-success, 5%);
+  }
+
+  & > .toast-info {
+    background-color: darken($brand-info, 5%);
+  }
+}
