@@ -1,0 +1,71 @@
+.alert-white {
+  display: table;
+  width: 100%;
+  @include gradient-vertical(#ffffff, #f9f9f9);
+  border-color: #ddd #ccc #bbb;
+  color: #404040;
+  padding-left: 61px;
+  position: relative;
+
+  .icon {
+    background: $brand-primary;
+    border: 1px solid darken($brand-primary, 5%);
+    text-align: center;
+    padding-top: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    @include border-radius(3px 0 0 3px);
+
+    &:after {
+      border: 0;
+      border-top: 1px solid darken($brand-primary, 5%);
+      border-right: 1px solid darken($brand-primary, 5%);
+      background: $brand-primary;
+      content: ' ';
+      display: block;
+      height: 10px;
+      margin-top: -4px;
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: rotate(45deg);
+      width: 10px;
+    }
+
+    i {
+      color: #fff;
+      font-size: 1.4em;
+      left: 12px;
+      margin-top: -10px;
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  &.alert-danger .icon,
+  &.alert-danger .icon::after {
+    background: $brand-danger;
+    border-color: darken($brand-danger, 5%);
+  }
+
+  &.alert-info .icon,
+  &.alert-info .icon::after {
+    background: $brand-info;
+    border-color: darken($brand-info, 5%);
+  }
+
+  &.alert-warning .icon,
+  &.alert-warning .icon::after {
+    background: $brand-warning;
+    border-color: darken($brand-warning, 5%);
+  }
+
+  &.alert-success .icon,
+  &.alert-success .icon::after {
+    background: $brand-success;
+    border-color: darken($brand-success, 5%);
+  }
+}

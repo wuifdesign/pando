@@ -1,0 +1,160 @@
+@mixin circle-variant($class, $color) {
+  &#{$class} {
+    .slice:after, .slice:before {
+      background: $color;
+    }
+    &:hover {
+      & > span {
+        color: $color;
+      }
+    }
+  }
+}
+
+.circle {
+  display: block;
+  position: relative;
+  font-size: 9em;
+  width: 1em;
+  height: 1em;
+  @include border-radius(50%);
+  background-color: $percentage-circle-bg;
+
+  &.circle-center {
+    margin: 0 auto;
+  }
+
+  &.circle-lg {
+    font-size: 15em;
+  }
+
+  &.circle-sm {
+    font-size: 6em;
+  }
+
+  & > span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    line-height: 4em;
+    font-size: 0.25em;
+    color: $percentage-circle-font;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    @include transition(all 0.2s ease-out);
+
+    .text, .info {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      display: block;
+      line-height: normal;
+      @include transition(all 0.2s ease-out);
+    }
+
+    .text {
+      bottom: 40%;
+    }
+
+    .info {
+      top: 53%;
+      font-size: 0.5em;
+      color: $percentage-circle-font-info;
+    }
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: $circle-width;
+    left: $circle-width;
+    content: ' ';
+    border-radius: 50%;
+    background-color: $percentage-circle-bg-inner;
+    width: 1 - (2 * $circle-width);
+    height: 1 - (2 * $circle-width);
+    @include transition(all 0.2s ease-in);
+  }
+
+  .slice, .slice:after, .slice:before {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    @include transition(transform 1.5s);
+    @include border-radius(50%);
+  }
+
+  .slice {
+    clip: rect(0, 1em, 1em, 0.5em);
+
+    &:before,
+    &:after {
+      display: block;
+      content: ' ';
+      clip: rect(0, 0.5em, 1em, 0);
+      background-color: $brand-primary;
+    }
+  }
+
+  $increment: 180deg / 100;
+  @for $j from 0 through 100 {
+    &[data-progress="#{$j}"] {
+      .slice.full, .slice:after {
+        -webkit-transform: rotate($increment * $j);
+        -ms-transform: rotate($increment * $j);
+        transform: rotate($increment * $j);
+      }
+      .slice.half:before {
+        -webkit-transform: rotate($increment * $j * 2);
+        -ms-transform: rotate($increment * $j * 2);
+        transform: rotate($increment * $j * 2);
+      }
+    }
+  }
+
+  &.circle-dark {
+    background-color: $percentage-circle-bg-dark;
+
+    & > span {
+      color: $percentage-circle-font-dark;
+
+      .info {
+        top: 53%;
+        font-size: 0.5em;
+        color: $percentage-circle-font-info-dark;
+      }
+
+    }
+
+    &:after {
+      background-color: $percentage-circle-bg-inner-dark;
+    }
+  }
+
+  &:hover {
+    cursor: default;
+
+    & > span {
+      width: 3.33em;
+      line-height: 3.33em;
+      font-size: 0.3em;
+      color: $brand-primary;
+    }
+
+    &:after {
+      top: $circle-width-hover;
+      left: $circle-width-hover;
+      width: 1 - (2 * $circle-width-hover);
+      height: 1 - (2 * $circle-width-hover);
+    }
+  }
+
+  @include circle-variant('.circle-danger', $brand-danger);
+  @include circle-variant('.circle-warning', $brand-warning);
+  @include circle-variant('.circle-info', $brand-info);
+  @include circle-variant('.circle-success', $brand-success);
+}
