@@ -1,5 +1,7 @@
 $font-awesome-path: '../fonts';
 $icon-font-path: '../fonts/';
+$slick-font-path: '../fonts/';
+$slick-loader-path: '../img/';
 
 //$grid-float-breakpoint: 1000px;
 
@@ -16,14 +18,6 @@ $brand-danger:  #d14d38;
 $brand-dark:    #444;
 
 $default-margin: 15px;
-
-$pando-sizes: (xs, sm, lg, xl);
-$margin-types: (
-    xs round($default-margin / 4),
-    sm round($default-margin / 2),
-    lg round($default-margin * 2),
-    xl round($default-margin * 4)
-);
 
 $default-text-shadow-color:    #000;
 $default-text-shadow-h-offset: 0px;
