@@ -11,7 +11,6 @@ A Bootstrap design wrapper with additional styles and functions
 
 Dependencies:
 - <a href="https://github.com/nex3/sass" target="_blank">Sass</a>
-- <a href="https://github.com/chriseppstein/compass" target="_blank">Compass</a>
 - <a href="https://github.com/gruntjs/grunt" target="_blank">Grunt</a>
 - <a href="http://jquery.com/" target="_blank">jQuery</a>
 
