@@ -1,6 +1,6 @@
 {
   "name": "Pando",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "title": "Wrap Bootstrap CSS with additional functions",
   "homepage": "https://github.com/wuifdesign/pando",
   "devDependencies": {
