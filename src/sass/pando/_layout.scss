@@ -30,204 +30,7 @@ html {
   font-size: 1.6em;
 }
 
-@each $types in $margin-types {
-  .padding-#{nth($types, 1)} {
-    padding: nth($types, 2);
-  }
-}
-
-.margin-none {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.margin-top {
-  margin-top: $default-margin;
-}
-
-.margin-bottom {
-  margin-bottom: $default-margin;
-}
-
-.margin-top-bottom {
-  margin-top: $default-margin;
-  margin-bottom: $default-margin;
-}
-
-.margin-right {
-  margin-right: $default-margin;
-}
-
-.margin-left {
-  margin-left: $default-margin;
-}
-
-.margin-right-left {
-  margin-right: $default-margin;
-  margin-left: $default-margin;
-}
-
-@each $types in $margin-types {
-  .margin-top-#{nth($types, 1)} {
-    margin-top: nth($types, 2);
-  }
-  .margin-bottom-#{nth($types, 1)} {
-    margin-bottom: nth($types, 2);
-  }
-  .margin-top-bottom-#{nth($types, 1)} {
-    margin-top: nth($types, 2);
-    margin-bottom: nth($types, 2);
-  }
-  .margin-right-#{nth($types, 1)} {
-    margin-right: nth($types, 2);
-  }
-
-  .margin-left-#{nth($types, 1)} {
-    margin-left: nth($types, 2);
-  }
-
-  .margin-right-left-#{nth($types, 1)} {
-    margin-right: nth($types, 2);
-    margin-left: nth($types, 2);
-  }
-}
-
-@media (max-width: $screen-lg) {
-  .margin-lg-none {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .margin-lg-top {
-    margin-top: $default-margin;
-  }
-  .margin-lg-bottom {
-    margin-bottom: $default-margin;
-  }
-  .margin-lg-top-bottom {
-    margin-top: $default-margin;
-    margin-bottom: $default-margin;
-  }
-
-  @each $types in $margin-types {
-    .margin-lg-top-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-    }
-    .margin-lg-bottom-#{nth($types, 1)} {
-      margin-bottom: nth($types, 2);
-    }
-    .margin-lg-top-bottom-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-      margin-bottom: nth($types, 2);
-    }
-  }
-}
-
-@media (max-width: $screen-md) {
-  .margin-md-none {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .margin-md-top {
-    margin-top: $default-margin;
-  }
-  .margin-md-bottom {
-    margin-bottom: $default-margin;
-  }
-  .margin-md-top-bottom {
-    margin-top: $default-margin;
-    margin-bottom: $default-margin;
-  }
-
-  @each $types in $margin-types {
-    .margin-md-top-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-    }
-    .margin-md-bottom-#{nth($types, 1)} {
-      margin-bottom: nth($types, 2);
-    }
-    .margin-md-top-bottom-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-      margin-bottom: nth($types, 2);
-    }
-  }
-}
-
-@media (max-width: $screen-sm) {
-  .margin-sm-none {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .margin-sm-top {
-    margin-top: $default-margin;
-  }
-  .margin-sm-bottom {
-    margin-bottom: $default-margin;
-  }
-  .margin-sm-top-bottom {
-    margin-top: $default-margin;
-    margin-bottom: $default-margin;
-  }
-
-  @each $types in $margin-types {
-    .margin-sm-top-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-    }
-    .margin-sm-bottom-#{nth($types, 1)} {
-      margin-bottom: nth($types, 2);
-    }
-    .margin-sm-top-bottom-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-      margin-bottom: nth($types, 2);
-    }
-  }
-}
-
-@media (max-width: $screen-xs) {
-  .margin-xs-none {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .margin-xs-top {
-    margin-top: $default-margin;
-  }
-  .margin-xs-bottom {
-    margin-bottom: $default-margin;
-  }
-  .margin-xs-top-bottom {
-    margin-top: $default-margin;
-    margin-bottom: $default-margin;
-  }
-
-  @each $types in $margin-types {
-    .margin-xs-top-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-    }
-    .margin-xs-bottom-#{nth($types, 1)} {
-      margin-bottom: nth($types, 2);
-    }
-    .margin-xs-top-bottom-#{nth($types, 1)} {
-      margin-top: nth($types, 2);
-      margin-bottom: nth($types, 2);
-    }
-  }
-}
-
-@media (max-width: $screen-lg) {
-  .text-lg-left {
-    text-align: left;
-  }
-  .text-lg-right {
-    text-align: right;
-  }
-  .text-lg-center {
-    text-align: center;
-  }
-  .text-lg-justify {
-    text-align: justify;
-  }
-}
-
-@media (max-width: $screen-md) {
+@media (max-width: $screen-md-max) {
   .text-md-left {
     text-align: left;
   }
@@ -242,7 +45,7 @@ html {
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-sm-max) {
   .text-sm-left {
     text-align: left;
   }
@@ -257,7 +60,7 @@ html {
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-xs-max) {
   .text-xs-left {
     text-align: left;
   }

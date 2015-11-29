@@ -7,4 +7,52 @@
       float: none;
     }
   }
+
+  &.v-align {
+    display: table;
+    width: 100%;
+
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+      vertical-align: middle;
+
+      &.top {
+        vertical-align: top;
+      }
+
+      &.bottom {
+        vertical-align: bottom;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      & > [class^="col-lg-"],
+      & > [class*=" col-lg-"] {
+        float: none;
+        display: table-cell;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      & > [class^="col-md-"],
+      & > [class*=" col-md-"] {
+        float: none;
+        display: table-cell;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
+      & > [class^="col-sm-"],
+      & > [class*=" col-sm-"] {
+        float: none;
+        display: table-cell;
+      }
+    }
+
+    & > [class^="col-xs-"],
+    & > [class*=" col-xs-"] {
+      float: none;
+      display: table-cell;
+    }
+  }
 }

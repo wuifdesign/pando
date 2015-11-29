@@ -146,7 +146,6 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
-                compass: true,
                 style: 'expanded'
             },
             pando: {
@@ -228,6 +227,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'bootstrap': 'bootstrap-sass/assets/stylesheets',
+                    'css-margin-padding': 'css-margin-padding/src/sass',
                     '_bootstrap-dialog.scss': 'bootstrap3-dialog/dist/css/bootstrap-dialog.css',
                     '_font-awesome.scss': 'Font-Awesome/css/font-awesome.css',
                     '_animate.scss': 'animate.css/animate.css',
