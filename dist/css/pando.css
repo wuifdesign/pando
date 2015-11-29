@@ -1,4 +1,4 @@
-/*! Wrap Bootstrap CSS with additional functions - v0.1.0
+/*! Wrap Bootstrap CSS with additional functions - v0.2.1
 * 2015-11-29
 * https://github.com/wuifdesign/pando
 * Copyright (c) 2015 - Michael Wohlfahrter 
