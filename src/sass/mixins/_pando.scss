@@ -25,23 +25,33 @@
 }
 
 @mixin text-shadow-default($color: $default-text-shadow-color, $h-offset: $default-text-shadow-h-offset, $v-offset: $default-text-shadow-v-offset, $blur: $default-text-shadow-blur) {
-    @include text-shadow($color $h-offset $v-offset $blur);
+    text-shadow: $color $h-offset $v-offset $blur;
 }
 
 @mixin text-shadow-white($color: #fff, $h-offset: $default-text-shadow-h-offset, $v-offset: $default-text-shadow-v-offset, $blur: $default-text-shadow-blur) {
-    @include text-shadow($color $h-offset $v-offset $blur);
+    text-shadow: $color $h-offset $v-offset $blur;
 }
 
 @mixin inner-text-shadow-default ($color: $default-text-shadow-color, $h-offset: $default-text-shadow-h-offset, $v-offset: -1px, $blur: $default-text-shadow-blur) {
-    @include text-shadow($color $h-offset $v-offset $blur);
+    text-shadow: $color $h-offset $v-offset $blur;
 }
 
 @mixin inner-text-shadow-white ($color: #fff, $h-offset: $default-text-shadow-h-offset, $v-offset: -1px, $blur: $default-text-shadow-blur) {
-    @include text-shadow($color $h-offset $v-offset $blur);
+    text-shadow: $color $h-offset $v-offset $blur;
 }
 
 @mixin no-user-select() {
     @include user-select(none);
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin opacity($opacity: 1) {
+    opacity: $opacity;
 }
 
 @mixin bordered($top-color: #EEE, $right-color: #EEE, $bottom-color: #EEE, $left-color: #EEE, $width: 1px, $type: solid) {
