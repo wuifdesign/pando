@@ -1,7 +1,6 @@
-@import "compass/css3";
-
-@import "../config/_variables";
-@import "bootstrap/bootstrap/_variables";
+@import "../mixins/pando";
+@import "../config/variables";
+@import "bootstrap/bootstrap/variables";
 
 @import "animate";
 

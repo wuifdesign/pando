@@ -146,7 +146,6 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
-                compass: true,
                 style: 'expanded'
             },
             pando: {
