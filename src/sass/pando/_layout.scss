@@ -122,7 +122,7 @@ html {
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-md-max) {
   .margin-md-none {
     margin-top: 0;
     margin-bottom: 0;
@@ -152,7 +152,7 @@ html {
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-sm-max) {
   .margin-sm-none {
     margin-top: 0;
     margin-bottom: 0;
@@ -182,7 +182,7 @@ html {
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-xs-max) {
   .margin-xs-none {
     margin-top: 0;
     margin-bottom: 0;
@@ -227,7 +227,7 @@ html {
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-md-max) {
   .text-md-left {
     text-align: left;
   }
@@ -242,7 +242,7 @@ html {
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-sm-max) {
   .text-sm-left {
     text-align: left;
   }
@@ -257,7 +257,7 @@ html {
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-xs-max) {
   .text-xs-left {
     text-align: left;
   }
