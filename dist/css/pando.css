@@ -9693,6 +9693,41 @@ body.footer-fixed .footer {
   margin-right: auto;
   float: none;
 }
+.row.v-align {
+  display: table;
+  width: 100%;
+}
+.row.v-align > [class^="col-"], .row.v-align > [class*=" col-"] {
+  vertical-align: middle;
+}
+.row.v-align > [class^="col-"].top, .row.v-align > [class*=" col-"].top {
+  vertical-align: top;
+}
+.row.v-align > [class^="col-"].bottom, .row.v-align > [class*=" col-"].bottom {
+  vertical-align: bottom;
+}
+@media (min-width: 1200px) {
+  .row.v-align > [class^="col-lg-"], .row.v-align > [class*=" col-lg-"] {
+    float: none;
+    display: table-cell;
+  }
+}
+@media (min-width: 992px) {
+  .row.v-align > [class^="col-md-"], .row.v-align > [class*=" col-md-"] {
+    float: none;
+    display: table-cell;
+  }
+}
+@media (min-width: 768px) {
+  .row.v-align > [class^="col-sm-"], .row.v-align > [class*=" col-sm-"] {
+    float: none;
+    display: table-cell;
+  }
+}
+.row.v-align > [class^="col-xs-"], .row.v-align > [class*=" col-xs-"] {
+  float: none;
+  display: table-cell;
+}
 
 .widget {
   border-radius: 5px;
