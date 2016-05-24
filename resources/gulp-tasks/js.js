@@ -8,7 +8,7 @@ module.exports = function (gulp, plugins, config) {
         return gulp.src(crystalPaths)
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.concat('main.min.js'))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify({ preserveComments: 'license' }))
             .pipe(plugins.sourcemaps.write('./'))
             .pipe(gulp.dest(config.publicPath + '/js'));
     };
