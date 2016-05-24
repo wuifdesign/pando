@@ -1,43 +1,5 @@
-@mixin clear-fix() {
-  *zoom: 1;
-
-  &:before,
-  &:after {
-    display: table;
-    line-height: 0;
-    content: "";
-  }
-  &:after {
-    clear: both;
-  }
-
-  &:before {
-    clear: both;
-  }
-}
-
 @mixin border-radius($border-radius: $border-radius-base) {
     border-radius: $border-radius;
-}
-
-@mixin border-box() {
-    @include box-sizing(border-box);
-}
-
-@mixin text-shadow-default($color: $default-text-shadow-color, $h-offset: $default-text-shadow-h-offset, $v-offset: $default-text-shadow-v-offset, $blur: $default-text-shadow-blur) {
-    text-shadow: $color $h-offset $v-offset $blur;
-}
-
-@mixin text-shadow-white($color: #fff, $h-offset: $default-text-shadow-h-offset, $v-offset: $default-text-shadow-v-offset, $blur: $default-text-shadow-blur) {
-    text-shadow: $color $h-offset $v-offset $blur;
-}
-
-@mixin inner-text-shadow-default ($color: $default-text-shadow-color, $h-offset: $default-text-shadow-h-offset, $v-offset: -1px, $blur: $default-text-shadow-blur) {
-    text-shadow: $color $h-offset $v-offset $blur;
-}
-
-@mixin inner-text-shadow-white ($color: #fff, $h-offset: $default-text-shadow-h-offset, $v-offset: -1px, $blur: $default-text-shadow-blur) {
-    text-shadow: $color $h-offset $v-offset $blur;
 }
 
 @mixin no-user-select() {
@@ -52,13 +14,6 @@
 
 @mixin opacity($opacity: 1) {
     opacity: $opacity;
-}
-
-@mixin bordered($top-color: #EEE, $right-color: #EEE, $bottom-color: #EEE, $left-color: #EEE, $width: 1px, $type: solid) {
-    border-top: $type $width $top-color;
-    border-left: $type $width $left-color;
-    border-right: $type $width $right-color;
-    border-bottom: $type $width $bottom-color;
 }
 
 @mixin gradient-directional-free($deg: 45deg, $color-stops...) {

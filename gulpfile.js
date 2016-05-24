@@ -16,6 +16,7 @@ function getTask(task) {
 gulp.task('copy-files', getTask('copy-files'));
 gulp.task('sass', getTask('sass'));
 gulp.task('js', getTask('js'));
+gulp.task('js-vendor', getTask('js-vendor'));
 gulp.task('watch', getTask('watch'));
 
 gulp.task('default', ['copy-files', 'sass', 'js']);

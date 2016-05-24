@@ -42,7 +42,7 @@ body.footer-fixed {
   margin: 0;
   padding: 10px 0px;
   list-style: none;
-  @include clear-fix;
+  @include clearfix;
 
   & > li {
     display: block;

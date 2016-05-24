@@ -1,21 +1,30 @@
-@import "config/variables";
+@import "variables";
 @import "mixins/pando";
-@import "custom/custom-mixins";
 
-@import "bootstrap";
+@import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "pando/colors";
-@import "pando/layout";
-@import "pando/buttons";
-@import "pando/navbar";
-@import "pando/forms";
+@import "../components/animate.css/animate.css";
+@import "../components/css-margin-padding/src/sass/main.scss";
+@import "../components/font-awesome/scss/font-awesome";
+@import "../components/slick-carousel/slick/slick.scss";
+
+@import "../components/magnific-popup/dist/magnific-popup.css";
+@import "override/magnific-popup";
+
+@import "../components/toastr/toastr.scss";
+@import "override/toastr";
+
 @import "pando/alert";
-@import "pando/circle";
+@import "pando/buttons";
+@import "pando/colors";
 @import "pando/footer";
+@import "pando/forms";
 @import "pando/grid";
-@import "pando/widgets";
+@import "pando/layout";
+@import "pando/navbar";
 @import "pando/progress";
-@import "pando/typography";
 @import "pando/random-stuff";
+@import "pando/typography";
+@import "pando/widgets";
 
 @import "custom/custom";
