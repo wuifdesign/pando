@@ -19,6 +19,11 @@ $brand-dark:    #444 !default;
 
 $default-margin: 15px !default;
 
+$default-navbar-color: $brand-primary !default;
+$nav-transparent-color: rgba(255, 255, 255, 0.7);
+$nav-transparent-color-hover: #fff;
+$nav-transparent-bg: rgba(0, 0, 0, 0.85);
+
 $default-text-shadow-color:    #000 !default;
 $default-text-shadow-h-offset: 0px !default;
 $default-text-shadow-v-offset: 1px !default;
