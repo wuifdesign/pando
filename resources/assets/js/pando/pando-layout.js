@@ -31,7 +31,6 @@
 
             if(fixedTop.length > 0) {
                 var scrollTop = $(window).scrollTop();
-                console.log(scrollTop);
                 if(scrollTop > 5) {
                     fixedTop.addClass('is-scrolled');
                 } else {

@@ -1,4 +1,5 @@
 @import "variables";
+@import "pando/variables";
 @import "mixins/pando";
 
 @import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -7,6 +8,7 @@
 @import "../components/css-margin-padding/src/sass/main.scss";
 @import "../components/font-awesome/scss/font-awesome";
 @import "../components/slick-carousel/slick/slick.scss";
+@import "../components/slick-carousel/slick/slick-theme.scss";
 
 @import "../components/magnific-popup/dist/magnific-popup.css";
 @import "override/magnific-popup";
