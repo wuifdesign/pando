@@ -16,10 +16,10 @@
             var _runs = 3;
             var _distanceReduce = 0;
 
-            if(typeof distance === 'undefined') { _distance = distance; }
-            if(typeof runs === 'undefined') { _runs = runs; }
-            if(typeof speed === 'undefined') { _speed = speed; }
-            if(typeof distanceReduce === 'undefined') { _distanceReduce = distanceReduce; }
+            if(typeof distance !== 'undefined') { _distance = distance; }
+            if(typeof runs !== 'undefined') { _runs = runs; }
+            if(typeof speed !== 'undefined') { _speed = speed; }
+            if(typeof distanceReduce !== 'undefined') { _distanceReduce = distanceReduce; }
 
             var position = this.css('position');
 
@@ -39,6 +39,8 @@
                 }
                 _distance -= _distanceReduce;
             }
+
+            return this;
         }
     }
 

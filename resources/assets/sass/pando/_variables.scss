@@ -1,0 +1,30 @@
+$icon-font-path: "../fonts/bootstrap-sass/assets/fonts/bootstrap/" !default;
+$fa-font-path: "../fonts/font-awesome/fonts" !default;
+
+$slick-arrow-color: #111 !default;
+$slick-font-path: '../fonts/slick-carousel/slick/fonts/' !default;
+$slick-loader-path: '../img/vendor/slick-carousel/slick/' !default;
+
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
+
+$body-bg: #fdfdfd !default;
+$text-color: #222 !default;
+
+$brand-primary: #458ecc !default;
+$brand-success: #76c279 !default;
+$brand-info:    #5bc0de !default;
+$brand-warning: #faaf3e !default;
+$brand-danger:  #d14d38 !default;
+$brand-dark:    #444 !default;
+
+$default-margin: 15px !default;
+
+$default-text-shadow-color:    #000 !default;
+$default-text-shadow-h-offset: 0px !default;
+$default-text-shadow-v-offset: 1px !default;
+$default-text-shadow-blur:     0px !default;
+
+$default-footer-background:       $text-color !default;
+$default-footer-font-color:       #fff !default;
+$default-footer-link-color:       lighten($brand-primary, 20%) !default;
+$default-footer-link-color-hover: lighten($default-footer-link-color, 10%) !default;
