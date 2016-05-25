@@ -76,7 +76,7 @@ body.footer-fixed {
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-sm-max) {
   body.footer-bottom {
     .wrap {
       .footer,
