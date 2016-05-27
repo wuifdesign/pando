@@ -2,7 +2,7 @@ module.exports = function (gulp, plugins, config, extra) {
     var generate = function(name) {
         var options = {
             imgName: 'sprite-' + name + '.png',
-            imgPath: '../img/sprites/sprite-' + name + '.png',
+            imgPath: extra.relative_sprites_path + 'sprite-' + name + '.png',
             cssName: '_sprite-' + name + '.scss',
             cssVarMap: function (sprite) {
                 sprite.name = 'sprite-' + name + '-' + sprite.name;
@@ -12,7 +12,7 @@ module.exports = function (gulp, plugins, config, extra) {
         if(extra.enable_retina_sprites) {
             options.retinaSrcFilter = [ extra.sprites_path + name + '/*@2x.png' ];
             options.retinaImgName = 'sprite-' + name + '@2x.png';
-            options.retinaImgPath = '../img/sprites/sprite-' + name + '@2x.png';
+            options.retinaImgPath = extra.relative_sprites_path + 'sprite-' + name + '@2x.png';
         }
 
         var spriteData = gulp.src(extra.sprites_path + name + '/*.png')

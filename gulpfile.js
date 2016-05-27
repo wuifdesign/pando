@@ -23,6 +23,7 @@ gulp.task('watch', getTask('watch'));
 gulp.task('sprite', getTask('sprite', {
     enable_retina_sprites: false, //Enable retina sprites which are defined as "filename@2x.png" and have to be exactly double the size of the normal image
     sprites_path: config.publicPath + '/img/sprites/', //Path to the spite images
+    relative_sprites_path: '../img/sprites/', //Relative path to the spite images (used in the css after compiling)
     sprites: [ /* 'base' */ ] //add folder names of the sprites. (if folder is "../img/sprites/base" add "base" to the array
 }));
 
