@@ -3,7 +3,6 @@ Pando CSS
 
 [![Bower version](https://badge.fury.io/bo/pando.svg)](http://badge.fury.io/bo/pando)
 [![devDependency Status](https://david-dm.org/wuifdesign/pando/dev-status.svg)](https://david-dm.org/wuifdesign/pando#info=devDependencies)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 A Bootstrap design wrapper with additional styles and functions
 
