@@ -1,0 +1,53 @@
+.pando-overlay {
+  position: relative;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  @include border-radius;
+  background: #fff;
+  border: 2px solid #eee;
+
+  .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0;
+  }
+}
+
+.pando-overlay-xs {
+  max-width: 150px;
+}
+.pando-overlay-sm {
+  max-width: 300px;
+}
+.pando-overlay-lg {
+  max-width: 700px;
+}
+.pando-overlay-xl {
+  max-width: 900px;
+}
+
+.pando-overlay-zoom-in {
+  .pando-overlay {
+    opacity: 0;
+    transform: scale(0.8);
+    @include transition(all 0.2s ease-in-out 0s);
+  }
+  &.mfp-ready .pando-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+  &.mfp-removing .pando-overlay {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  &.mfp-bg {
+    opacity: 0.001;
+    @include transition(opacity 0.3s ease-out 0s);
+  }
+  &.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+  &.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+}
