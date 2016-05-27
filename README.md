@@ -11,7 +11,7 @@ A Bootstrap design wrapper with additional styles and functions
 
 Dependencies:
 - <a href="https://github.com/nex3/sass" target="_blank">Sass</a>
-- <a href="https://github.com/gruntjs/grunt" target="_blank">Grunt</a>
+- <a href="http://gulpjs.com/" target="_blank">Gulp</a>
 - <a href="http://jquery.com/" target="_blank">jQuery</a>
 
 Includes:
@@ -19,11 +19,7 @@ Includes:
 - <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>
 - <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>
 - <a href="http://nakupanda.github.io/bootstrap3-dialog/" target="_blank">bootstrap3-dialog</a>
-- <a href="http://imsky.github.io/holder/" target="_blank">holderjs</a>
-- <a href="http://fgnass.github.io/spin.js/" target="_blank">spin.js</a>
-- <a href="https://select2.github.io/" target="_blank">Select2</a>
 - <a href="https://github.com/anijs/anijs" target="_blank">AniJS</a>
-- <a href="https://github.com/scottjehl/Respond" target="_blank">Respond</a>
 - <a href="https://github.com/kenwheeler/slick" target="_blank">Slick.js</a>
 - <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a>
 - <a href="https://github.com/CodeSeven/toastr" target="_blank">Toastr</a>
