@@ -2,31 +2,27 @@ html {
   height: 100%;
 }
 
-.no-col-padding {
-  margin-left: 0;
-  margin-right: 0;
+.btn-scroll-top {
+  position: fixed;
+  border: none;
+  color: #fff;
+  right: 10px;
+  bottom: 10px;
+  @include opacity(0.5);
+  background: #000;
+  @include border-radius(5px);
+  line-height: 20px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 50;
 
-  & > [class^="col-"],
-  & > [class*=" col-"] {
-    padding-left: 0;
-    padding-right: 0;
+  &:hover,
+  &:focus {
+    outline: none;
+    @include opacity(0.8);
   }
-}
-
-.text-xs {
-  font-size: 0.7em;
-}
-
-.text-sm {
-  font-size: 0.85em;
-}
-
-.text-lg {
-  font-size: 1.3em;
-}
-
-.text-xl {
-  font-size: 1.6em;
 }
 
 @media (max-width: $screen-md-max) {

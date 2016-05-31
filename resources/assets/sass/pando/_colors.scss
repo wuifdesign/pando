@@ -3,7 +3,8 @@
     background-color: $color;
     color: #fff;
   }
-  a#{$parent}:hover {
+  a#{$parent}:hover,
+  a#{$parent}:focus {
     background-color: darken($color, 10%);
     color: #fff;
   }
@@ -14,3 +15,4 @@
 @include bg-variant-full('.bg-info-full', $brand-info);
 @include bg-variant-full('.bg-warning-full', $brand-warning);
 @include bg-variant-full('.bg-danger-full', $brand-danger);
+@include bg-variant-full('.bg-dark', $brand-dark);

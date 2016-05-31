@@ -13,9 +13,9 @@
     text-align: center;
     padding-top: 15px;
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
     width: 45px;
     @include border-radius(3px 0 0 3px);
 
