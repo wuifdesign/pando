@@ -29,11 +29,10 @@
         var equalize = function() {
             $('[data-equalizer]').each(function() {
                 var target = $(this).attr('data-equalizer');
-
                 var elements = $(this).find('[data-equalizer-element="' + target + '"]');
                 elements.css('height', '');
-                var height = 0;
 
+                var height = 0;
                 elements.each(function() {
                     height = Math.max(height, $(this).outerHeight());
                 });

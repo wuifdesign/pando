@@ -7,18 +7,18 @@ Pando CSS
 #### See the [Documentation](http://wuifdesign.github.io/pando/)
 
 ##### Dependencies:
-- [SASS](https://github.com/nex3/sass)
-- [Gulp](http://gulpjs.com/)
-- [jQuery](http://jquery.com/)
+- [SASS](https://github.com/sass/sass)
+- [Gulp](https://gulpjs.com/)
+- [jQuery](https://jquery.com/)
 
 ##### Includes:
 - [bootstrap-sass](https://github.com/twbs/bootstrap-sass)
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [Animate.css](https://github.com/daneden/animate.css)
 - [AniJS](https://github.com/anijs/anijs)
-- [bootstrap3-dialog](http://nakupanda.github.io/bootstrap3-dialog/)
+- [bootstrap3-dialog](https://github.com/nakupanda/bootstrap3-dialog)
 - [Slick.js](https://github.com/kenwheeler/slick)
-- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [Magnific Popup](https://github.com/dimsemenov/Magnific-Popup)
 - [Toastr](https://github.com/CodeSeven/toastr)
 
 ## Installation
@@ -37,7 +37,7 @@ How to update your vendor dependencies:
 
 You can use to `gulpfile.js` to compile the code. Use one of the following
 
-    $ gulp              //Copies vendor files and compiles JS/CSS
+    $ gulp              //Copies vendor files and compiles JS/CSS ('copy-files', 'sass', 'js-vendor', 'js')
     $ gulp copy-files   //Copies new font and images from the bower folder to the public folder
     $ gulp js           //Compiles JS
     $ gulp js-vendor    //Compiles Vendor JS

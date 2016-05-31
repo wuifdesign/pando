@@ -7,7 +7,7 @@
                 speed: 0.3
             }, options);
 
-            return this.each( function() {
+            return this.each(function() {
                 var element = $(this);
                 $(document).scroll(function(){
                     scrollCheck(element, settings);
