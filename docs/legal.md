@@ -5,8 +5,7 @@ permalink: /legal/
 ---
 
 <div class="container">
-    <p class="margin-top-bottom">E-Mail: <a href="mailto:design.wuif@gmail.com">design.wuif@gmail.com</a></p>
-
+    <p class="m-t-b-lg">E-Mail: <a href="mailto:design.wuif@gmail.com">design.wuif@gmail.com</a></p>
 
     <h4>Google Analytics</h4>
     <p>

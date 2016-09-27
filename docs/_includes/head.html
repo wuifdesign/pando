@@ -3,28 +3,26 @@
 
     <title>{{ site.title }}{% if page.title %} :: {{ page.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="web development,html,css,js,external,pando,framework,front-end,grid">
-    <meta name="author" content="Michael Wohlfahrter">
 
     <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ site.pandobaseurl }}/assets/css/main.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets-custom/css/syntax.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets-custom/css/custom.css" type="text/css">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
     <script src="{{ site.pandobaseurl }}/assets/js/vendor.min.js" type="text/javascript"></script>
     <script src="{{ site.pandobaseurl }}/assets/js/main.min.js" type="text/javascript"></script>
-    <script src="{{ site.pandobaseurl }}/js/holder.min.js" type="text/javascript"></script>
-    <script src="{{ site.baseurl }}/js/custom.js" type="text/javascript"></script>
+    <script src="{{ site.pandobaseurl }}/assets-custom/js/holder.min.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/assets-custom/js/custom.js" type="text/javascript"></script>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:image" content="{{ site.url | replace:'http://','//' }}{{ site.baseurl }}/img/social-img.png" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets-custom/img/social-img.png" />
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
     <meta property="og:site_name" content="Pando CSS" />
 
