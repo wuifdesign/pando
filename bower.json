@@ -23,6 +23,6 @@
     "css-margin-padding": "https://github.com/wuifdesign/css-margin-padding.git"
   },
   "ignore": [
-    "*.md"
+    "*.md", "docs/*", "public/*"
   ]
 }

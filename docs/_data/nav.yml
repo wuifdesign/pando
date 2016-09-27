@@ -1,0 +1,12 @@
+- title: "Components"
+  href: "/docs/"
+
+- title: "JavaScript"
+  href: "/docs/javascript/"
+
+- title: "External"
+  href: "/docs/external/"
+
+- title: "<i class='fa fa-github'></i> GitHub"
+  href: "https://github.com/wuifdesign/pando"
+  external: true

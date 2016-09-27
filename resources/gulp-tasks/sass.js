@@ -8,6 +8,7 @@ module.exports = function (gulp, plugins, config) {
             .on('error', function(e) { plugins.util.log(e); })
             .pipe(plugins.rename({ suffix: '.min' }))
             .pipe(plugins.sourcemaps.write('./'))
-            .pipe(gulp.dest(config.publicPath + '/css'));
+            .pipe(gulp.dest(config.publicPath + '/css'))
+            .pipe(plugins.livereload());
     };
 };

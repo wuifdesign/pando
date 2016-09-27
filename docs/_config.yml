@@ -1,0 +1,15 @@
+# Site settings
+title: Pando CSS
+email: design.wuif@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A Bootstrap design wrapper with additional styles and functions
+baseurl: "/pando"
+pandobaseurl: "/pando"
+url: "http://wuifdesign.github.io/pando"
+github_username:  wuifdesign
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-sitemap

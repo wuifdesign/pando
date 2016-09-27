@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Parallax Image</h1>
+    </div>
+</div>
+
+<style>
+    .parallax-demo {
+        background-image: url('{{ site.baseurl }}/img/bg_forest.jpg');
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.parallax-demo').parallax();
+    });
+</script>
+
+<div class="parallax parallax-demo text-center m-b">
+    <h1>Pando Parallax</h1>
+    <p class="lead">Parallax Styles</p>
+</div>
+
+<div class="container">
+    <div class="code-hider">
+        <a href="#">Show Code</a>
+    </div>
+    <div class="code-holder">
+    {% highlight html %}
+<style>
+    .parallax-demo {
+        background-image: url('...');
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.parallax-demo').parallax();
+    });
+</script>
+
+<div class="parallax parallax-demo text-center m-b">
+    <h1>Pando Parallax</h1>
+    <p class="lead">Parallax Styles</p>
+</div>
+    {% endhighlight %}
+    </div>
+</div>
