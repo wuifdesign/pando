@@ -4,7 +4,6 @@ email: design.wuif@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A Bootstrap design wrapper with additional styles and functions
 baseurl: "/pando"
-pandobaseurl: "/pando"
 url: "https://wuifdesign.github.io/pando"
 github_username:  wuifdesign
 
