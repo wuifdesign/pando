@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: http://wuifdesign.github.io/pando/sitemap.xml

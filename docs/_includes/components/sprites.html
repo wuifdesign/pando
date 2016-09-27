@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Sprites</h1>
+    </div>
+
+    <p>To enable sprites you just have to do two simple steps:</p>
+
+    <ol>
+        <li>
+            <b>Edit "sprite" task in your "gulpfile.js"</b><br/>
+            Just add the name of the folder containing the sprite images (i.e.: ".../img/sprites/base" you add "base" to the "sprites" key)
+        </li>
+        <li>
+            <b>Add the sprite to your "custom.scss"</b><br/>
+            <pre>@import "sprites/sprite-base";
+@include sprites($spritesheet-sprites);
+//@include retina-sprites($retina-groups); //Include if "enable_retina_sprites" is true</pre>
+        </li>
+    </ol>
+
+    <h4 class="m-t-lg">Supporting Retina Displays</h4>
+
+    <p>
+        You can also enable "enable_retina_sprites" in the "gulpfile.js".<br/>
+        If you do so, you have to add for each image in the sprite folder a second one ("filename@2x.png") to the same folder.<br/><br/>
+        This will automatically generate a sprite for retina displayes and use it if the monitor supports retina.
+
+        also you have to add @include retina-sprites($retina-groups); after the import into your SCSS file.
+    </p>
+</div>
