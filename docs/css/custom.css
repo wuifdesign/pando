@@ -1,0 +1,14 @@
+.code-holder {
+    display: none;
+}
+
+.code-hider a {
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
