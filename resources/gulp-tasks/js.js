@@ -17,6 +17,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.uglify({ preserveComments: 'license' }))
             .on('error', catchError)
             .pipe(plugins.sourcemaps.write('./'))
-            .pipe(gulp.dest(config.publicPath + '/js'));
+            .pipe(gulp.dest(config.publicPath + '/js'))
+            .pipe(plugins.livereload());
     };
 };
