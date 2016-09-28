@@ -1,12 +1,26 @@
 'use strict';
 
+var through = require('through2');
 var gulp    = require('gulp');
 var plugins = require('gulp-load-plugins')();
+
+var sassReporter = function() {
+    return through.obj(function(file, enc, cb){
+        if(file.cssSelectorLimit && !file.cssSelectorLimit.ok){
+            plugins.util.log(plugins.util.colors.yellow('\n'));
+            plugins.util.log(plugins.util.colors.yellow('"' + file.path + '" is over the css selector limit (' + file.cssSelectorLimit.count.toLocaleString('en') + '/4,095 Selectors).'));
+            plugins.util.log(plugins.util.colors.yellow('The line number of the first selector that is over the limit is ' + file.cssSelectorLimit.line.toLocaleString('en') + '.'));
+            plugins.util.log(plugins.util.colors.yellow('The first selector that is over the limit is "' + file.cssSelectorLimit.selector + '".'));
+        }
+        cb(null, file);
+    });
+};
 
 var config = {
     getTask: getTask,
     srcPath: './resources/assets', //change to your source path
-    publicPath: './public/assets' //change to your target path
+    publicPath: './public/assets', //change to your target path
+    sassReporter: sassReporter //Reporter for gulp-css-selector-limit
 };
 
 function getTask(task, extra) {
@@ -15,6 +29,7 @@ function getTask(task, extra) {
 
 gulp.task('copy-files', getTask('copy-files'));
 gulp.task('sass', getTask('sass'));
+gulp.task('sass-vendor', getTask('sass-vendor'));
 gulp.task('js', getTask('js'));
 gulp.task('js-vendor', getTask('js-vendor'));
 gulp.task('watch', getTask('watch'));
@@ -27,4 +42,4 @@ gulp.task('sprite', getTask('sprite', {
     sprites: [ /* 'base' */ ] //add folder names of the sprites. (if folder is "../img/sprites/base" add "base" to the array
 }));
 
-gulp.task('default', ['copy-files', 'sass', 'js-vendor', 'js']);
+gulp.task('default', ['copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);
