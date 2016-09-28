@@ -44,12 +44,14 @@
             $(document).ready(function () {
                 $('#shakeButton').click(function () {
                     $('#shakeInput').pandoShake();
-                    $('#shakeInput').addClass('input-error');
+                    $('#shakeInput').closest('.form-group').addClass('has-error');
                 })
             });
         </script>
         <div class="text-center">
-            <input id="shakeInput" type="text" /><br/>
+            <div class="form-group">
+                <input id="shakeInput" type="text" class="form-control" style="max-width: 300px; margin: 0 auto;" />
+            </div>
             <button id="shakeButton" class="btn btn-default m-t">Shake</button>
         </div>
     </div>
@@ -63,11 +65,13 @@
     $(document).ready(function () {
         $('#shakeButton').click(function () {
             $('#shakeInput').pandoShake();
-            $('#shakeInput').addClass('input-error');
+            $('#shakeInput').closest('.form-group').addClass('has-error');
         })
     });
 </script>
-<input id="shakeInput" type="text" />
+<div class="form-group">
+    <input id="shakeInput" type="text" class="form-control" />
+</div>
 <button id="shakeButton" class="btn m-t">Shake</button>
     {% endhighlight %}
     </div>
