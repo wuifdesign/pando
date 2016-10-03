@@ -9,7 +9,7 @@
 
             return this.each(function() {
                 var element = $(this);
-                $(document).scroll(function(){
+                $(document).scroll(function() {
                     scrollCheck(element, settings);
                 });
                 scrollCheck(element, settings);
@@ -22,14 +22,13 @@
             var offset = element.offset().top;
             var height = element.outerHeight();
 
-            if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
+            if(offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
                 return;
             }
 
             var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
             element.css('background-position', 'center ' + yBgPosition + 'px');
-        }
+        };
     }
 
 }(jQuery));
-

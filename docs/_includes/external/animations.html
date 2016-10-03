@@ -149,6 +149,16 @@
         </div>
     </div>
 
+    <h4 class="m-t-b">Custom Trigger</h4>
+
+    <img id="animation-custom" class="img-responsive center-block" data-src="holder.js/200x100/auto/text:Custom Trigger" />
+
+    <script type="text/javascript">
+        $('#animation-custom').on('click', function() {
+            $(this).animateCss('bounce');
+        });
+    </script>
+
     <div class="code-hider">
         <a href="#">Show Code</a>
     </div>
@@ -158,6 +168,14 @@
 <img class="img-responsive center-block" data-anijs="if: scroll, on: window, do: fadeIn animated, before: scrollReveal" src="..." />
 <img class="img-responsive center-block" data-anijs="if: click, do: bounceInRight animated" src="..." />
 <img class="img-responsive center-block" data-anijs="if: click, do: fadeInUp animated" src="..." />
+
+<img id="animation-custom" class="img-responsive center-block" data-src="holder.js/200x100/auto/text:Custom Trigger" />
+
+<script type="text/javascript">
+    $('#animation-custom').on('click', function() {
+        $(this).animateCss('bounce');
+    });
+</script>
     {% endhighlight %}
     </div>
 </div>
