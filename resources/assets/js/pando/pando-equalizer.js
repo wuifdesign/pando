@@ -39,8 +39,7 @@
 
                 elements.outerHeight(height);
             });
-        }
+        };
     }
 
 }(jQuery));
-
