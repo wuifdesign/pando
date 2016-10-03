@@ -31,22 +31,6 @@
             }
         };
 
-        $.fn.pandoScrollTop = function() {
-            $(this).click(function() {
-                var scrollTop = $(window).scrollTop();
-                $('html,body').animate({ scrollTop: 0 }, scrollTop/10);
-            });
-        };
-
-        var fixedCheck = function() {
-            if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
-                $('.footer-push').css('height', $('.footer').outerHeight(true));
-            }
-            if(fixedTopAuto.length > 0) {
-                body.css('padding-top', fixedTopAuto.outerHeight(true));
-            }
-        };
-
         var scrollCheck = function() {
             var scrollTop = $(window).scrollTop();
 
@@ -63,8 +47,14 @@
                     fixedTop.removeClass('is-scrolled');
                 }
             }
-        }
+        };
+
+        $.fn.pandoScrollTop = function() {
+            $(this).click(function() {
+                var scrollTop = $(window).scrollTop();
+                $('html,body').animate({scrollTop: 0}, scrollTop / 10);
+            });
+        };
     }
 
 }(jQuery));
-

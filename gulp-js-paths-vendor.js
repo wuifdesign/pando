@@ -9,12 +9,5 @@ module.exports = [
     'components/toastr/toastr.js',
 
     'components/magnific-popup/dist/jquery.magnific-popup.js',
-    'js/pando/magnific-popup-override.js',
-    'js/pando/animate-css.js',
-
-    'js/pando/pando-equalizer.js',
-    'js/pando/pando-layout.js',
-    'js/pando/pando-parallax.js',
-    'js/pando/pando-shake.js',
-    'js/pando/pando.js'
+    'js/pando/magnific-popup-override.js'
 ];
