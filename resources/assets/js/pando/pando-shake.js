@@ -23,26 +23,27 @@
 
             var position = this.css('position');
 
-            if(position == 'static') {
+            if(position === 'static') {
                 this.css('position', 'relative');
             }
 
-            for (var i = 0; i <= _runs; ++i) {
-                if(i == 0) {
-                    this.animate({ left: '-' + _distance + 'px' }, _speed / 2).animate({ left: _distance + 'px' }, _speed);
-                } else if (i == _runs) {
-                    this.animate({ left: '0px' }, _speed / 2, function() {
-                        $(this).css('position', '').css('left', '');
-                    });
+            var resetCSS = function() {
+                $(this).css('position', '').css('left', '');
+            };
+
+            for(var i = 0; i <= _runs; ++i) {
+                if(i === 0) {
+                    this.animate({left: '-' + _distance + 'px'}, _speed / 2).animate({left: _distance + 'px'}, _speed);
+                } else if(i === _runs) {
+                    this.animate({left: '0px'}, _speed / 2, resetCSS.bind(this));
                 } else {
-                    this.animate({ left: '-' + _distance + 'px' }, _speed).animate({ left: _distance + 'px' }, _speed);
+                    this.animate({left: '-' + _distance + 'px'}, _speed).animate({left: _distance + 'px'}, _speed);
                 }
                 _distance -= _distanceReduce;
             }
 
             return this;
-        }
+        };
     }
 
 }(jQuery));
-

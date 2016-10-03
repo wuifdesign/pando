@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    document.addEventListener("DOMContentLoaded", function(event) {
+    document.addEventListener("DOMContentLoaded", function() {
         if(typeof AniJS !== 'undefined') {
             AniJS.run();
         }
@@ -20,12 +20,10 @@
 
     window.str_shorten = function(text, maxLength) {
         var ret = text;
-        if (ret.length > maxLength) {
-            ret = ret.substr(0, maxLength-3) + '&hellip;';
+        if(ret.length > maxLength) {
+            ret = ret.substr(0, maxLength - 3) + '&hellip;';
         }
         return ret;
-    }
+    };
 
 }());
-
-
