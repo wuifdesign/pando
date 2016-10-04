@@ -1,6 +1,6 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        gulp.src(config.srcPath + '/sass/vendor.scss')
+        return gulp.src(config.srcPath + '/sass/vendor.scss')
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.cssimport({ extensions: ['css'] }))
             .pipe(plugins.sass().on('error', plugins.sass.logError))

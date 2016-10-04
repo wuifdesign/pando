@@ -3,25 +3,27 @@ html {
 }
 
 .btn-scroll-top {
+  @include opacity(.5);
+  @include border-radius(5px);
+
+  line-height: 20px;
   position: fixed;
-  border: none;
-  color: #fff;
+  z-index: 50;
   right: 10px;
   bottom: 10px;
-  @include opacity(0.5);
-  background: #000;
-  @include border-radius(5px);
-  line-height: 20px;
-  height: 35px;
   width: 35px;
-  text-align: center;
+  height: 35px;
   cursor: pointer;
-  z-index: 50;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background: #000;
 
   &:hover,
   &:focus {
+    @include opacity(.8);
+
     outline: none;
-    @include opacity(0.8);
   }
 }
 
