@@ -1,12 +1,12 @@
 @mixin bg-variant-full($parent, $color) {
   #{$parent} {
-    background-color: $color;
     color: #fff;
+    background-color: $color;
   }
   a#{$parent}:hover,
   a#{$parent}:focus {
-    background-color: darken($color, 10%);
     color: #fff;
+    background-color: darken($color, 10%);
   }
 }
 

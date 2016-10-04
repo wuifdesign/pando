@@ -1,19 +1,19 @@
 .btn-app {
-  padding: 12px;
   min-width: 90px;
+  padding: 12px;
 
   span,
   i {
-    display: block;
     font-size: 1.8em;
     line-height: 1em;
+    display: block;
     margin: 0 0 2px;
     padding: 0;
   }
 
   &.btn-xs {
-    padding: 5px;
     min-width: 65px;
+    padding: 5px;
 
     span,
     i {
@@ -22,13 +22,13 @@
   }
 
   &.btn-sm {
-    padding: 8px;
     min-width: 70px;
+    padding: 8px;
   }
 
   &.btn-lg {
-    padding: 15px;
     min-width: 100px;
+    padding: 15px;
 
     span,
     i {

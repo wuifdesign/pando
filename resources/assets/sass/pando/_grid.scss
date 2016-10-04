@@ -1,21 +1,21 @@
 .row {
   &.no-col-padding {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 
-    & > [class^="col-"],
-    & > [class*=" col-"] {
-      padding-left: 0;
+    & > [class^='col-'],
+    & > [class*=' col-'] {
       padding-right: 0;
+      padding-left: 0;
     }
   }
 
-  [class^="col-"],
-  [class*=" col-"] {
+  [class^='col-'],
+  [class*=' col-'] {
     &.centered {
-      margin-left: auto;
-      margin-right: auto;
       float: none;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -23,8 +23,8 @@
     display: table;
     width: 100%;
 
-    & > [class^="col-"],
-    & > [class*=" col-"] {
+    & > [class^='col-'],
+    & > [class*=' col-'] {
       vertical-align: middle;
 
       &.top {
@@ -37,33 +37,33 @@
     }
 
     @media (min-width: $screen-lg) {
-      & > [class^="col-lg-"],
-      & > [class*=" col-lg-"] {
-        float: none;
+      & > [class^='col-lg-'],
+      & > [class*=' col-lg-'] {
         display: table-cell;
+        float: none;
       }
     }
 
     @media (min-width: $screen-md) {
-      & > [class^="col-md-"],
-      & > [class*=" col-md-"] {
-        float: none;
+      & > [class^='col-md-'],
+      & > [class*=' col-md-'] {
         display: table-cell;
+        float: none;
       }
     }
 
     @media (min-width: $screen-sm) {
-      & > [class^="col-sm-"],
-      & > [class*=" col-sm-"] {
-        float: none;
+      & > [class^='col-sm-'],
+      & > [class*=' col-sm-'] {
         display: table-cell;
+        float: none;
       }
     }
 
-    & > [class^="col-xs-"],
-    & > [class*=" col-xs-"] {
-      float: none;
+    & > [class^='col-xs-'],
+    & > [class*=' col-xs-'] {
       display: table-cell;
+      float: none;
     }
   }
 }
