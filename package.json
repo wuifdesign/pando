@@ -9,6 +9,7 @@
     "gulp-clean-css": "^2.0.3",
     "gulp-concat": "^2.6.0",
     "gulp-css-selector-limit": "^0.1.2",
+    "gulp-csscomb": "^3.0.8",
     "gulp-cssimport": "^3.0.2",
     "gulp-imagemin": "^3.0.1",
     "gulp-jshint": "^2.0.1",

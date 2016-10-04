@@ -1,7 +1,7 @@
 .footer {
-  background: $default-footer-background;
-  color: $default-footer-font-color;
   padding: 10px 0;
+  color: $default-footer-font-color;
+  background: $default-footer-background;
 
   a {
     color: $default-footer-link-color;
@@ -20,8 +20,8 @@ body.footer-bottom {
 
   .footer {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
   }
 }
@@ -31,28 +31,29 @@ body.footer-fixed {
 
   .footer {
     position: fixed;
+    z-index: 900;
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 900;
   }
 }
 
 .nav-footer {
-  margin: 0;
-  padding: 10px 0px;
-  list-style: none;
   @include clearfix;
+
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
 
   & > li {
     display: block;
-    float: left;
     position: relative;
+    float: left;
 
     & > a {
-      color: $default-footer-font-color;
       display: block;
       padding: 0 20px;
+      color: $default-footer-font-color;
       border-right: 1px solid $default-footer-font-color;
 
       &:hover {
@@ -93,7 +94,7 @@ body.footer-fixed {
       text-align: center;
 
       & > a {
-        padding: 3px 0px;
+        padding: 3px 0;
         border-right: 0;
       }
     }

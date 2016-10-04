@@ -1,5 +1,5 @@
-$icon-font-path: "../fonts/bootstrap-sass/assets/fonts/bootstrap/" !default;
-$fa-font-path: "../fonts/font-awesome/fonts" !default;
+$icon-font-path: '../fonts/bootstrap-sass/assets/fonts/bootstrap/' !default;
+$fa-font-path: '../fonts/font-awesome/fonts' !default;
 
 $slick-arrow-color: #111 !default;
 $slick-font-path: '../fonts/slick-carousel/slick/fonts/' !default;
@@ -12,19 +12,19 @@ $text-color: #222 !default;
 
 $brand-primary: #458ecc !default;
 $brand-success: #76c279 !default;
-$brand-info:    #5bc0de !default;
+$brand-info: #5bc0de !default;
 $brand-warning: #faaf3e !default;
-$brand-danger:  #d14d38 !default;
-$brand-dark:    #444444 !default;
+$brand-danger: #d14d38 !default;
+$brand-dark: #444 !default;
 
 $default-margin: 15px !default;
 
 $default-navbar-color: $brand-primary !default;
-$nav-transparent-color: rgba(255, 255, 255, 0.7);
+$nav-transparent-color: rgba(255, 255, 255, .7);
 $nav-transparent-color-hover: #fff;
-$nav-transparent-bg: rgba(0, 0, 0, 0.85);
+$nav-transparent-bg: rgba(0, 0, 0, .85);
 
-$default-footer-background:       $text-color !default;
-$default-footer-font-color:       #fff !default;
-$default-footer-link-color:       lighten($brand-primary, 20%) !default;
+$default-footer-background: $text-color !default;
+$default-footer-font-color: #fff !default;
+$default-footer-link-color: lighten($brand-primary, 20%) !default;
 $default-footer-link-color-hover: lighten($default-footer-link-color, 10%) !default;
