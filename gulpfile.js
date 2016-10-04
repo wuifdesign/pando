@@ -32,6 +32,7 @@ gulp.task('sass', getTask('sass'));
 gulp.task('sass-vendor', getTask('sass-vendor'));
 gulp.task('js', getTask('js'));
 gulp.task('js-vendor', getTask('js-vendor'));
+gulp.task('css-comb', getTask('css-comb')); //Rearrange code in sass files
 gulp.task('watch', getTask('watch'));
 
 //Generates Sprite images and adds the image to the "sprites_path" and the SCSS-files to "sass/custom/sprites"

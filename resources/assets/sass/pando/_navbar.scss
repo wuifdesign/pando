@@ -3,8 +3,8 @@
 }
 
 .navbar-colored {
-  background-color: $default-navbar-color;
   border-color: darken($default-navbar-color, 5%);
+  background-color: $default-navbar-color;
 
   .navbar-brand {
     color: #fff;
@@ -67,8 +67,8 @@
       &,
       &:hover,
       &:focus {
-        background-color: darken($default-navbar-color, 5%);
         color: #fff;
+        background-color: darken($default-navbar-color, 5%);
       }
     }
 
@@ -125,9 +125,10 @@
 }
 
 .navbar-transparent {
-  @include transition(background 0.3s ease-in);
-  background-color: rgba(0, 0, 0, 0);
+  @include transition(background .3s ease-in);
+
   border-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 
   &.is-scrolled {
     background: $nav-transparent-bg;
@@ -188,10 +189,11 @@
   @media (max-width: $grid-float-breakpoint-max) {
     .navbar-collapse,
     .navbar-form {
-      @include transition(all 0.3s ease-in);
+      @include transition(all .3s ease-in);
+
       border-color: $nav-transparent-color;
-      background: $nav-transparent-bg;
       border-bottom: 1px solid #000;
+      background: $nav-transparent-bg;
     }
     &.is-scrolled {
       .navbar-collapse,
@@ -199,7 +201,6 @@
         background: transparent;
       }
     }
-
   }
 
   .navbar-nav {
@@ -207,18 +208,19 @@
       &,
       &:hover,
       &:focus {
-        background-color: transparent;
         color: $nav-transparent-color-hover;
+        background-color: transparent;
       }
     }
 
     > .open > .dropdown-menu {
       @include border-radius(3px);
       &:after {
-        position: absolute;
-        left: 20px;
-        bottom: 100%;
         @include caret('top', 10px);
+
+        position: absolute;
+        bottom: 100%;
+        left: 20px;
       }
     }
 
