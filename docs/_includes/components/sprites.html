@@ -28,3 +28,59 @@
         also you have to add @include retina-sprites($retina-groups); after the import into your SCSS file.
     </p>
 </div>
+
+<div class="container">
+    <div class="page-header">
+        <h1>SVG Sprites</h1>
+    </div>
+
+    <p>To enable sprites you just have to do 3 simple steps:</p>
+
+    <ol>
+        <li>
+            <b>Edit "sprite-svg" task in your "gulpfile.js"</b><br/>
+            Just add folder names of the sprites. (if folder is "/resources/assets/svg/icons" add "icons" to the array)
+        </li>
+        <li>
+            <b>Add the base svg files to the src folder</b> (i.e. "/resources/assets/svg/icons/src")
+        </li>
+        <li>
+            <b>After genarating the first time, add the _styles.scss file to your "custom.scss"</b><br/>
+            <pre>@import "../../svg/.../_styles";</pre>
+        </li>
+    </ol>
+
+    <p>
+        The generated sprite can be found in the public folder "svg/sprite-{sprite_name}.svg"
+    </p>
+
+    <h3 class="m-t-lg">Using SVG Sprites</h3>
+
+    <h4>External SVG</h4>
+
+    <p>If you are using this, you have to include <b>svg4everybody for IE9-11</b>.</p>
+
+    <svg class="svg-icons-close-dims"><use xlink:href="{{ site.baseurl }}/assets/svg/sprite-icons.svg#close"></use></svg>
+
+    <div class="code-hider">
+        <a href="#">Show Code</a>
+    </div>
+    <div class="code-holder">
+        {% highlight html %}<svg class="svg-{sprite_name}-{svg_name}-dims"><use xlink:href="path_to_svg/sprite-{sprite_name}.svg#{svg_name}"></use></svg>{% endhighlight %}
+    </div>
+
+    <h4>Inline SVG</h4>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;"><symbol viewBox="0 0 26.2 26.2" id="close"><title>Element 1</title><path d="M24.8 26.2L13.1 14.5 1.4 26.2 0 24.8l11.7-11.7L0 1.4 1.4 0l11.7 11.7L24.8 0l1.4 1.4-11.7 11.7 11.7 11.7z"/></symbol></svg>
+
+    <svg class="svg-icons-close-dims"><use xlink:href="#close"></use></svg>
+
+    <div class="code-hider">
+        <a href="#">Show Code</a>
+    </div>
+    <div class="code-holder">
+
+        {% highlight html %}<?php include_once('path_to_svg/sprite-{sprite_name}.svg') ?>
+<svg class="svg-{sprite_name}-{svg_name}-dims"><use xlink:href="#{svg_name}"></use></svg>{% endhighlight %}
+    </div>
+</div>
