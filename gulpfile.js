@@ -43,4 +43,8 @@ gulp.task('sprite', getTask('sprite', {
     sprites: [ /* 'base' */ ] //add folder names of the sprites. (if folder is "../img/sprites/base" add "base" to the array
 }));
 
+gulp.task('sprite-svg', getTask('sprite-svg', {
+    sprites: [ 'icons' ] //add folder names of the sprites. (if folder is "/resources/assets/svg/icons" add "icons" to the array
+}));
+
 gulp.task('default', ['copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);

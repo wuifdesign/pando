@@ -7,6 +7,7 @@ module.exports = [
     'components/bootstrap3-dialog/dist/js/bootstrap-dialog.js',
     'components/slick-carousel/slick/slick.js',
     'components/toastr/toastr.js',
+    'components/svg4everybody/dist/svg4everybody.js',
 
     'components/magnific-popup/dist/jquery.magnific-popup.js',
     'js/pando/magnific-popup-override.js'

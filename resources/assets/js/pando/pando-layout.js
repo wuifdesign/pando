@@ -32,6 +32,9 @@
         };
 
         var scrollCheck = function() {
+            if(typeof body === 'undefined') {
+                return;
+            }
             var scrollTop = $(window).scrollTop();
 
             if(scrollTop > 5) {

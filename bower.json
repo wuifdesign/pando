@@ -20,9 +20,12 @@
     "magnific-popup": "1.1.*",
     "slick-carousel": "1.6.*",
     "bootstrap3-dialog": "1.35.*",
+    "svg4everybody": "^2.1.1",
     "css-margin-padding": "https://github.com/wuifdesign/css-margin-padding.git"
   },
   "ignore": [
-    "*.md", "docs/*", "public/*"
+    "*.md",
+    "docs/*",
+    "public/*"
   ]
 }
