@@ -1,11 +1,11 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var crystalJsPaths  = require('../../gulp-js-paths-vendor.js');
-        var crystalPaths = [];
-        crystalJsPaths.map(function(path) {
-            crystalPaths.push(config.srcPath + '/' + path);
+        var sourceJsPaths  = require('../../gulp-js-paths-vendor.js');
+        var jsPaths = [];
+        sourceJsPaths.map(function(path) {
+            jsPaths.push(config.srcPath + '/' + path);
         });
-        return gulp.src(crystalPaths)
+        return gulp.src(jsPaths)
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.concat('vendor.min.js'))
             .pipe(plugins.uglify({ preserveComments: 'license' }))

@@ -2,15 +2,15 @@
     'use strict';
 
     if(typeof $ !== 'undefined') {
-        $(window).load(function() {
+        $(window).on('load', function() {
             equalize();
         });
 
-        $(window).resize(function() {
+        $(window).on('resize', function() {
             equalize();
         });
 
-        $(document).ready(function() {
+        $(document).on('ready', function() {
             equalize();
         });
 
