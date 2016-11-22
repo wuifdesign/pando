@@ -9,7 +9,7 @@
 
             return this.each(function() {
                 var element = $(this);
-                $(document).scroll(function() {
+                $(document).on('scroll', function() {
                     scrollCheck(element, settings);
                 });
                 scrollCheck(element, settings);

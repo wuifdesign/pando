@@ -6,7 +6,7 @@
         var fixedTop;
         var fixedTopAuto;
 
-        $(document).ready(function() {
+        $(document).on('ready', function() {
             body = $('body');
             fixedTop = $('.navbar-fixed-top');
             fixedTopAuto = $('.navbar-fixed-top.auto-padding');
@@ -14,15 +14,16 @@
             fixedCheck();
         });
 
-        $(window).load(function() {
+        $(window).on('load', function() {
             fixedCheck();
         });
 
-        $(window).scroll(function() {
+        $(window).on('scroll', function() {
             scrollCheck();
         });
 
         var fixedCheck = function() {
+            if(typeof body === 'undefined') { return; }
             if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
                 $('.footer-push').css('height', $('.footer').outerHeight(true));
             }
@@ -53,7 +54,7 @@
         };
 
         $.fn.pandoScrollTop = function() {
-            $(this).click(function() {
+            $(this).on('click', function() {
                 var scrollTop = $(window).scrollTop();
                 $('html,body').animate({scrollTop: 0}, scrollTop / 10);
             });
