@@ -1,15 +1,15 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var crystalJsPaths  = require('../../gulp-js-paths-vendor.js');
-        var crystalPaths = [];
-        crystalJsPaths.map(function(path) {
-            crystalPaths.push(config.srcPath + '/' + path);
+        var sourceJsPaths  = config.js_paths_vendor;
+        var jsPaths = [];
+        sourceJsPaths.map(function(path) {
+            jsPaths.push(config.src_path + '/' + path);
         });
-        return gulp.src(crystalPaths)
+        return gulp.src(jsPaths)
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.concat('vendor.min.js'))
             .pipe(plugins.uglify({ preserveComments: 'license' }))
             .pipe(plugins.sourcemaps.write('./'))
-            .pipe(gulp.dest(config.publicPath + '/js'));
+            .pipe(gulp.dest(config.public_path + '/js'));
     };
 };

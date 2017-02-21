@@ -4,7 +4,8 @@ module.exports = [
     'js/pando/pando-layout.js',
     'js/pando/pando-parallax.js',
     'js/pando/pando-shake.js',
+    'js/pando/pando-cookie.js',
     'js/pando/pando.js',
 
-    'js/custom.js'
+    'js/custom/main.js'
 ];
