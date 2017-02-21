@@ -14,15 +14,16 @@
             fixedCheck();
         });
 
-        $(window).load(function() {
+        $(window).on('load', function() {
             fixedCheck();
         });
 
-        $(window).scroll(function() {
+        $(window).on('scroll', function() {
             scrollCheck();
         });
 
         var fixedCheck = function() {
+            if(typeof body === 'undefined') { return; }
             if(body.hasClass('footer-fixed') || body.hasClass('footer-bottom')) {
                 $('.footer-push').css('height', $('.footer').outerHeight(true));
             }
@@ -32,6 +33,9 @@
         };
 
         var scrollCheck = function() {
+            if(typeof body === 'undefined') {
+                return;
+            }
             var scrollTop = $(window).scrollTop();
 
             if(scrollTop > 5) {
@@ -50,7 +54,7 @@
         };
 
         $.fn.pandoScrollTop = function() {
-            $(this).click(function() {
+            $(this).on('click', function() {
                 var scrollTop = $(window).scrollTop();
                 $('html,body').animate({scrollTop: 0}, scrollTop / 10);
             });
