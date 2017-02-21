@@ -7,5 +7,5 @@ module.exports = [
     'js/pando/pando-cookie.js',
     'js/pando/pando.js',
 
-    'js/custom.js'
+    'js/custom/main.js'
 ];

@@ -6,7 +6,7 @@
         var fixedTop;
         var fixedTopAuto;
 
-        $(document).on('ready', function() {
+        $(document).ready(function() {
             body = $('body');
             fixedTop = $('.navbar-fixed-top');
             fixedTopAuto = $('.navbar-fixed-top.auto-padding');
