@@ -24,7 +24,7 @@ module.exports = function (gulp, plugins, config, extra) {
             .pipe(gulp.dest(extra.sprites_path));
 
         spriteData.css
-            .pipe(gulp.dest(config.srcPath + '/sass/custom/sprites'));
+            .pipe(gulp.dest(config.src_path + '/sass/custom/sprites'));
     };
 
     return function () {

@@ -6,10 +6,10 @@ module.exports = function (gulp, plugins, config) {
     };
 
     return function () {
-        var sourceJsPaths  = require('../../gulp-js-paths-custom.js');
+        var sourceJsPaths  = config.js_paths_custom;
         var jsPaths = [];
         sourceJsPaths.map(function(path) {
-            jsPaths.push(config.srcPath + '/' + path);
+            jsPaths.push(config.src_path + '/' + path);
         });
         return gulp.src(jsPaths)
             .pipe(plugins.jshint())
@@ -20,7 +20,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.uglify({ preserveComments: 'license' }))
             .on('error', catchError)
             .pipe(plugins.sourcemaps.write('./'))
-            .pipe(gulp.dest(config.publicPath + '/js'))
+            .pipe(gulp.dest(config.public_path + '/js'))
             .pipe(plugins.livereload());
     };
 };
