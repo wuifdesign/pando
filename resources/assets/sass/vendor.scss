@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'pando/variables';
-@import 'mixins/pando';
+@import 'pando/mixins/pando';
 
 @import '../components/bootstrap-sass/assets/stylesheets/bootstrap';
 
@@ -11,7 +11,7 @@
 @import '../components/slick-carousel/slick/slick-theme.scss';
 
 @import '../components/magnific-popup/dist/magnific-popup.css';
-@import 'override/magnific-popup';
+@import 'pando/override/magnific-popup';
 
 @import '../components/toastr/toastr.scss';
-@import 'override/toastr';
+@import 'pando/override/toastr';

@@ -10,7 +10,7 @@
             equalize();
         });
 
-        $(document).on('ready', function() {
+        $(document).ready(function() {
             equalize();
         });
 
