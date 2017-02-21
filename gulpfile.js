@@ -18,13 +18,15 @@ var sassReporter = function() {
 
 var config = {
     getTask: getTask,
-    srcPath: './resources/assets', //change to your source path
-    publicPath: './public/assets', //change to your target path
-    sassReporter: sassReporter //Reporter for gulp-css-selector-limit
+    sassReporter: sassReporter, //Reporter for gulp-css-selector-limit
+    src_path: './resources/assets', //change to your source path
+    public_path: './public/assets', //change to your target path
+    js_paths_custom: require('./gulp-js-paths-custom.js'), //JS custom path file
+    js_paths_vendor: require('./gulp-js-paths-vendor.js') //JS vendor path file
 };
 
 function getTask(task, extra) {
-    return require(config.srcPath + '/../gulp-tasks/' + task)(gulp, plugins, config, extra);
+    return require(config.src_path + '/../gulp-tasks/' + task)(gulp, plugins, config, extra);
 }
 
 gulp.task('copy-files', getTask('copy-files'));

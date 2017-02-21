@@ -1,9 +1,9 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        gulp.src(config.srcPath + '/components/**/*.{png,jpg,gif}', { base: config.srcPath + '/components' }).pipe(gulp.dest(config.publicPath + '/img/vendor'));
+        gulp.src(config.src_path + '/components/**/*.{png,jpg,gif}', { base: config.src_path + '/components' }).pipe(gulp.dest(config.public_path + '/img/vendor'));
 
-        gulp.src(config.srcPath + '/components/bootstrap-sass/**/*.{eot,svg,ttf,woff,woff2}', { base: config.srcPath + '/components' }).pipe(gulp.dest(config.publicPath + '/fonts'));
-        gulp.src(config.srcPath + '/components/font-awesome/**/*.{eot,svg,ttf,woff,woff2}', { base: config.srcPath + '/components' }).pipe(gulp.dest(config.publicPath + '/fonts'));
-        gulp.src(config.srcPath + '/components/slick-carousel/**/*.{eot,svg,ttf,woff,woff2}', { base: config.srcPath + '/components' }).pipe(gulp.dest(config.publicPath + '/fonts'));
+        gulp.src(config.src_path + '/components/bootstrap-sass/**/*.{eot,svg,ttf,woff,woff2}', { base: config.src_path + '/components' }).pipe(gulp.dest(config.public_path + '/fonts'));
+        gulp.src(config.src_path + '/components/font-awesome/**/*.{eot,svg,ttf,woff,woff2}', { base: config.src_path + '/components' }).pipe(gulp.dest(config.public_path + '/fonts'));
+        gulp.src(config.src_path + '/components/slick-carousel/**/*.{eot,svg,ttf,woff,woff2}', { base: config.src_path + '/components' }).pipe(gulp.dest(config.public_path + '/fonts'));
     };
 };
