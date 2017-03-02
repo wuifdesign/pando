@@ -1,8 +1,8 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
         return gulp.src(config.src_path + '/sass/vendor.scss')
-            .pipe(plugins.sourcemaps.init())
             .pipe(plugins.cssimport({ extensions: ['css'] }))
+            .pipe(plugins.sourcemaps.init())
             .pipe(plugins.sass().on('error', plugins.sass.logError))
             .pipe(plugins.cssSelectorLimit())
             .pipe(plugins.cssSelectorLimit.reporter(config.sassReporter))

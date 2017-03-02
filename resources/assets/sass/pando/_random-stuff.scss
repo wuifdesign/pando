@@ -24,6 +24,8 @@
     display: inline-block;
 
     &:after {
+      position: relative;
+      top: -1px;
       margin: 0 8px 0 10px;
       content: '|';
     }
