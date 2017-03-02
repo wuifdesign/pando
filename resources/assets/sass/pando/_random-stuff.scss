@@ -24,12 +24,12 @@
     display: inline-block;
 
     &:after {
-      margin: 0 10px;
+      margin: 0 8px 0 10px;
       content: '|';
     }
 
     &:last-child:after {
-      content: ' ';
+      display: none;
     }
   }
 }
