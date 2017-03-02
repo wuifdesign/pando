@@ -10,7 +10,7 @@
             body = $('body');
             fixedTop = $('.navbar-fixed-top');
             fixedTopAuto = $('.navbar-fixed-top.auto-padding');
-            $('.btn-scroll-top').pandoScrollTop();
+            $('.btn-scroll-top').pandoOnClickScrollTop();
             fixedCheck();
         });
 
@@ -53,12 +53,23 @@
             }
         };
 
-        $.fn.pandoScrollTop = function() {
+        $.fn.pandoOnClickScrollTop = function() {
             $(this).on('click', function() {
-                var scrollTop = $(window).scrollTop();
-                $('html,body').animate({scrollTop: 0}, scrollTop / 10);
+                $('body').pandoScrollTo(0);
             });
         };
-    }
+
+        $.fn.pandoScrollTo = function(offset, speed_divider) {
+            if(typeof offset === 'undefined') {offset = 0; }
+            if(typeof speed_divider === 'undefined') { speed_divider = 7; }
+            var window_top = $(window).scrollTop();
+            var element_top = $($(this).first()).offset().top - offset;
+            var speed = (element_top - window_top) / speed_divider;
+            if(window_top > element_top) {
+                speed = (window_top - element_top) / speed_divider;
+            }
+            $('html,body').animate({scrollTop: element_top}, speed);
+        };
+    } 
 
 }(jQuery));
