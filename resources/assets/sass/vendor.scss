@@ -2,16 +2,15 @@
 @import 'pando/variables';
 @import 'pando/mixins/pando';
 
-@import '../components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
-@import '../components/animate.css/animate.css';
-@import '../components/css-margin-padding/src/sass/main.scss';
-@import '../components/font-awesome/scss/font-awesome';
-@import '../components/slick-carousel/slick/slick.scss';
-@import '../components/slick-carousel/slick/slick-theme.scss';
+@import '../../../node_modules/animate.css/animate.css';
+@import '../../../node_modules/font-awesome/scss/font-awesome';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
 
-@import '../components/magnific-popup/dist/magnific-popup.css';
+@import '../../../node_modules/magnific-popup/dist/magnific-popup.css';
 @import 'pando/override/magnific-popup';
 
-@import '../components/toastr/toastr.scss';
+@import '../../../node_modules/toastr/toastr.scss';
 @import 'pando/override/toastr';

@@ -1,5 +1,24 @@
 html {
+  font-size: $font-size-html-base;
   height: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: $font-size-html-sm;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: $font-size-html-md;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: $font-size-html-lg;
+  }
 }
 
 .btn-scroll-top {
@@ -24,50 +43,5 @@ html {
     @include opacity(.8);
 
     outline: none;
-  }
-}
-
-@media (max-width: $screen-md-max) {
-  .text-md-left {
-    text-align: left;
-  }
-  .text-md-right {
-    text-align: right;
-  }
-  .text-md-center {
-    text-align: center;
-  }
-  .text-md-justify {
-    text-align: justify;
-  }
-}
-
-@media (max-width: $screen-sm-max) {
-  .text-sm-left {
-    text-align: left;
-  }
-  .text-sm-right {
-    text-align: right;
-  }
-  .text-sm-center {
-    text-align: center;
-  }
-  .text-sm-justify {
-    text-align: justify;
-  }
-}
-
-@media (max-width: $screen-xs-max) {
-  .text-xs-left {
-    text-align: left;
-  }
-  .text-xs-right {
-    text-align: right;
-  }
-  .text-xs-center {
-    text-align: center;
-  }
-  .text-xs-justify {
-    text-align: justify;
   }
 }

@@ -2,20 +2,16 @@
 @import 'pando/variables';
 @import 'pando/mixins/pando';
 
-@import '../components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import '../components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
 
 @import 'pando/alert';
 @import 'pando/buttons';
-@import 'pando/colors';
 @import 'pando/footer';
 @import 'pando/forms';
-@import 'pando/grid';
 @import 'pando/layout';
-@import 'pando/navbar';
-@import 'pando/progress';
 @import 'pando/random-stuff';
 @import 'pando/typography';
-@import 'pando/widgets';
 
 @import 'custom/custom';

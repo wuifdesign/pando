@@ -3,7 +3,7 @@
 }
 
 @mixin no-user-select() {
-  @include user-select(none);
+  user-select: none;
 }
 
 @mixin transition($transition...) {

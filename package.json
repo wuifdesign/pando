@@ -8,7 +8,6 @@
   "devDependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-beta",
-    "bower": "^1.8.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-buffer": "0.0.2",
@@ -33,12 +32,12 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "magnific-popup": "^1.1.0",
+    "popper.js": "^1.12.5",
     "slick-carousel": "^1.7.1",
+    "svg4everybody": "^2.1.9",
     "toastr": "^2.1.2"
   },
   "scripts": {
-    "bower-install": "bower install",
-    "bower-update": "bower update",
     "gulp": "gulp",
     "gulp-copy-files": "gulp copy-files",
     "gulp-css-comb": "gulp css-comb",
@@ -48,8 +47,7 @@
     "gulp-sass-vendor": "gulp sass-vendor",
     "gulp-sprite": "gulp sprite",
     "gulp-sprite-svg": "gulp sprite-svg",
-    "gulp-watch": "gulp watch",
-    "postinstall": "bower install"
+    "gulp-watch": "gulp watch"
   },
   "license": "MIT"
 }

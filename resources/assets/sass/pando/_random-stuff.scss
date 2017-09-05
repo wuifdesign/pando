@@ -2,20 +2,6 @@
   display: inline-block;
 }
 
-.label-as-badge {
-  @include border-radius(1em);
-}
-
-.navbar-brand-text {
-  padding-top: 5px;
-  padding-bottom: 5px;
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
-  }
-}
-
 .list-inline-separate {
   display: block;
   padding: 0;
@@ -86,34 +72,25 @@
   }
 }
 
-.gradient-bg {
-  @include gradient-directional-free(135deg, #000, darken($brand-primary, 50%) 15%, darken($brand-primary, 30%) 40%, $brand-primary 70%, lighten($brand-primary, 20%) 95%, lighten($brand-primary, 30%));
-
-  color: #fff;
-}
-
-.table-display {
-  display: table;
-  width: 100%;
-
-  & > * {
-    display: table-cell;
+@include media-breakpoint-down(lg) {
+  [data-equalizer-disable='lg'] [data-equalizer-element] {
+    height: auto !important;
   }
 }
 
-@media (max-width: $screen-md-max) {
+@include media-breakpoint-down(md) {
   [data-equalizer-disable='md'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@media (max-width: $screen-sm-max) {
+@include media-breakpoint-down(sm) {
   [data-equalizer-disable='sm'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@media (max-width: $screen-xs-max) {
+@include media-breakpoint-down(xs) {
   [data-equalizer-disable='xs'] [data-equalizer-element] {
     height: auto !important;
   }

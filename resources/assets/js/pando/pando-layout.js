@@ -8,8 +8,8 @@
 
         $(document).ready(function() {
             body = $('body');
-            fixedTop = $('.navbar-fixed-top');
-            fixedTopAuto = $('.navbar-fixed-top.auto-padding');
+            fixedTop = $('.navbar.fixed-top');
+            fixedTopAuto = $('.navbar.fixed-top.auto-padding');
             $('.btn-scroll-top').pandoOnClickScrollTop();
             fixedCheck();
         });

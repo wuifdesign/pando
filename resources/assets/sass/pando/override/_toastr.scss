@@ -37,18 +37,18 @@
   }
 
   & > .toast-error {
-    background-color: darken($brand-danger, 5%);
+    background-color: darken(theme-color('danger'), 5%);
   }
 
   & > .toast-warning {
-    background-color: darken($brand-warning, 5%);
+    background-color: darken(theme-color('warning'), 5%);
   }
 
   & > .toast-success {
-    background-color: darken($brand-success, 5%);
+    background-color: darken(theme-color('success'), 5%);
   }
 
   & > .toast-info {
-    background-color: darken($brand-info, 5%);
+    background-color: darken(theme-color('info'), 5%);
   }
 }
