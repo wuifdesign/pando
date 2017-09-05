@@ -1,5 +1,5 @@
 .alert-white {
-  @include gradient-vertical(#fff, #f9f9f9);
+  @include gradient-y(#fff, #f9f9f9);
 
   display: table;
   position: relative;
@@ -18,8 +18,8 @@
     width: 45px;
     padding-top: 15px;
     text-align: center;
-    border: 1px solid darken($brand-primary, 5%);
-    background: $brand-primary;
+    border: 1px solid darken(theme-color('primary'), 5%);
+    background: theme-color('primary');
 
     &:after {
       display: block;
@@ -32,9 +32,9 @@
       content: ' ';
       transform: rotate(45deg);
       border: 0;
-      border-top: 1px solid darken($brand-primary, 5%);
-      border-right: 1px solid darken($brand-primary, 5%);
-      background: $brand-primary;
+      border-top: 1px solid darken(theme-color('primary'), 5%);
+      border-right: 1px solid darken(theme-color('primary'), 5%);
+      background: theme-color('primary');
     }
 
     i {
@@ -49,25 +49,25 @@
 
   &.alert-danger .icon,
   &.alert-danger .icon::after {
-    border-color: darken($brand-danger, 5%);
-    background: $brand-danger;
+    border-color: darken(theme-color('danger'), 5%);
+    background: theme-color('danger');
   }
 
   &.alert-info .icon,
   &.alert-info .icon::after {
-    border-color: darken($brand-info, 5%);
-    background: $brand-info;
+    border-color: darken(theme-color('info'), 5%);
+    background: theme-color('info');
   }
 
   &.alert-warning .icon,
   &.alert-warning .icon::after {
-    border-color: darken($brand-warning, 5%);
-    background: $brand-warning;
+    border-color: darken(theme-color('warning'), 5%);
+    background: theme-color('warning');
   }
 
   &.alert-success .icon,
   &.alert-success .icon::after {
-    border-color: darken($brand-success, 5%);
-    background: $brand-success;
+    border-color: darken(theme-color('success'), 5%);
+    background: theme-color('success');
   }
 }

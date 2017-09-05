@@ -77,7 +77,7 @@ body.footer-fixed {
   }
 }
 
-@media (max-width: $screen-sm-max) {
+@include media-breakpoint-down(md) {
   body.footer-bottom {
     .wrap {
       .footer,

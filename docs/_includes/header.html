@@ -1,20 +1,17 @@
 <header>
-    <nav class="navbar navbar-colored navbar-fixed-top auto-padding">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between auto-padding">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand navbar-brand-text" href="{{ site.baseurl }}/">
-                    <img alt="Pando Bootstrap Theme" src="{{ site.baseurl }}/assets-custom/img/logo.png">
-                    Pando Bootstrap Theme
-                </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <img alt="Pando Bootstrap Theme" src="{{ site.baseurl }}/assets-custom/img/logo.png" class="d-inline-block">
+                Pando Bootstrap Theme
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarText" class="navbar-collapse collapse">
+                <ul class="navbar-nav ml-auto">
                     {% for nav in site.data.nav %}
                         {% assign class = ''  %}
                         {% if page.url == nav.href %}
@@ -27,25 +24,31 @@
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
-                        <li class="{{ class }}">
-                            {% if nav.external == true %}
-                                <a target="_blank" href="{{ nav.href }}">{{ nav.title }}</a>
-                            {% else %}
-                                <a href="{{ nav.href | prepend: site.baseurl }}">{{ nav.title }}</a>
-                            {% endif %}
 
-                            {% if nav.subcategories != null %}
+                        {% if nav.subcategories != null %}
+                            <li class="nav-item dropdown {{ class }}">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                    {{ subcategory.title }}
+                                </a>
                                 <ul class="dropdown-menu">
                                     {% for subcategory in nav.subcategories %}
                                         {% if page.url == subcategory.href %}
-                                            <li class="active"><a href="{{ subcategory.href | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
+                                            <li class="dropdown-item active"><a href="{{ subcategory.href | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
                                         {% else %}
-                                            <li><a href="{{ subcategory.href | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
+                                            <li class="dropdown-item"><a href="{{ subcategory.href | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
                                         {% endif %}
                                     {% endfor %}
                                 </ul>
-                            {% endif %}
-                        </li>
+                            </li>
+                        {% else %}
+                            <li class="nav-item {{ class }}">
+                                {% if nav.external == true %}
+                                    <a class="nav-link" target="_blank" href="{{ nav.href }}">{{ nav.title }}</a>
+                                {% else %}
+                                    <a class="nav-link" href="{{ nav.href | prepend: site.baseurl }}">{{ nav.title }}</a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
