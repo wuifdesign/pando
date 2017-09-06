@@ -1,6 +1,5 @@
 html {
   font-size: $font-size-html-base;
-  height: 100%;
 }
 
 @include media-breakpoint-up(sm) {
@@ -22,10 +21,11 @@ html {
 }
 
 .btn-scroll-top {
-  @include opacity(.5);
+  @include opacity(0);
   @include border-radius(5px);
+  @include transition(opacity .3s ease-in-out);
 
-  line-height: 20px;
+  line-height: 31px;
   position: fixed;
   z-index: 50;
   right: 10px;
@@ -34,14 +34,30 @@ html {
   height: 35px;
   cursor: pointer;
   text-align: center;
-  color: #fff;
-  border: none;
-  background: #000;
+  color: #000;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid #000;
 
-  &:hover,
-  &:focus {
+  &:hover {
     @include opacity(.8);
+  }
 
+  &:focus {
     outline: none;
   }
+}
+
+.is-scrolled .btn-scroll-top {
+  @include opacity(.5);
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
 }
