@@ -11,6 +11,7 @@
          * @param distanceReduce Reduction of the distance for each following shake
          */
         $.fn.pandoShake = function(distance, runs, speed, distanceReduce) {
+            var element = this;
             var _distance = 10;
             var _speed = 100;
             var _runs = 3;
@@ -39,17 +40,23 @@
                 $(this).css('position', '').css('left', '');
             };
 
-            for(var i = 0; i <= _runs; ++i) {
-                if(i === 0) {
-                    this.animate({left: '-' + _distance + 'px'}, _speed / 2).animate({left: _distance + 'px'}, _speed);
-                } else if(i === _runs) {
-                    this.animate({left: '0px'}, _speed / 2, resetCSS.bind(this));
-                } else {
-                    this.animate({left: '-' + _distance + 'px'}, _speed).animate({left: _distance + 'px'}, _speed);
+            var runAnimation = function(run_index) {
+                var first_speed = _speed;
+                if(run_index === 0) {
+                    first_speed /= 2;
                 }
-                _distance -= _distanceReduce;
-            }
+                if(run_index === _runs) {
+                    element.animate({left: '0px'}, _speed / 2, resetCSS.bind(this));
+                } else {
+                    element.animate({left: '-' + _distance + 'px'}, first_speed).animate({left: _distance + 'px'}, _speed, 'swing', function() {
+                        runAnimation(run_index + 1)
+                    });
+                }
+            };
 
+            this.finish();
+            runAnimation(0);
+            
             return this;
         };
     }
