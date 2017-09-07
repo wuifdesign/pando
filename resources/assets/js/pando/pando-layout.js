@@ -3,10 +3,15 @@
 
     if(typeof $ !== 'undefined') {
         var body;
+        var site_holder;
         var fixedTopAuto;
 
         $(document).ready(function() {
             body = $('body');
+            site_holder = $('.site');
+            if(site_holder.length === 0) {
+                site_holder = body;
+            }
             fixedTopAuto = $('.navbar.fixed-top.auto-padding');
             $('.btn-scroll-top').pandoOnClickScrollTop();
             fixedCheck();
@@ -21,11 +26,11 @@
         });
 
         var fixedCheck = function() {
-            if(typeof body === 'undefined') {
+            if(typeof site_holder === 'undefined') {
                 return;
             }
             if(fixedTopAuto.length > 0) {
-                body.css('padding-top', fixedTopAuto.outerHeight(true));
+                site_holder.css('padding-top', fixedTopAuto.outerHeight(true));
             }
         };
 
