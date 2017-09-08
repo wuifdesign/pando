@@ -73,25 +73,25 @@
 }
 
 @include media-breakpoint-down(lg) {
-  [data-equalizer-disable='lg'] [data-equalizer-element] {
+  [data-equalizer-enable='xl'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
 @include media-breakpoint-down(md) {
-  [data-equalizer-disable='md'] [data-equalizer-element] {
+  [data-equalizer-enable='lg'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
 @include media-breakpoint-down(sm) {
-  [data-equalizer-disable='sm'] [data-equalizer-element] {
+  [data-equalizer-enable='md'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
 @include media-breakpoint-down(xs) {
-  [data-equalizer-disable='xs'] [data-equalizer-element] {
+  [data-equalizer-enable='sm'] [data-equalizer-element] {
     height: auto !important;
   }
 }
