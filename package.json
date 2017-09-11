@@ -6,7 +6,7 @@
   "author": "Wuif Design <design.wuif@gmail.com>",
   "homepage": "https://github.com/wuifdesign/pando",
   "devDependencies": {
-    "AniJS": "git+https://github.com/anijs/anijs.git#190b3504b672d59a4b721f5efc9481c26ea2147d",
+    "AniJS": "git+https://github.com/anijs/anijs.git#0.9.3",
     "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-beta",
     "font-awesome": "^4.7.0",
