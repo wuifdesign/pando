@@ -4,7 +4,7 @@
     if(typeof $ !== 'undefined') {
         var body;
         var site_holder;
-        var fixedTopAuto;
+        var fixed_top_auto;
 
         $(document).ready(function() {
             body = $('body');
@@ -12,16 +12,14 @@
             if(site_holder.length === 0) {
                 site_holder = body;
             }
-            fixedTopAuto = $('.navbar.fixed-top.auto-padding');
+            fixed_top_auto = $('.navbar.fixed-top.auto-padding');
             $('.btn-scroll-top').pandoOnClickScrollTop();
             fixedCheck();
         });
 
         $(window).on('load', function() {
             fixedCheck();
-        });
-
-        $(window).on('scroll', function() {
+        }).on('scroll', function() {
             scrollCheck();
         });
 
@@ -29,8 +27,8 @@
             if(typeof site_holder === 'undefined') {
                 return;
             }
-            if(fixedTopAuto.length > 0) {
-                site_holder.css('padding-top', fixedTopAuto.outerHeight(true));
+            if(fixed_top_auto.length > 0) {
+                site_holder.css('padding-top', fixed_top_auto.outerHeight(true));
             }
         };
 
@@ -38,8 +36,8 @@
             if(typeof body === 'undefined') {
                 return;
             }
-            var scrollTop = $(window).scrollTop();
-            if(scrollTop > 5) {
+            var scroll_top = $(window).scrollTop();
+            if(scroll_top > 5) {
                 body.addClass('is-scrolled');
             } else {
                 body.removeClass('is-scrolled');
