@@ -9,6 +9,10 @@ module.exports = [
     '../../node_modules/AniJS/dist/anijs.js',
     '../../node_modules/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
 
+    '../../node_modules/photoswipe/dist/photoswipe.js',
+    '../../node_modules/photoswipe/dist/photoswipe-ui-default.js',
+    'js/pando/photoswipe-override.js',
+
     '../../node_modules/magnific-popup/dist/jquery.magnific-popup.js',
     'js/pando/magnific-popup-override.js'
 ];
