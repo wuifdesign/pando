@@ -49,7 +49,7 @@
                     element.animate({left: '0px'}, _speed / 2, resetCSS.bind(this));
                 } else {
                     element.animate({left: '-' + _distance + 'px'}, first_speed).animate({left: _distance + 'px'}, _speed, 'swing', function() {
-                        runAnimation(run_index + 1)
+                        runAnimation(run_index + 1);
                     });
                 }
             };

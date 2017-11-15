@@ -8,9 +8,12 @@
   "devDependencies": {
     "AniJS": "git+https://github.com/anijs/anijs.git#0.9.3",
     "animate.css": "^3.5.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "bootstrap": "^4.0.0-beta",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-buffer": "0.0.2",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
@@ -50,6 +53,11 @@
     "gulp-sprite": "gulp sprite",
     "gulp-sprite-svg": "gulp sprite-svg",
     "gulp-watch": "gulp watch"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "license": "MIT"
 }
