@@ -2,9 +2,9 @@
 @import 'pando/variables';
 @import 'pando/mixins/pando';
 
-@import '../../../node_modules/bootstrap/scss/functions';
-@import '../../../node_modules/bootstrap/scss/variables';
-@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../components/bootstrap/scss/functions';
+@import '../components/bootstrap/scss/variables';
+@import '../components/bootstrap/scss/mixins';
 
 @import 'pando/alert';
 @import 'pando/buttons';

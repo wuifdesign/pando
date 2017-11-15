@@ -27,8 +27,9 @@ var config = {
 
 var getTask = function(task, extra) {
     return require(config.src_path + '/../gulp-tasks/' + task)(gulp, plugins, config, extra);
-}
+};
 
+gulp.task('symlink', getTask('symlink')); //Create symlink to node_modules folder
 gulp.task('copy-files', getTask('copy-files'));
 gulp.task('css-comb', getTask('css-comb')); //Rearrange code in sass files
 gulp.task('js', getTask('js'));
@@ -50,4 +51,4 @@ gulp.task('sprite-svg', getTask('sprite-svg', {
 
 gulp.task('watch', getTask('watch'));
 
-gulp.task('default', ['copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);
+gulp.task('default', ['symlink', 'copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);
