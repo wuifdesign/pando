@@ -15,6 +15,7 @@
             fixed_top_auto = $('.navbar.fixed-top.auto-padding');
             $('.btn-scroll-top').pandoOnClickScrollTop();
             fixedCheck();
+            scrollCheck();
         });
 
         $(window).on('load', function() {
