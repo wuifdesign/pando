@@ -5,7 +5,11 @@
 @import '../components/bootstrap/scss/bootstrap';
 
 @import '../components/animate.css/animate.css';
-@import '../components/font-awesome/scss/font-awesome';
+@import '../components/@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '../components/@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+@import '../components/@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+@import '../components/@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+//@import '../components/font-awesome/scss/font-awesome';
 @import '../components/slick-carousel/slick/slick.scss';
 @import '../components/slick-carousel/slick/slick-theme.scss';
 
