@@ -17,6 +17,8 @@ Pando CSS
 - [Slick.js](https://github.com/kenwheeler/slick)
 - [Magnific Popup](https://github.com/dimsemenov/Magnific-Popup)
 - [Toastr](https://github.com/CodeSeven/toastr)
+- [Photoswipe](https://github.com/dimsemenov/photoswipe)
+- [jQuery Validation](https://github.com/jquery-validation/jquery-validation)
 
 ## Installation
 

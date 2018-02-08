@@ -9,6 +9,9 @@ module.exports = [
     'components/AniJS/dist/anijs.js',
     'components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal.js',
 
+    'components/jquery-validation/dist/jquery.validate.js',
+    //'components/jquery-validation/dist/localization/messages_de.js',
+
     'components/photoswipe/dist/photoswipe.js',
     'components/photoswipe/dist/photoswipe-ui-default.js',
     'js/pando/photoswipe-override.js',
