@@ -30,3 +30,10 @@ body {
 .code-holder-single pre, .code-holder-single figure {
     margin: 0;
 }
+
+.highlight pre {
+    padding: 5px;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

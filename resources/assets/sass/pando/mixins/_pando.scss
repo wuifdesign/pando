@@ -46,3 +46,16 @@
     border-left: $size solid $color;
   }
 }
+
+@mixin loading-circle($color: $body-color) {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: -2px;
+  animation: pando-loading-spin 1s infinite linear;
+  vertical-align: middle;
+  border: .2em solid transparentize($color, .8);
+  border-top-color: $color;
+  border-radius: 50%;
+}

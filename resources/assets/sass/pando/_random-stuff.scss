@@ -94,26 +94,8 @@
   }
 }
 
-@keyframes pando-loading-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .pando-loading {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  position: relative;
-  top: -2px;
-  animation: pando-loading-spin 1s infinite linear;
-  vertical-align: middle;
-  border: .2em solid transparentize($body-color, .8);
-  border-top-color: $body-color;
-  border-radius: 50%;
+  @include loading-circle();
 
   @each $color, $value in $theme-colors {
     &.pando-loading-#{$color} {
