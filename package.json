@@ -6,12 +6,12 @@
   "author": "Wuif Design <design.wuif@gmail.com>",
   "homepage": "https://github.com/wuifdesign/pando",
   "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.3",
     "AniJS": "git+https://github.com/anijs/anijs.git#0.9.3",
     "animate.css": "^3.5.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "bootstrap": "^4.0.0-beta",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-buffer": "0.0.2",

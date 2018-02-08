@@ -7,6 +7,6 @@
 - title: "External"
   href: "/docs/external/"
 
-- title: "<i class='fa fa-github'></i> GitHub"
+- title: "<i class='fab fa-github'></i> GitHub"
   href: "https://github.com/wuifdesign/pando"
   external: true

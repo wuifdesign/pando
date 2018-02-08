@@ -22,10 +22,10 @@ $default-footer-link-color: $blue !default;
 $default-footer-link-color-hover: lighten($default-footer-link-color, 10%) !default;
 
 //Vendor Styles
-$fa-font-path: '../fonts/font-awesome/fonts' !default;
+$fa-font-path: '../fonts/fortawesome' !default;
 
 $slick-arrow-color: #111 !default;
-$slick-font-path: '../fonts/slick-carousel/slick/fonts/' !default;
-$slick-loader-path: '../img/vendor/slick-carousel/slick/' !default;
+$slick-font-path: '../fonts/slick-carousel/' !default;
+$slick-loader-path: '../img/vendor/slick-carousel/' !default;
 
-$pswp__assets-path: '../img/vendor/photoswipe/dist/default-skin/' !default;
+$pswp__assets-path: '../img/vendor/photoswipe/' !default;

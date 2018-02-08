@@ -51,4 +51,4 @@ gulp.task('sprite-svg', getTask('sprite-svg', {
 
 gulp.task('watch', getTask('watch'));
 
-gulp.task('default', ['symlink', 'copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);
+gulp.task('default', ['symlink', 'sass-vendor', 'sass', 'js-vendor', 'js']);
