@@ -22,11 +22,22 @@
             fixedCheck();
         }).on('scroll', function() {
             scrollCheck();
+        }).on('resize', function() {
+            fixedCheck();
         });
 
         var fixedCheck = function() {
             if(typeof site_holder === 'undefined') {
                 return;
+            }
+            if(body.hasClass('page-footer-bottom')) {
+                var footer = $('.page-footer');
+                var footer_push = $('.page-footer-push');
+                if(footer_push.length === 0) {
+                    footer_push = $('<div class="page-footer-push"></div>');
+                    footer.before(footer_push);
+                }
+                footer_push.css('height', footer.outerHeight(true));
             }
             if(fixed_top_auto.length > 0) {
                 site_holder.css('padding-top', fixed_top_auto.outerHeight(true));

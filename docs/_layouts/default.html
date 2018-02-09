@@ -3,21 +3,15 @@
 
 {% include head.html %}
 
-<body>
+<body class="page-footer-bottom">
 
-    <div class="site-holder">
-        <div class="site">
-            <div class="site-header">
-                {% include header.html %}
-            </div>
-            <div class="site-content">
-                {{ content }}
-            </div>
-            <div class="site-footer">
-                {% include footer.html %}
-            </div>
-        </div>
-    </div>
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
 
     <button class="btn-scroll-top"><i class="fa fa-chevron-up fa-fw"></i></button>
 
