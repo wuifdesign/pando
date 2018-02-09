@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   font-size: $font-size-html-base;
 }
 
@@ -50,19 +51,4 @@ html {
 
 .is-scrolled .btn-scroll-top {
   @include opacity(.5);
-}
-
-.site-holder {
-  display: flex;
-}
-
-.site {
-  display: flex;
-  flex: 1 1 auto;
-  flex-flow: column nowrap;
-  min-height: 100vh;
-}
-
-.site-content {
-  flex: 1 1 auto;
 }
