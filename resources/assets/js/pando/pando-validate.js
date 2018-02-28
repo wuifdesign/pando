@@ -99,7 +99,7 @@
             return {
                 lang: lang,
                 validator: validator
-            }
+            };
         };
 
         $('.pando-ajax-form').each(function() {

@@ -113,3 +113,21 @@
 </div>{% endhighlight %}
     </div>
 </div>
+
+<div class="container mb-4">
+    <h3 class="mt-4 mb-2">Footer Bottom</h3>
+
+    You need to add the class <code>.page-footer-bottom</code> to the <code>body</code>. If you have an element with the class
+    <code>.page-footer</code> on the page, it will be at least on the bottom of the page.<br/><br/>
+    If you update the Footer you may have to call <code>$.pandoFooterPush();</code> to update the height of the push element.
+
+    <div class="code-hider">
+        <a href="#">Show Code</a>
+    </div>
+    <div class="code-holder">
+    {% highlight html %}
+<body class="page-footer-bottom">
+    <footer class="page-footer"></footer>
+</body>{% endhighlight %}
+    </div>
+</div>
