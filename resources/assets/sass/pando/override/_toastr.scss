@@ -1,12 +1,12 @@
 #toast-container {
   & > div {
-    @include box-shadow(0 0 3px #888);
     @include opacity(.92);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 30px 19px 50px;
 
     &:hover {
       @include opacity(1);
-
-      box-shadow: 0 0 4px #888;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -14,26 +14,46 @@
     background-image: none !important;
   }
 
+  button.toast-close-button {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    padding: 0 5px;
+    text-shadow: none;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
   & > .toast:before {
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free';
     font-size: 24px;
     line-height: 24px;
-    position: fixed;
-    margin: auto .5em auto -1.5em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
     color: #fff;
+    width: 50px;
+    text-align: center;
   }
 
   & > .toast-warning:before {
-    content: '\f075';
+    content: fa-content($fa-var-comment);
   }
   & > .toast-error:before {
-    content: '\f071';
+    content: fa-content($fa-var-exclamation-triangle);
+    font-weight: bold;
   }
   & > .toast-info:before {
-    content: '\f1cd';
+    content: fa-content($fa-var-info);
+    font-weight: bold;
   }
   & > .toast-success:before {
-    content: '\f00C';
+    content: fa-content($fa-var-check);
+    font-weight: bold;
   }
 
   & > .toast-error {
