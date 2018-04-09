@@ -25,6 +25,21 @@ var config = {
     js_paths_vendor: require('./gulp-js-paths-vendor.js') //JS vendor path file
 };
 
+config.gulpNotify = function(message) {
+    return {
+        title: 'Pando',
+        subtitle: 'Gulp Notification',
+        message: message,
+        onLast: true,
+        icon: null,
+        timeout: 2,
+        contentImage: config.src_path + '/../gulp-tasks/notify-icon.png', // case sensitive
+        templateOptions: {
+            date: new Date()
+        }
+    };
+};
+
 var getTask = function(task, extra) {
     return require(config.src_path + '/../gulp-tasks/' + task)(gulp, plugins, config, extra);
 };
