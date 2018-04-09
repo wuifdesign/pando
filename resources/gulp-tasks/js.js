@@ -22,6 +22,7 @@ module.exports = function (gulp, plugins, config) {
             .on('error', catchError)
             .pipe(plugins.sourcemaps.write('./'))
             .pipe(gulp.dest(config.public_path + '/js'))
-            .pipe(plugins.livereload());
+            .pipe(plugins.livereload())
+            .pipe(plugins.notify(config.gulpNotify('"main.js" generated!')));
     };
 };
