@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener('DOMContentLoaded', function() {
         if(typeof AniJS !== 'undefined') {
             AniJS.run();
         }
