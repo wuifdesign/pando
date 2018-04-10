@@ -1,3 +1,7 @@
+body {
+    padding-top: 65px;
+}
+
 .code-holder {
     display: none;
 }
@@ -16,4 +20,20 @@
 .svg-icons-close-dims {
     width: 26.2px;
     height: 26.2px;
+}
+
+.code-holder-single {
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.code-holder-single pre, .code-holder-single figure {
+    margin: 0;
+}
+
+.highlight pre {
+    padding: 5px;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

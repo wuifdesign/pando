@@ -25,10 +25,23 @@ var config = {
     js_paths_vendor: require('./gulp-js-paths-vendor.js') //JS vendor path file
 };
 
+config.gulpNotify = function(message) {
+    return {
+        title: 'Pando',
+        subtitle: 'Gulp Notification',
+        message: message,
+        onLast: true,
+        icon: null,
+        timeout: 2,
+        contentImage: config.src_path + '/../gulp-tasks/notify-icon.png'
+    };
+};
+
 var getTask = function(task, extra) {
     return require(config.src_path + '/../gulp-tasks/' + task)(gulp, plugins, config, extra);
-}
+};
 
+gulp.task('symlink', getTask('symlink')); //Create symlink to node_modules folder
 gulp.task('copy-files', getTask('copy-files'));
 gulp.task('css-comb', getTask('css-comb')); //Rearrange code in sass files
 gulp.task('js', getTask('js'));
@@ -50,4 +63,4 @@ gulp.task('sprite-svg', getTask('sprite-svg', {
 
 gulp.task('watch', getTask('watch'));
 
-gulp.task('default', ['copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js']);
+gulp.task('default', ['symlink', 'sass-vendor', 'sass', 'js-vendor', 'js']);

@@ -1,7 +1,6 @@
 Pando CSS
 ---------
 
-[![Bower version](https://badge.fury.io/bo/pando.svg)](http://badge.fury.io/bo/pando)
 [![devDependency Status](https://david-dm.org/wuifdesign/pando/dev-status.svg)](https://david-dm.org/wuifdesign/pando#info=devDependencies)
 
 #### See the [Documentation](http://wuifdesign.github.io/pando/)
@@ -12,34 +11,28 @@ Pando CSS
 - [jQuery](https://jquery.com/)
 
 ##### Includes:
-- [bootstrap-sass](https://github.com/twbs/bootstrap-sass)
+- [bootstrap](https://github.com/twbs/bootstrap)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [Animate.css](https://github.com/daneden/animate.css)
-- [AniJS](https://github.com/anijs/anijs)
-- [bootstrap3-dialog](https://github.com/nakupanda/bootstrap3-dialog)
 - [Slick.js](https://github.com/kenwheeler/slick)
 - [Magnific Popup](https://github.com/dimsemenov/Magnific-Popup)
 - [Toastr](https://github.com/CodeSeven/toastr)
+- [Photoswipe](https://github.com/dimsemenov/photoswipe)
+- [jQuery Validation](https://github.com/jquery-validation/jquery-validation)
 
 ## Installation
 
 Files are bundled using [Gulp.js](http://gulpjs.com/). The bundle can be created like this:
 
-    $ npm install       //Should automatically run bower install
+    $ npm install       //Install dependencies
     $ npm run gulp      //Runs the gulp default task
 
 ## Compiling the code
 
-How to update your vendor dependencies:
-
-    $ npm run bower-update
-    -- or --
-    $ bower update
-
 You can use `npm` or `gulp` to compile the code. Use one of the following
 
     $ npm run gulp              //Copies vendor files and compiles JS/CSS ('copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js')
-    $ npm run gulp-copy-files   //Copies new font and images from the bower folder to the public folder
+    $ npm run gulp-copy-files   //Copies new font and images from the npm folder to the public folder
     $ npm run gulp-css-comb     //Rearrange code in sass files
     $ npm run gulp-js           //Compiles JS
     $ npm run gulp-js-vendor    //Compiles vendor JS
@@ -52,7 +45,7 @@ You can use `npm` or `gulp` to compile the code. Use one of the following
 If you have `gulp-cli installed globally you can also use the following commands:
 
     $ gulp              //Copies vendor files and compiles JS/CSS ('copy-files', 'sass-vendor', 'sass', 'js-vendor', 'js')
-    $ gulp copy-files   //Copies new font and images from the bower folder to the public folder
+    $ gulp copy-files   //Copies new font and images from the npm folder to the public folder
     $ gulp css-comb     //Rearrange code in sass files
     $ gulp js           //Compiles JS
     $ gulp js-vendor    //Compiles vendor JS

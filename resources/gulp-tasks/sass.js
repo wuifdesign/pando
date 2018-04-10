@@ -1,8 +1,8 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
         return gulp.src(config.src_path + '/sass/main.scss')
-            .pipe(plugins.sourcemaps.init())
             .pipe(plugins.cssimport({ extensions: ['css'] }))
+            .pipe(plugins.sourcemaps.init())
             .pipe(plugins.sass().on('error', plugins.sass.logError))
             .pipe(plugins.cssSelectorLimit())
             .pipe(plugins.cssSelectorLimit.reporter(config.sassReporter))
@@ -13,6 +13,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.rename({ suffix: '.min' }))
             .pipe(plugins.sourcemaps.write('./'))
             .pipe(gulp.dest(config.public_path + '/css'))
-            .pipe(plugins.livereload());
+            .pipe(plugins.livereload())
+            .pipe(plugins.notify(config.gulpNotify('"main.css" generated!')));
     };
 };

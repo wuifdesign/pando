@@ -16,8 +16,6 @@
 
         /**
          * Calculate all Equalizer Elements
-         *
-         * @param type Set to 'init' if first call
          */
         $.pandoEqualizer = function() {
             equalize();
