@@ -1,4 +1,4 @@
-.footer {
+.page-footer {
   padding: 10px 0;
   color: $default-footer-font-color;
   background: $default-footer-background;
@@ -12,13 +12,13 @@
   }
 }
 
-body.footer-bottom {
+body.page-footer-bottom {
   position: relative;
   height: auto !important;
   height: 100%;
   min-height: 100%;
 
-  .footer {
+  .page-footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -26,77 +26,12 @@ body.footer-bottom {
   }
 }
 
-body.footer-fixed {
-  background: $body-bg;
-
-  .footer {
-    position: fixed;
-    z-index: 900;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-}
-
-.nav-footer {
-  @include clearfix;
-
-  margin: 0;
-  padding: 10px 0;
-  list-style: none;
-
-  & > li {
-    display: block;
-    position: relative;
-    float: left;
-
-    & > a {
-      display: block;
-      padding: 0 20px;
-      color: $default-footer-font-color;
-      border-right: 1px solid $default-footer-font-color;
-
-      &:hover {
-        color: $default-footer-font-color;
-      }
-    }
-
-    &.active {
-      & > a {
-        text-decoration: underline;
-      }
-    }
-
-    &:last-child > a {
-      border-right: 0;
-    }
-
-    & > ul {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: $screen-sm-max) {
-  body.footer-bottom {
-    .wrap {
-      .footer,
-      .footer-push {
-        position: static;
-        height: auto !important;
-      }
-    }
-  }
-
-  .nav-footer {
-    & > li {
-      float: none;
-      text-align: center;
-
-      & > a {
-        padding: 3px 0;
-        border-right: 0;
-      }
+@include media-breakpoint-down(sm) {
+  body.page-footer-bottom {
+    .page-footer,
+    .page-footer-push {
+      position: static;
+      height: auto !important;
     }
   }
 }

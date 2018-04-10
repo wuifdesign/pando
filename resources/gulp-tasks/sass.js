@@ -13,6 +13,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.rename({ suffix: '.min' }))
             .pipe(plugins.sourcemaps.write('./'))
             .pipe(gulp.dest(config.public_path + '/css'))
-            .pipe(plugins.livereload());
+            .pipe(plugins.livereload())
+            .pipe(plugins.notify(config.gulpNotify('"main.css" generated!')));
     };
 };

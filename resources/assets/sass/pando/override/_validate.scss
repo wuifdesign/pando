@@ -1,0 +1,43 @@
+.form-show-success,
+.form-show-error {
+  display: none;
+}
+
+.custom-loading {
+  animation: custom-loading-spin 1s infinite linear;
+  border: .2em solid transparentize(#fff, .8);
+  border-radius: 50%;
+  border-top-color: #fff;
+  display: inline-block;
+  height: 1em;
+  margin-top: -.15em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.pando-ajax-file-form,
+.pando-ajax-form {
+  button[type="submit"].disabled {
+    pointer-events: none;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      background: inherit;
+    }
+
+    &:after {
+      @include loading-circle(#fff);
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -.5em 0 0 -.5em;
+    }
+  }
+}

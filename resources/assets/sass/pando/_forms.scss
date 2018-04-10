@@ -16,7 +16,7 @@ input[type=checkbox] {
       width: 53px;
       height: 22px;
       margin: 0 5px;
-      background-color: $input-border;
+      background-color: $input-border-color;
 
       &:after {
         @include border-radius(50%);
@@ -32,13 +32,13 @@ input[type=checkbox] {
         height: 18px;
         content: '|||';
         text-align: center;
-        color: darken($brand-primary, 20%);
+        color: darken(theme-color('primary'), 20%);
         background-color: #fff;
       }
     }
 
     &:checked + .form-add {
-      background-color: $brand-primary;
+      background-color: theme-color('primary');
 
       &:after {
         left: 33px;
@@ -53,7 +53,7 @@ input[type=checkbox] {
       width: 16px;
       height: 16px;
       margin: 0 5px 5px;
-      border: 1px solid $input-border;
+      border: 1px solid $input-border-color;
       background: #fff;
 
       &:after {
@@ -69,13 +69,13 @@ input[type=checkbox] {
       }
 
       &:hover {
-        border-color: $brand-primary;
+        border-color: theme-color('primary');
       }
     }
 
     &:checked + .form-add {
       &:after {
-        background-color: $brand-primary;
+        background-color: theme-color('primary');
       }
     }
   }
@@ -91,7 +91,7 @@ input[type=radio] {
       width: 16px;
       height: 16px;
       margin: 0 5px 5px;
-      border: 1px solid $input-border;
+      border: 1px solid $input-border-color;
       background: #fff;
 
       &:after {
@@ -108,13 +108,13 @@ input[type=radio] {
       }
 
       &:hover {
-        border-color: $brand-primary;
+        border-color: theme-color('primary');
       }
     }
 
     &:checked + .form-add {
       &:after {
-        background-color: $brand-primary;
+        background-color: theme-color('primary');
       }
     }
   }
