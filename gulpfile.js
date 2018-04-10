@@ -33,10 +33,7 @@ config.gulpNotify = function(message) {
         onLast: true,
         icon: null,
         timeout: 2,
-        contentImage: config.src_path + '/../gulp-tasks/notify-icon.png', // case sensitive
-        templateOptions: {
-            date: new Date()
-        }
+        contentImage: config.src_path + '/../gulp-tasks/notify-icon.png'
     };
 };
 
