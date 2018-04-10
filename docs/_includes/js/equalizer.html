@@ -1,7 +1,5 @@
-<div class="container m-b-lg">
-    <div class="page-header">
-        <h1>Equalizer</h1>
-    </div>
+<div class="container mb-4">
+    <h1 class="mt-4 mb-2">Equalizer</h1>
 
     <style>
         .panel {
@@ -9,15 +7,15 @@
         }
     </style>
 
-    <p class="m-t-b">
+    <p class="my-3">
         Add the attribute <code>data-equalizer</code> to the container and <code>data-equalizer-element</code> to each element.<br/>
         If you want to use more equalizer you can specify a name for each by using <code>data-equalizer="main"</code> and
         <code>data-equalizer-element="main"</code>.<br/>
-        Adding <code>data-equalizer-disable="md"</code> or <code>data-equalizer-disable="sm"</code> to the <code>data-equalizer</code> will disable the equalizer
-        for smaller screens.
+        Adding <code>data-equalizer-enable="md"</code> or <code>data-equalizer-enable="sm"</code> to the <code>data-equalizer</code> will enable the equalizer
+        only for wider screens.
     </p>
 
-    <div class="row" data-equalizer>
+    <div class="row mb-3" data-equalizer>
         <div class="col-md-4">
             <div class="panel" data-equalizer-element>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
@@ -37,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="row" data-equalizer="main" data-equalizer-disable="sm">
+    <div class="row" data-equalizer="main" data-equalizer-enable="sm">
         <div class="col-md-4">
             <div class="panel" data-equalizer-element="main">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
@@ -98,7 +96,6 @@
             ...
         </div>
     </div>
-</div>
-    {% endhighlight %}
+</div>{% endhighlight %}
     </div>
 </div>

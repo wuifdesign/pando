@@ -1,14 +1,12 @@
 <div class="container">
-    <div class="page-header">
-        <h1>Shake Element</h1>
-    </div>
+    <h1 class="mt-4 mb-2">Shake Element</h1>
 
-    <p class="m-t-b-xs">
+    <p class="my-3">
         To shake an element, use <code>$(element).pandoShake(distance, runs, speed, distanceReduce)</code>.
     </p>
 
-    <div class="row m-t-b">
-        <div class="col-md-8 centered">
+    <div class="row my-3">
+        <div class="col-md-8 mx-auto">
             <table class="table table-striped">
                 <tr>
                     <th>Value</th>
@@ -39,7 +37,7 @@
         </div>
     </div>
 
-    <div class="m-t-b">
+    <div class="my-3">
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#shakeButton').click(function () {
@@ -52,7 +50,7 @@
             <div class="form-group">
                 <input id="shakeInput" type="text" class="form-control" style="max-width: 300px; margin: 0 auto;" />
             </div>
-            <button id="shakeButton" class="btn btn-default m-t">Shake</button>
+            <button id="shakeButton" class="btn btn-secondary mt-3">Shake</button>
         </div>
     </div>
 
@@ -72,7 +70,6 @@
 <div class="form-group">
     <input id="shakeInput" type="text" class="form-control" />
 </div>
-<button id="shakeButton" class="btn m-t">Shake</button>
-    {% endhighlight %}
+<button id="shakeButton" class="btn m-t">Shake</button>{% endhighlight %}
     </div>
 </div>

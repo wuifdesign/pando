@@ -2,20 +2,6 @@
   display: inline-block;
 }
 
-.label-as-badge {
-  @include border-radius(1em);
-}
-
-.navbar-brand-text {
-  padding-top: 5px;
-  padding-bottom: 5px;
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
-  }
-}
-
 .list-inline-separate {
   display: block;
   padding: 0;
@@ -46,8 +32,6 @@
 }
 
 .parallax {
-  padding: 80px 0;
-  color: #fff;
   background: transparent no-repeat center center fixed;
   background-size: cover;
 }
@@ -86,35 +70,37 @@
   }
 }
 
-.gradient-bg {
-  @include gradient-directional-free(135deg, #000, darken($brand-primary, 50%) 15%, darken($brand-primary, 30%) 40%, $brand-primary 70%, lighten($brand-primary, 20%) 95%, lighten($brand-primary, 30%));
-
-  color: #fff;
-}
-
-.table-display {
-  display: table;
-  width: 100%;
-
-  & > * {
-    display: table-cell;
-  }
-}
-
-@media (max-width: $screen-md-max) {
-  [data-equalizer-disable='md'] [data-equalizer-element] {
+@include media-breakpoint-down(lg) {
+  [data-equalizer-enable='xl'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@media (max-width: $screen-sm-max) {
-  [data-equalizer-disable='sm'] [data-equalizer-element] {
+@include media-breakpoint-down(md) {
+  [data-equalizer-enable='lg'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@media (max-width: $screen-xs-max) {
-  [data-equalizer-disable='xs'] [data-equalizer-element] {
+@include media-breakpoint-down(sm) {
+  [data-equalizer-enable='md'] [data-equalizer-element] {
     height: auto !important;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  [data-equalizer-enable='sm'] [data-equalizer-element] {
+    height: auto !important;
+  }
+}
+
+.pando-loading {
+  @include loading-circle();
+
+  @each $color, $value in $theme-colors {
+    &.pando-loading-#{$color} {
+      border: .2em solid transparentize($value, .8);
+      border-top-color: $value;
+    }
   }
 }

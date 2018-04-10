@@ -21,8 +21,6 @@
 
         /**
          * Override for the magnificPopup close dialog
-         *
-         * @param data
          */
         $.magnificPopup.instance.close = function() {
             var removalDelay = $.magnificPopup.instance.st.removalDelay;
