@@ -1,125 +1,129 @@
 <div class="container mb-5">
-    <h1 class="mt-4 mb-4">jQuery Validation <small>(v1.17.0)</small></h1>
+  <h1 class="mt-4 mb-4">jQuery Validation
+    <small>(v1.17.0)</small>
+  </h1>
 
-    <p>
-        Add the <code>.pando-ajax-form</code> to your form and the <code>data-validation</code> attribute for validation
-        rules.
-    </p>
+  <p>
+    Add the <code>.pando-ajax-form</code> to your form and the <code>data-validation</code> attribute for validation
+    rules.
+  </p>
 
-    <p>
-        If you want to send files use <code>.pando-ajax-file-form</code> instead.
-    </p>
+  <p>
+    If you want to send files use <code>.pando-ajax-file-form</code> instead.
+  </p>
 
-    <p>
-        To hide/show elements after submit you can use the following classes <code>.form-hide-success</code>,
-        <code>.form-show-success</code>, <code>.form-show-error</code>.
-    </p>
+  <p>
+    To hide/show elements after submit you can use the following classes <code>.form-hide-success</code>,
+    <code>.form-show-success</code>, <code>.form-show-error</code>.
+  </p>
 
-    <p>
-        For this to work the post should return at least a JSON including <code>{"success": true}</code>.
-    </p>
+  <p>
+    For this to work the post should return at least a JSON including <code>{"success": true}</code>.
+  </p>
 
-    <p>
-        For localization you have to include the <code>components/jquery-validation/dist/localization/messages_{lang}.js</code>
-        file in your <code>gulp-js-paths-vendor.js</code> and add the <code>data-lang="{lang}"</code> attribute to the <code>form</code>.
-    </p>
+  <p>
+    For localization you have to include the
+    <code>components/jquery-validation/dist/localization/messages_{lang}.js</code>
+    file in your <code>gulp-js-paths-vendor.js</code> and add the <code>data-lang="{lang}"</code> attribute to the
+    <code>form</code>.
+  </p>
 
-    <div class="row justify-content-center my-5">
-        <div class="col-5">
-            <form method="get" action="{{ site.baseurl }}/assets/post.json" class="pando-ajax-form" data-validation="{&quot;firstname&quot;:&quot;required&quot;,&quot;lastname&quot;:&quot;required&quot;,&quot;email&quot;:{&quot;required&quot;:true,&quot;email&quot;:true,&quot;email&quot;:true},&quot;checkbox&quot;:&quot;required&quot;,&quot;radios&quot;:&quot;required&quot;}">
-                <div class="alert alert-danger form-show-error">
-                    <h4>Error</h4>
-                    <p class="mb-0">Error Message</p>
-                </div>
-                <div class="alert alert-success form-show-success">
-                    <h4>Success</h4>
-                    <p class="mb-0">Success Message</p>
-                </div>
-                <div class="form-hide-success">
-                    <div class="form-group">
-                        <input name="firstname" type="text" class="form-control" placeholder="First Name">
-                    </div>
-                    <div class="form-group">
-                        <input name="lastname" type="text" class="form-control" placeholder="Last Name">
-                    </div>
-                    <div class="form-group">
-                        <input name="email" type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="checkbox" class="form-check-input">
-                        <label class="form-check-label">Checkbox</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radios" value="option1">
-                        <label class="form-check-label">Option 1</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radios" value="option2">
-                        <label class="form-check-label">Option 2</label>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </div>
-                </div>
-            </form>
+  <div class="row justify-content-center my-5">
+    <div class="col-5">
+      <form method="get" action="{{ site.baseurl }}/assets/post.json" class="pando-ajax-form" data-validation="{&quot;firstname&quot;:&quot;required&quot;,&quot;lastname&quot;:&quot;required&quot;,&quot;email&quot;:{&quot;required&quot;:true,&quot;email&quot;:true,&quot;email&quot;:true},&quot;checkbox&quot;:&quot;required&quot;,&quot;radios&quot;:&quot;required&quot;}">
+        <div class="alert alert-danger form-show-error">
+          <h4>Error</h4>
+          <p class="mb-0">Error Message</p>
         </div>
-    </div>
-
-
-    <h5>Using PHP for <code>data-validation</code></h5>
-
-    <p>Use the following code for the <code>data-validation</code> attribute in the form.</p>
-
-    {% highlight php %}
-<?= htmlentities(json_encode(array(
-    'firstname' => 'required',
-    'lastname' => 'required',
-    'email' => array(
-        'required' => true,
-        'email' => true,
-    ),
-))); ?>{% endhighlight %}
-
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
-        {% highlight html %}
-<form method="get" action="URL" class="pando-ajax-form" data-validation="{&quot;firstname&quot;:&quot;required&quot;,&quot;lastname&quot;:&quot;required&quot;,&quot;email&quot;:{&quot;required&quot;:true,&quot;email&quot;:true,&quot;email&quot;:true},&quot;checkbox&quot;:&quot;required&quot;,&quot;radios&quot;:&quot;required&quot;}">
-    <div class="alert alert-danger form-show-error">
-        <h4>Error</h4>
-        <p class="mb-0">Error Message</p>
-    </div>
-    <div class="alert alert-success form-show-success">
-        <h4>Success</h4>
-        <p class="mb-0">Success Message</p>
-    </div>
-    <div class="form-hide-success">
-        <div class="form-group">
+        <div class="alert alert-success form-show-success">
+          <h4>Success</h4>
+          <p class="mb-0">Success Message</p>
+        </div>
+        <div class="form-hide-success">
+          <div class="form-group">
             <input name="firstname" type="text" class="form-control" placeholder="First Name">
-        </div>
-        <div class="form-group">
+          </div>
+          <div class="form-group">
             <input name="lastname" type="text" class="form-control" placeholder="Last Name">
-        </div>
-        <div class="form-group">
+          </div>
+          <div class="form-group">
             <input name="email" type="email" class="form-control" placeholder="Email">
-        </div>
-        <div class="form-check">
+          </div>
+          <div class="form-check">
             <input type="checkbox" name="checkbox" class="form-check-input">
             <label class="form-check-label">Checkbox</label>
-        </div>
-        <div class="form-check">
+          </div>
+          <div class="form-check">
             <input class="form-check-input" type="radio" name="radios" value="option1">
             <label class="form-check-label">Option 1</label>
-        </div>
-        <div class="form-check">
+          </div>
+          <div class="form-check">
             <input class="form-check-input" type="radio" name="radios" value="option2">
             <label class="form-check-label">Option 2</label>
-        </div>
-        <div class="text-right">
+          </div>
+          <div class="text-right">
             <button type="submit" class="btn btn-primary">Send</button>
+          </div>
         </div>
+      </form>
     </div>
-</form>{% endhighlight %}
+  </div>
+
+
+  <h5>Using PHP for <code>data-validation</code></h5>
+
+  <p>Use the following code for the <code>data-validation</code> attribute in the form.</p>
+
+  {% highlight php %}
+<?= htmlentities(json_encode(array(
+  'firstname' => 'required',
+'lastname' => 'required',
+'email' => array(
+'required' => true,
+'email' => true,
+),
+))); ?>{% endhighlight %}
+
+<div class="code-hider">
+  <a href="#">Show Code</a>
+</div>
+<div class="code-holder">
+  {% highlight html %}
+  <form method="get" action="URL" class="pando-ajax-form" data-validation="{&quot;firstname&quot;:&quot;required&quot;,&quot;lastname&quot;:&quot;required&quot;,&quot;email&quot;:{&quot;required&quot;:true,&quot;email&quot;:true,&quot;email&quot;:true},&quot;checkbox&quot;:&quot;required&quot;,&quot;radios&quot;:&quot;required&quot;}">
+    <div class="alert alert-danger form-show-error">
+      <h4>Error</h4>
+      <p class="mb-0">Error Message</p>
     </div>
+    <div class="alert alert-success form-show-success">
+      <h4>Success</h4>
+      <p class="mb-0">Success Message</p>
+    </div>
+    <div class="form-hide-success">
+      <div class="form-group">
+        <input name="firstname" type="text" class="form-control" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <input name="lastname" type="text" class="form-control" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <input name="email" type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" name="checkbox" class="form-check-input">
+        <label class="form-check-label">Checkbox</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radios" value="option1">
+        <label class="form-check-label">Option 1</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radios" value="option2">
+        <label class="form-check-label">Option 2</label>
+      </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </form>
+</div>{% endhighlight %}
 </div>

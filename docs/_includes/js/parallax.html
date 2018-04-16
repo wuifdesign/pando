@@ -1,49 +1,49 @@
 <div class="container">
-    <h1 class="mt-4 mb-2">Parallax Image</h1>
+  <h1 class="mt-4 mb-2">Parallax Image</h1>
 </div>
 
 <style>
-    .parallax-demo {
-        padding: 80px 0;
-        color: #fff;
-        background-image: url('{{ site.baseurl }}/assets-custom/img/bg_forest.jpg');
-    }
+  .parallax-demo {
+    padding: 80px 0;
+    color: #fff;
+    background-image: url('{{ site.baseurl }}/assets-custom/img/bg_forest.jpg');
+  }
 </style>
 
 <script>
-    $(document).ready(function() {
-        $('.parallax-demo').parallax();
-    });
+  $(document).ready(function() {
+    $('.parallax-demo').parallax();
+  });
 </script>
 
 <div class="parallax parallax-demo text-center mb-3">
-    <h1>Pando Parallax</h1>
-    <p class="lead">Parallax Styles</p>
+  <h1>Pando Parallax</h1>
+  <p class="lead">Parallax Styles</p>
 </div>
 
 <div class="container">
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <style>
-    .parallax-demo {
-        background-image: url('...');
-        padding: 80px 0;
-        color: #fff;
-    }
+  .parallax-demo {
+    background-image: url('...');
+    padding: 80px 0;
+    color: #fff;
+  }
 </style>
 
 <script>
-    $(document).ready(function() {
-        $('.parallax-demo').parallax();
-    });
+  $(document).ready(function() {
+    $('.parallax-demo').parallax();
+  });
 </script>
 
 <div class="parallax parallax-demo text-center mb-3">
-    <h1>Pando Parallax</h1>
-    <p class="lead">Parallax Styles</p>
+  <h1>Pando Parallax</h1>
+  <p class="lead">Parallax Styles</p>
 </div>{% endhighlight %}
-    </div>
+  </div>
 </div>
