@@ -1,12 +1,31 @@
 <div class="container">
-    <h1 class="mt-4 mb-2">Random Stuff</h1>
+  <h1 class="mt-4 mb-2">Random Stuff</h1>
 </div>
 
 <div class="container">
-    <h3 class="mt-4 mb-2">Loading Icon</h3>
+  <h3 class="mt-4 mb-2">Loading Icon</h3>
 
-    <p>This icon will respect can be resized by setting the font size for the element.</p>
+  <p>This icon will respect can be resized by setting the font size for the element.</p>
 
+  <div class="pando-loading pando-loading-primary"></div>
+  <div class="pando-loading pando-loading-secondary"></div>
+  <div class="pando-loading pando-loading-success"></div>
+  <div class="pando-loading pando-loading-danger"></div>
+  <div class="pando-loading pando-loading-warning"></div>
+  <div class="pando-loading pando-loading-info"></div>
+  <div class="pando-loading pando-loading-light"></div>
+  <div class="pando-loading pando-loading-dark"></div>
+  <br/>
+  <div class="pando-loading pando-loading-primary" style="font-size: 1em;"></div>
+  <div class="pando-loading pando-loading-primary" style="font-size: 2em;"></div>
+  <div class="pando-loading pando-loading-primary" style="font-size: 3em;"></div>
+  <div class="pando-loading pando-loading-primary" style="font-size: 4em;"></div>
+
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
+    {% highlight html %}
     <div class="pando-loading pando-loading-primary"></div>
     <div class="pando-loading pando-loading-secondary"></div>
     <div class="pando-loading pando-loading-success"></div>
@@ -15,119 +34,104 @@
     <div class="pando-loading pando-loading-info"></div>
     <div class="pando-loading pando-loading-light"></div>
     <div class="pando-loading pando-loading-dark"></div>
-    <br/>
+
     <div class="pando-loading pando-loading-primary" style="font-size: 1em;"></div>
     <div class="pando-loading pando-loading-primary" style="font-size: 2em;"></div>
     <div class="pando-loading pando-loading-primary" style="font-size: 3em;"></div>
     <div class="pando-loading pando-loading-primary" style="font-size: 4em;"></div>
-
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
-        {% highlight html %}
-<div class="pando-loading pando-loading-primary"></div>
-<div class="pando-loading pando-loading-secondary"></div>
-<div class="pando-loading pando-loading-success"></div>
-<div class="pando-loading pando-loading-danger"></div>
-<div class="pando-loading pando-loading-warning"></div>
-<div class="pando-loading pando-loading-info"></div>
-<div class="pando-loading pando-loading-light"></div>
-<div class="pando-loading pando-loading-dark"></div>
-
-<div class="pando-loading pando-loading-primary" style="font-size: 1em;"></div>
-<div class="pando-loading pando-loading-primary" style="font-size: 2em;"></div>
-<div class="pando-loading pando-loading-primary" style="font-size: 3em;"></div>
-<div class="pando-loading pando-loading-primary" style="font-size: 4em;"></div>{% endhighlight %}
-    </div>
+    {% endhighlight %}
+  </div>
 </div>
 
 <div class="container">
-    <h3 class="mt-4 mb-2">Inline List</h3>
+  <h3 class="mt-4 mb-2">Inline List</h3>
 
-    <ul class="list-inline-separate">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
-    {% highlight html %}
-<ul class="list-inline-separate">
+  <ul class="list-inline-separate">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
-</ul>{% endhighlight %}
-    </div>
-</div>
+  </ul>
 
-<div class="container">
-    <h3 class="mt-4 mb-2">Hover Opacity</h3>
-
-    <img data-src="holder.js/120x120/auto/#222:#eee" class="hover-opacity" />
-
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
-<img data-src="holder.js/120x120/auto/#222:#eee" class="hover-opacity" />{% endhighlight %}
-    </div>
+    <ul class="list-inline-separate">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    {% endhighlight %}
+  </div>
 </div>
 
 <div class="container">
-    <h3 class="mt-4 mb-2">Noise BG</h3>
+  <h3 class="mt-4 mb-2">Hover Opacity</h3>
 
-    <div class="bg-noise">
-        <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid" />
-    </div>
+  <img data-src="holder.js/120x120/auto/#222:#eee" class="hover-opacity"/>
 
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
+    {% highlight html %}
+    <img data-src="holder.js/120x120/auto/#222:#eee" class="hover-opacity"/>{% endhighlight %}
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="mt-4 mb-2">Noise BG</h3>
+
+  <div class="bg-noise">
+    <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid"/>
+  </div>
+
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <div class="bg-noise">
-    <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid" />
+  <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid"/>
 </div>{% endhighlight %}
-    </div>
+  </div>
 </div>
 
 <div class="container mb-4">
-    <h3 class="mt-4 mb-2">Dots BG</h3>
+  <h3 class="mt-4 mb-2">Dots BG</h3>
 
-    <div class="bg-dots">
-        <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid" />
-    </div>
+  <div class="bg-dots">
+    <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid"/>
+  </div>
 
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <div class="bg-dots">
-    <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid" />
+  <img src="{{ site.baseurl }}/assets-custom/img/bg_forest.jpg" class="img-fluid"/>
 </div>{% endhighlight %}
-    </div>
+  </div>
 </div>
 
 <div class="container mb-4">
-    <h3 class="mt-4 mb-2">Footer Bottom</h3>
+  <h3 class="mt-4 mb-2">Footer Bottom</h3>
 
-    You need to add the class <code>.page-footer-bottom</code> to the <code>body</code>. If you have an element with the class
-    <code>.page-footer</code> on the page, it will be at least on the bottom of the page.<br/><br/>
-    If you update the Footer you may have to call <code>$.pandoFooterPush();</code> to update the height of the push element.
+  You need to add the class <code>.page-footer-bottom</code> to the <code>body</code>. If you have an element with the
+  class
+  <code>.page-footer</code> on the page, it will be at least on the bottom of the page.<br/><br/>
+  If you update the Footer you may have to call <code>$.pandoFooterPush();</code> to update the height of the push
+  element.
 
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <body class="page-footer-bottom">
-    <footer class="page-footer"></footer>
+  <footer class="page-footer"></footer>
 </body>{% endhighlight %}
     </div>
 </div>

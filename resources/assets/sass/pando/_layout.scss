@@ -1,6 +1,6 @@
 html {
-  height: 100%;
   font-size: $font-size-html-base;
+  height: 100%;
 }
 
 @include media-breakpoint-up(sm) {
