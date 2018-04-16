@@ -1,45 +1,47 @@
 <div class="container">
-    <h1 class="mt-4 mb-2">Slick Slider <small>(v1.8.1)</small></h1>
+  <h1 class="mt-4 mb-2">Slick Slider
+    <small>(v1.8.1)</small>
+  </h1>
 
-    <p>
-        <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
-    </p>
+  <p>
+    <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
+  </p>
 
-    <div class="slick-slider">
-        <div><img src="{{ site.baseurl }}/assets-custom/img/slide-1.png"  class="img-fluid d-block mx-auto"></div>
-        <div><img src="{{ site.baseurl }}/assets-custom/img/slide-2.png"  class="img-fluid d-block mx-auto"></div>
-        <div><img src="{{ site.baseurl }}/assets-custom/img/slide-3.png"  class="img-fluid d-block mx-auto"></div>
-    </div>
+  <div class="slick-slider">
+    <div><img src="{{ site.baseurl }}/assets-custom/img/slide-1.png" class="img-fluid d-block mx-auto"></div>
+    <div><img src="{{ site.baseurl }}/assets-custom/img/slide-2.png" class="img-fluid d-block mx-auto"></div>
+    <div><img src="{{ site.baseurl }}/assets-custom/img/slide-3.png" class="img-fluid d-block mx-auto"></div>
+  </div>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.slick-slider').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            });
-        });
-    </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.slick-slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      });
+    });
+  </script>
 
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <div class="slick-slider">
-    <div><img src="..." class="img-fluid"></div>
-    <div><img src="..." class="img-fluid"></div>
-    <div><img src="..." class="img-fluid"></div>
+  <div><img src="..." class="img-fluid"></div>
+  <div><img src="..." class="img-fluid"></div>
+  <div><img src="..." class="img-fluid"></div>
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('.slick-slider').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
+  $(document).ready(function() {
+    $('.slick-slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
     });
+  });
 </script>{% endhighlight %}
-    </div>
+  </div>
 </div>

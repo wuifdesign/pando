@@ -1,29 +1,29 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if(typeof AniJS !== 'undefined') {
-            AniJS.run();
-        }
-        if(typeof toastr !== 'undefined') {
-            toastr.options = {
-                'closeButton': true,
-                'progressBar': true,
-                'positionClass': 'toast-top-right'
-            };
-        }
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+    if(typeof AniJS !== 'undefined') {
+      AniJS.run();
+    }
+    if(typeof toastr !== 'undefined') {
+      toastr.options = {
+        'closeButton': true,
+        'progressBar': true,
+        'positionClass': 'toast-top-right'
+      };
+    }
+  });
 
-    window.isDefined = function(variable) {
-        return (typeof variable !== 'undefined');
-    };
+  window.isDefined = function(variable) {
+    return (typeof variable !== 'undefined');
+  };
 
-    window.str_shorten = function(text, maxLength) {
-        var ret = text;
-        if(ret.length > maxLength) {
-            ret = ret.substr(0, maxLength - 3) + '&hellip;';
-        }
-        return ret;
-    };
+  window.str_shorten = function(text, maxLength) {
+    var ret = text;
+    if(ret.length > maxLength) {
+      ret = ret.substr(0, maxLength - 3) + '&hellip;';
+    }
+    return ret;
+  };
 
 }());
