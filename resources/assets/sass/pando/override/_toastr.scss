@@ -1,12 +1,14 @@
 #toast-container {
   & > div {
     @include opacity(.92);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
     padding: 15px 30px 19px 50px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
 
     &:hover {
       @include opacity(1);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, .4);
     }
   }
 
@@ -16,8 +18,8 @@
 
   button.toast-close-button {
     position: absolute;
-    right: 5px;
     top: 12px;
+    right: 5px;
     padding: 0 5px;
     text-shadow: none;
 
@@ -32,28 +34,28 @@
     font-size: 24px;
     line-height: 24px;
     position: absolute;
-    left: 0;
     top: 50%;
-    margin-top: -12px;
-    color: #fff;
+    left: 0;
     width: 50px;
+    margin-top: -12px;
     text-align: center;
+    color: #fff;
   }
 
   & > .toast-warning:before {
     content: fa-content($fa-var-comment);
   }
   & > .toast-error:before {
-    content: fa-content($fa-var-exclamation-triangle);
     font-weight: bold;
+    content: fa-content($fa-var-exclamation-triangle);
   }
   & > .toast-info:before {
-    content: fa-content($fa-var-info);
     font-weight: bold;
+    content: fa-content($fa-var-info);
   }
   & > .toast-success:before {
-    content: fa-content($fa-var-check);
     font-weight: bold;
+    content: fa-content($fa-var-check);
   }
 
   & > .toast-error {

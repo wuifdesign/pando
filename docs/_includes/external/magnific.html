@@ -1,80 +1,82 @@
 <div class="container">
-    <h1 class="mt-4 mb-2">Magnific Popup <small>(v1.1.0)</small></h1>
+  <h1 class="mt-4 mb-2">Magnific Popup
+    <small>(v1.1.0)</small>
+  </h1>
 
-    <p class="my-2">
-        The Documentation of this plugin can be found here:
-        <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">
-            http://dimsemenov.com/plugins/magnific-popup/documentation.html
+  <p class="my-2">
+    The Documentation of this plugin can be found here:
+    <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">
+      http://dimsemenov.com/plugins/magnific-popup/documentation.html
+    </a>
+  </p>
+
+  <p class="my-2">
+    If you use <code>type: inline</code> you can use classes like <code>.pando-overlay</code> to style
+    the overlay. Also use <code>.pando-overlay-lg</code> to set the size of the overlays.
+  </p>
+
+  <script>
+    $(document).ready(function() {
+      $('#image-holder').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+          enabled: true
+        }
+      });
+    });
+  </script>
+
+  <div id="image-holder">
+    <div class="row align-center my-3">
+      {% for i in (1..3) %}
+      <div class="col-sm-4 m-b">
+        <a href="{{ site.baseurl }}/assets-custom/img/slide-{{ i }}.png">
+          <img src="{{ site.baseurl }}/assets-custom/img/slide-{{ i }}.png" class="img-fluid"/>
         </a>
-    </p>
-
-    <p class="my-2">
-        If you use <code>type: inline</code> you can use classes like <code>.pando-overlay</code> to style
-        the overlay. Also use <code>.pando-overlay-lg</code> to set the size of the overlays.
-    </p>
-
-    <script>
-        $(document).ready(function() {
-            $('#image-holder').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-    </script>
-
-    <div id="image-holder">
-        <div class="row align-center my-3">
-            {% for i in (1..3) %}
-            <div class="col-sm-4 m-b">
-                <a href="{{ site.baseurl }}/assets-custom/img/slide-{{ i }}.png">
-                    <img src="{{ site.baseurl }}/assets-custom/img/slide-{{ i }}.png" class="img-fluid" />
-                </a>
-            </div>
-            {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <div class="code-hider">
-        <a href="#">Show Code</a>
-    </div>
-    <div class="code-holder">
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
     {% highlight html %}
 <script>
-    $(document).ready(function() {
-        $('#image-holder').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-        $('.content-holder-link').magnificPopup({
-            type: 'inline'
-        });
+  $(document).ready(function() {
+    $('#image-holder').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
     });
+    $('.content-holder-link').magnificPopup({
+      type: 'inline'
+    });
+  });
 </script>
 
 <div id="image-holder">
-    <div class="row align-center my-3">
-        <div class="col-sm-4 m-b">
-            <a href="{{ site.baseurl }}/assets-custom/img/img-1.png">
-                <img src="{{ site.baseurl }}/assets-custom/img/img-1.png">
-            </a>
-        </div>
-        <div class="col-sm-4 m-b">
-            <a href="{{ site.baseurl }}/assets-custom/img/img-2.png">
-                <img src="{{ site.baseurl }}/assets-custom/img/img-2.png">
-            </a>
-        </div>
-        <div class="col-sm-4 m-b">
-            <a href="{{ site.baseurl }}/assets-custom/img/img-3.png">
-                <img src="{{ site.baseurl }}/assets-custom/img/img-3.png">
-            </a>
-        </div>
+  <div class="row align-center my-3">
+    <div class="col-sm-4 m-b">
+      <a href="{{ site.baseurl }}/assets-custom/img/img-1.png">
+        <img src="{{ site.baseurl }}/assets-custom/img/img-1.png">
+      </a>
     </div>
+    <div class="col-sm-4 m-b">
+      <a href="{{ site.baseurl }}/assets-custom/img/img-2.png">
+        <img src="{{ site.baseurl }}/assets-custom/img/img-2.png">
+      </a>
+    </div>
+    <div class="col-sm-4 m-b">
+      <a href="{{ site.baseurl }}/assets-custom/img/img-3.png">
+        <img src="{{ site.baseurl }}/assets-custom/img/img-3.png">
+      </a>
+    </div>
+  </div>
 </div>{% endhighlight %}
-    </div>
+  </div>
 </div>

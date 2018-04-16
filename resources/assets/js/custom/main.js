@@ -1,8 +1,6 @@
-/*
 (function($) {
-    'use strict';
+  'use strict';
 
-    //Add Custom Code
+  //Add Custom Code
 
 }(jQuery));
-*/
