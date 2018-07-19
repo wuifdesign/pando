@@ -17,6 +17,7 @@
 
   .cookie-banner-container {
     display: flex;
+
     align-items: center;
   }
 
@@ -30,11 +31,13 @@
   }
 
   .cookie-banner-buttons {
-    white-space: nowrap;
     padding: 10px;
+    white-space: nowrap;
   }
+}
 
-  @include media-breakpoint-down(sm) {
+@include media-breakpoint-down(sm) {
+  .cookie-banner {
     .cookie-banner-container {
       display: block;
     }

@@ -6,17 +6,16 @@ module.exports = function(gulp, plugins, config) {
       }))
       .pipe(gulp.dest(config.public_path + '/img/vendor'));
 
-    ['@fortawesome', 'slick-carousel'].forEach(function(item) {
-      var dest = item.replace('@', '');
-      gulp.src(config.src_path + '/components/' + item + '/**/*.{png,jpg,gif}', {base: config.src_path + '/components'})
+    [{src: 'slick-carousel', dest: 'slick-carousel'}, {src: '@fortawesome/fontawesome-free/webfonts', dest: 'fontawesome'}].forEach(function(item) {
+      gulp.src(config.src_path + '/components/' + item.src + '/**/*.{png,jpg,gif}', {base: config.src_path + '/components'})
         .pipe(plugins.rename(function(path) {
-          path.dirname = item.replace('@', '');
+          path.dirname = item.dest;
         }))
         .pipe(gulp.dest(config.public_path + '/img/vendor'));
 
-      gulp.src(config.src_path + '/components/' + item + '/**/*.{eot,svg,ttf,woff,woff2}', {base: config.src_path + '/components'})
+      gulp.src(config.src_path + '/components/' + item.src + '/**/*.{eot,svg,ttf,woff,woff2}', {base: config.src_path + '/components'})
         .pipe(plugins.rename(function(path) {
-          path.dirname = item.replace('@', '');
+          path.dirname = item.dest;
         }))
         .pipe(gulp.dest(config.public_path + '/fonts/'));
     });
