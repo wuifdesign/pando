@@ -1,0 +1,50 @@
+.cookie-banner-spacer {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.cookie-banner {
+  display: none;
+  position: fixed;
+  z-index: $cookie-banner-z-index;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $cookie-banner-padding;
+  color: $cookie-banner-color;
+  background: $cookie-banner-bg;
+
+  .cookie-banner-container {
+    display: flex;
+
+    align-items: center;
+  }
+
+  .cookie-banner-text {
+    padding: 10px;
+
+    a {
+      text-decoration: underline;
+      color: $cookie-banner-link-color;
+    }
+  }
+
+  .cookie-banner-buttons {
+    padding: 10px;
+    white-space: nowrap;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .cookie-banner {
+    .cookie-banner-container {
+      display: block;
+    }
+
+    .cookie-banner-buttons .btn {
+      display: block;
+      width: 100%;
+    }
+  }
+}
