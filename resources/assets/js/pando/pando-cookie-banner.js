@@ -16,7 +16,7 @@
       banner_spacer.show();
     }
 
-    close_button.on('click', function(event) {
+    close_button.on('click', function() {
       window.setCookie('cookies_accepted', 'yes', 365);
       banner.hide();
       banner_spacer.hide();
