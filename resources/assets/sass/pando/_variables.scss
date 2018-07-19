@@ -1,9 +1,9 @@
 $font-family-sans-serif: 'Open Sans', sans-serif !default;
 
-$font-size-html-base: 15px;
-$font-size-html-sm: $font-size-html-base;
-$font-size-html-md: $font-size-html-sm;
-$font-size-html-lg: $font-size-html-md;
+$font-size-html-base: 15px !default;
+$font-size-html-sm: $font-size-html-base !default;
+$font-size-html-md: $font-size-html-sm !default;
+$font-size-html-lg: $font-size-html-md !default;
 
 $body-bg: #fdfdfd !default;
 $body-color: #222 !default;
@@ -20,6 +20,12 @@ $default-footer-background: #eee !default;
 $default-footer-font-color: $body-color !default;
 $default-footer-link-color: $blue !default;
 $default-footer-link-color-hover: lighten($default-footer-link-color, 10%) !default;
+
+$cookie-banner-bg: #333 !default;
+$cookie-banner-color: #fff !default;
+$cookie-banner-link-color: $cookie-banner-color !default;
+$cookie-banner-padding: 10px 15px !default;
+$cookie-banner-z-index: 2000 !default;
 
 //Vendor Styles
 $fa-font-path: '../fonts/fortawesome' !default;
