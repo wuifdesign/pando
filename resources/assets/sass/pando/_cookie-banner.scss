@@ -22,7 +22,7 @@
   }
 
   .cookie-banner-text {
-    padding: 10px;
+    padding: $cookie-banner-element-padding;
 
     a {
       text-decoration: underline;
@@ -31,7 +31,7 @@
   }
 
   .cookie-banner-buttons {
-    padding: 10px;
+    padding: $cookie-banner-element-padding;
     white-space: nowrap;
   }
 }
