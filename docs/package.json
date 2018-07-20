@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "gulp-copy-files": "gulp copy-files",
+    "gulp-watch": "gulp watch",
+    "jekyll": "bundle exec jekyll serve"
   }
 }
