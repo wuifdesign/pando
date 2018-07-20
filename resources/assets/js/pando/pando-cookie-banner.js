@@ -14,6 +14,11 @@
     if(window.getCookie('cookies_accepted') !== 'yes') {
       banner.show();
       banner_spacer.show();
+      try {
+        setTimeout(function() {
+          $.pandoFooterPush();
+        }, 10);
+      } catch(error) {}
     }
 
     close_button.on('click', function() {
