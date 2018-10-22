@@ -1,25 +1,29 @@
 .alert-white {
   @include gradient-y(#fff, #f9f9f9);
 
-  display: table;
   position: relative;
   width: 100%;
   padding-left: 61px;
-  color: #404040;
-  border-color: #ddd #ccc #bbb;
+  color: $body-color;
+  border-color: $border-color;
 
   .icon {
-    @include border-radius(3px 0 0 3px);
+    @include border-radius($border-radius 0 0 $border-radius);
 
+    font-size: 20px;
+    display: flex;
     position: absolute;
     top: -1px;
     bottom: -1px;
     left: -1px;
     width: 45px;
-    padding-top: 15px;
     text-align: center;
-    border: 1px solid darken(theme-color('primary'), 5%);
-    background: theme-color('primary');
+    color: #fff;
+    border: 1px solid $border-color;
+    background: $border-color;
+
+    justify-content: center;
+    align-items: center;
 
     &:after {
       display: block;
@@ -32,42 +36,16 @@
       content: ' ';
       transform: rotate(45deg);
       border: 0;
-      border-top: 1px solid darken(theme-color('primary'), 5%);
-      border-right: 1px solid darken(theme-color('primary'), 5%);
-      background: theme-color('primary');
-    }
-
-    i {
-      font-size: 1.4em;
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      margin-top: -10px;
-      color: #fff;
+      border-right: 1px solid $border-color;
+      background: $border-color;
     }
   }
 
-  &.alert-danger .icon,
-  &.alert-danger .icon::after {
-    border-color: darken(theme-color('danger'), 5%);
-    background: theme-color('danger');
-  }
-
-  &.alert-info .icon,
-  &.alert-info .icon::after {
-    border-color: darken(theme-color('info'), 5%);
-    background: theme-color('info');
-  }
-
-  &.alert-warning .icon,
-  &.alert-warning .icon::after {
-    border-color: darken(theme-color('warning'), 5%);
-    background: theme-color('warning');
-  }
-
-  &.alert-success .icon,
-  &.alert-success .icon::after {
-    border-color: darken(theme-color('success'), 5%);
-    background: theme-color('success');
+  @each $color, $value in $theme-colors {
+    &.alert-#{$color} .icon,
+    &.alert-#{$color} .icon:after {
+      border-color: darken($value, 5%);
+      background: $value;
+    }
   }
 }
