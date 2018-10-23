@@ -11,7 +11,7 @@
       banner.after(banner_spacer);
     }
 
-    if(window.getCookie('cookies_accepted') !== 'yes') {
+    if(window.getCookie('cookies_accepted') === null) {
       banner.show();
       banner_spacer.show();
       try {
@@ -22,9 +22,10 @@
     }
 
     close_button.on('click', function() {
-      window.setCookie('cookies_accepted', 'yes', 365);
+      window.setCookie('cookies_accepted', new Date().toISOString(), 365);
       banner.hide();
       banner_spacer.hide();
+      $.pandoFooterPush();
     });
 
     var setSpacerHeight = function() {
