@@ -2,23 +2,23 @@
 @import 'pando/variables';
 @import 'pando/mixins/pando';
 
-@import '../components/bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap/scss/bootstrap';
 
-@import '../components/animate.css/animate.css';
-@import '../components/@fortawesome/fontawesome-free/scss/fontawesome';
-@import '../components/@fortawesome/fontawesome-free/scss/solid';
-@import '../components/@fortawesome/fontawesome-free/scss/regular';
-@import '../components/@fortawesome/fontawesome-free/scss/brands';
-@import '../components/slick-carousel/slick/slick.scss';
-@import '../components/slick-carousel/slick/slick-theme.scss';
+@import '../node_modules/animate.css/animate.css';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../node_modules/slick-carousel/slick/slick.scss';
+@import '../node_modules/slick-carousel/slick/slick-theme.scss';
 
-@import '../components/photoswipe/src/css/main';
-@import '../components/photoswipe/src/css/default-skin/default-skin';
+@import '../node_modules/photoswipe/src/css/main';
+@import '../node_modules/photoswipe/src/css/default-skin/default-skin';
 
-@import '../components/magnific-popup/dist/magnific-popup.css';
+@import '../node_modules/magnific-popup/dist/magnific-popup.css';
 @import 'pando/override/magnific-popup';
 
-@import '../components/toastr/toastr.scss';
+@import '../node_modules/toastr/toastr.scss';
 @import 'pando/override/toastr';
 
 @import 'pando/override/validate';

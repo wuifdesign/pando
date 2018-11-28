@@ -3,12 +3,12 @@
 @import 'pando/mixins/pando';
 @import 'pando/keyframes';
 
-@import '../components/bootstrap/scss/functions';
-@import '../components/bootstrap/scss/variables';
-@import '../components/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
 
-@import '../components/@fortawesome/fontawesome-free/scss/variables';
-@import '../components/@fortawesome/fontawesome-free/scss/mixins';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/variables';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/mixins';
 
 @import 'pando/alert';
 @import 'pando/buttons';
