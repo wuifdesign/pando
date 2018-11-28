@@ -1,4 +1,8 @@
 module.exports = function(gulp, plugins, config, extra) {
+
+  var count = extra.sprites.length;
+  var callback;
+
   var generate = function(name) {
     var options = {
       imgName: 'sprite-' + name + '.png',
@@ -24,10 +28,17 @@ module.exports = function(gulp, plugins, config, extra) {
       .pipe(gulp.dest(extra.sprites_path));
 
     spriteData.css
-      .pipe(gulp.dest(config.src_path + '/sass/custom/sprites'));
+      .pipe(gulp.dest(config.src_path + '/sass/custom/sprites'))
+      .on('end', function() {
+        count--;
+        if(count === 0) {
+          callback();
+        }
+      });
   };
 
-  return function() {
+  return function(done) {
+    callback = done;
     extra.sprites.forEach(function(sprite_name) {
       generate(sprite_name);
       console.log(sprite_name);

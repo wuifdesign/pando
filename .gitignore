@@ -2,4 +2,4 @@
 .DS_Store
 /.sass-cache
 /node_modules
-/resources/assets/components
+/resources/assets/node_modules
