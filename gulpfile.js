@@ -63,4 +63,4 @@ gulp.task('sprite-svg', getTask('sprite-svg', {
 
 gulp.task('watch', getTask('watch'));
 
-gulp.task('default', gulp.parallel('symlink', 'sass-vendor', 'sass', 'js-vendor', 'js'));
+gulp.task('default', gulp.parallel('sass-vendor', 'sass', 'js-vendor', 'js'));
