@@ -5,7 +5,6 @@ permalink: /docs/
 excerpt: Special Components added to Bootstrap
 ---
 
-{% include components/sprites.html %}
 {% include components/alerts.html %}
 {% include components/buttons.html %}
 {% include components/form.html %}

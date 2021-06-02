@@ -36,7 +36,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .cookie-banner {
     .cookie-banner-container {
       display: block;

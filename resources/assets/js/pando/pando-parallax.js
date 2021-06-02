@@ -1,35 +1,27 @@
-(function($) {
-  'use strict';
+const parallax = function (element, options = {}) {
+  const settings = Object.assign({ speed: 0.3 }, options);
+  document.addEventListener('scroll', function () {
+    scrollCheck(element, settings);
+  });
+  scrollCheck(element, settings);
+  return this;
+};
 
-  if(typeof $ !== 'undefined') {
+const scrollCheck = function (element, settings) {
+  const window_height = window.innerHeight;
+  const scrollTop = window.scrollTop;
 
-    $.fn.parallax = function(options) {
-      var settings = $.extend({
-        speed: 0.3
-      }, options);
-      var elements = $(this);
-      $(document).on('scroll', function() {
-        scrollCheck(elements, settings);
-      });
-      scrollCheck(elements, settings);
-      return this;
-    };
-
-
-    var scrollCheck = function(elements, settings) {
-      var window_height = $(window).height();
-      var scroll_top = $(window).scrollTop();
-
-      elements.each(function() {
-        var element_offset = $(this).offset().top;
-        var element_height = $(this).outerHeight();
-        if(element_offset + element_height <= scroll_top || element_offset >= scroll_top + window_height) {
-          return;
-        }
-        var y_bg_position = Math.round((element_offset - scroll_top) * settings.speed);
-        $(this).css('background-position', 'center ' + y_bg_position + 'px');
-      });
-    };
+  const elementOffset = element.top + window.scrollY;
+  const elementHeight = element.offsetHeight;
+  if (elementOffset + elementHeight <= scrollTop || elementOffset >= scrollTop + window_height) {
+    return;
   }
+  const yBbPosition = Math.round((elementOffset - scrollTop) * settings.speed);
+  element.style.backgroundPosition = 'center ' + yBbPosition + 'px';
+};
 
-}(jQuery));
+window.parallax = parallax;
+
+export {
+  parallax,
+};

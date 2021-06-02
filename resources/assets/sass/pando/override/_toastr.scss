@@ -59,18 +59,18 @@
   }
 
   & > .toast-error {
-    background-color: darken(theme-color('danger'), 5%);
+    background-color: darken($danger, 5%);
   }
 
   & > .toast-warning {
-    background-color: darken(theme-color('warning'), 5%);
+    background-color: darken($warning, 5%);
   }
 
   & > .toast-success {
-    background-color: darken(theme-color('success'), 5%);
+    background-color: darken($success, 5%);
   }
 
   & > .toast-info {
-    background-color: darken(theme-color('info'), 5%);
+    background-color: darken($info, 5%);
   }
 }

@@ -1,15 +1,15 @@
-$(document).ready(function () {
-    $('.code-hider a').click(function (event) {
-        var code = $(this).parent().next();
-        if($(this).hasClass('open')) {
-            $(this).html('Show Code');
-            $(this).removeClass('open');
-            code.hide();
-        } else {
-            $(this).html('Hide Code');
-            $(this).addClass('open');
-            code.show();
-        }
-        event.preventDefault();
-    });
-})
+document.querySelectorAll('.code-hider a').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    const code = button.parentNode.nextElementSibling;
+    if(button.classList.contains('open')) {
+      button.innerHTML = 'Show Code';
+      button.classList.remove('open');
+      code.style.display = 'none';
+    } else {
+      button.innerHTML = 'Hide Code';
+      button.classList.add('open');
+      code.style.display = 'block';
+    }
+  });
+});

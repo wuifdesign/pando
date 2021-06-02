@@ -26,7 +26,7 @@ body.page-footer-bottom {
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   body.page-footer-bottom {
     .page-footer,
     .page-footer-push {

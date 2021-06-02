@@ -1,42 +1,44 @@
-(function($) {
-  'use strict';
+import { getCookie, setCookie } from './pando-cookie';
+import { pandoFooterPush } from './pando-layout';
 
-  $(document).ready(function() {
-    var banner = $('.cookie-banner');
-    var banner_spacer = $('.cookie-banner-spacer');
-    var close_button = $('[data-dismiss="cookie-banner"]');
+const banner = document.querySelector('.cookie-banner');
+let bannerSpacer = document.querySelector('.cookie-banner-spacer');
+const closeButtons = document.querySelectorAll('[data-dismiss="cookie-banner"]');
 
-    if(banner_spacer.length === 0) {
-      banner_spacer = $('<div class="cookie-banner-spacer"></div>');
-      banner.after(banner_spacer);
+if (banner) {
+  if (!bannerSpacer) {
+    bannerSpacer = document.createElement('div');
+    bannerSpacer.classList.add('cookie-banner-spacer');
+    banner.parentNode.insertBefore(bannerSpacer, banner);
+  }
+
+  if (getCookie('cookies_accepted') === null) {
+    banner.style.display = 'block';
+    bannerSpacer.style.display = 'block';
+    try {
+      setTimeout(function () {
+        pandoFooterPush();
+      }, 10);
+    } catch (error) {
     }
+  }
 
-    if(window.getCookie('cookies_accepted') === null) {
-      banner.show();
-      banner_spacer.show();
-      try {
-        setTimeout(function() {
-          $.pandoFooterPush();
-        }, 10);
-      } catch(error) {}
-    }
-
-    close_button.on('click', function() {
-      window.setCookie('cookies_accepted', new Date().toISOString(), 365);
-      banner.hide();
-      banner_spacer.hide();
-      $.pandoFooterPush();
+  closeButtons.forEach((closeButton) => {
+    closeButton.addEventListener('click', () => {
+      setCookie('cookies_accepted', new Date().toISOString(), 365);
+      banner.style.display = 'none';
+      bannerSpacer.style.display = 'none';
+      pandoFooterPush();
     });
+  });
 
-    var setSpacerHeight = function() {
-      banner_spacer.css('height', banner.outerHeight() + 'px');
-    };
+  const setSpacerHeight = function () {
+    bannerSpacer.style.height = banner.offsetHeight + 'px';
+  };
 
-    $(window).resize(function() {
-      setSpacerHeight();
-    });
-
+  window.addEventListener('resize', function () {
     setSpacerHeight();
   });
 
-}(jQuery));
+  setSpacerHeight();
+}

@@ -32,13 +32,13 @@ input[type=checkbox] {
         height: 18px;
         content: '|||';
         text-align: center;
-        color: darken(theme-color('primary'), 20%);
+        color: darken($primary, 20%);
         background-color: #fff;
       }
     }
 
     &:checked + .form-add {
-      background-color: theme-color('primary');
+      background-color: $primary;
 
       &:after {
         left: 33px;
@@ -69,13 +69,13 @@ input[type=checkbox] {
       }
 
       &:hover {
-        border-color: theme-color('primary');
+        border-color: $primary;
       }
     }
 
     &:checked + .form-add {
       &:after {
-        background-color: theme-color('primary');
+        background-color: $primary;
       }
     }
   }
@@ -108,23 +108,14 @@ input[type=radio] {
       }
 
       &:hover {
-        border-color: theme-color('primary');
+        border-color: $primary;
       }
     }
 
     &:checked + .form-add {
       &:after {
-        background-color: theme-color('primary');
+        background-color: $primary;
       }
-    }
-  }
-}
-
-.form-group {
-  .radio,
-  .checkbox {
-    label .form-add {
-      margin-left: -20px;
     }
   }
 }

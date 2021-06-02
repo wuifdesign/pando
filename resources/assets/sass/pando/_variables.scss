@@ -8,17 +8,11 @@ $font-size-html-lg: $font-size-html-md !default;
 $body-bg: #fdfdfd !default;
 $body-color: #222 !default;
 
-$blue: #458ecc !default;
-$red: #d14d38 !default;
-$yellow: #faaf3e !default;
-$green: #76c279 !default;
-$cyan: #5bc0de !default;
-
 $default-margin: 15px !default;
 
 $default-footer-background: #eee !default;
 $default-footer-font-color: $body-color !default;
-$default-footer-link-color: $blue !default;
+$default-footer-link-color: #0d6efd !default;
 $default-footer-link-color-hover: lighten($default-footer-link-color, 10%) !default;
 
 $cookie-banner-bg: #333 !default;
@@ -29,10 +23,10 @@ $cookie-banner-element-padding: 10px !default;
 $cookie-banner-z-index: 2000 !default;
 
 //Vendor Styles
-$fa-font-path: '../fonts/fontawesome' !default;
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
 
 $slick-arrow-color: #111 !default;
-$slick-font-path: '../fonts/slick-carousel/' !default;
-$slick-loader-path: '../img/vendor/slick-carousel/' !default;
+$slick-font-path: '~slick-carousel/slick/fonts/' !default;
+$slick-loader-path: '~slick-carousel/slick/' !default;
 
-$pswp__assets-path: '../img/vendor/photoswipe/' !default;
+$pswp__assets-path: '~photoswipe/dist/default-skin/' !default;

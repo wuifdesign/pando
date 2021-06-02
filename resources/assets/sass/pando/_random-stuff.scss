@@ -50,25 +50,25 @@
   }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
   [data-equalizer-enable='xl'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   [data-equalizer-enable='lg'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   [data-equalizer-enable='md'] [data-equalizer-element] {
     height: auto !important;
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   [data-equalizer-enable='sm'] [data-equalizer-element] {
     height: auto !important;
   }

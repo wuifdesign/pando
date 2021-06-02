@@ -1,43 +1,44 @@
-(function($) {
-  'use strict';
+/**
+ * Run the Equalize
+ */
+const equalize = (attributeName = 'data-equalizer', styleProperty = 'height') => {
+  document.querySelectorAll('[' + attributeName + ']').forEach((element) => {
+    const target = element.getAttribute(attributeName);
+    const elements = element.querySelectorAll('[data-equalizer-element="' + target + '"]');
 
-  if(typeof $ !== 'undefined') {
-    $(window).on('load', function() {
-      equalize();
+    let height = 0;
+    elements.forEach((item) => {
+      item.style[styleProperty] = null;
     });
 
-    $(window).on('resize', function() {
-      equalize();
+    elements.forEach((item) => {
+      height = Math.max(height, item.offsetHeight);
     });
 
-    $(document).ready(function() {
-      equalize();
+    elements.forEach((item) => {
+      item.style[styleProperty] = height + 'px';
     });
+  });
+};
 
-    /**
-     * Calculate all Equalizer Elements
-     */
-    $.pandoEqualizer = function() {
-      equalize();
-    };
+/**
+ * Calculate all Equalizer Elements
+ */
+const pandoEqualizer = () => {
+  equalize('data-equalizer', 'height');
+  equalize('data-equalizer-min', 'minHeight');
+};
 
-    /**
-     * Run the Equalize
-     */
-    var equalize = function() {
-      $('[data-equalizer]').each(function() {
-        var target = $(this).attr('data-equalizer');
-        var elements = $(this).find('[data-equalizer-element="' + target + '"]');
-        elements.css('height', '');
+window.addEventListener('load', function () {
+  pandoEqualizer();
+});
 
-        var height = 0;
-        elements.each(function() {
-          height = Math.max(height, $(this).outerHeight());
-        });
+window.addEventListener('resize', function () {
+  pandoEqualizer();
+});
 
-        elements.outerHeight(height);
-      });
-    };
-  }
+pandoEqualizer();
 
-}(jQuery));
+export {
+  pandoEqualizer,
+};

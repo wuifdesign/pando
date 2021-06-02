@@ -11,9 +11,14 @@
 </style>
 
 <script>
-  $(document).ready(function() {
-    $('.parallax-demo').parallax();
-  });
+  const initParallax = function () {
+    if(typeof parallax !== 'undefined') {
+      window.parallax(document.querySelector('.parallax-demo'));
+    } else {
+      setTimeout(initParallax, 10);
+    }
+  }
+  initParallax();
 </script>
 
 <div class="parallax parallax-demo text-center mb-3">
@@ -47,3 +52,11 @@
 </div>{% endhighlight %}
   </div>
 </div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
