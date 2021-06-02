@@ -2,7 +2,7 @@
   & > div {
     @include opacity(.92);
 
-    padding: 15px 30px 19px 50px;
+    padding: 15px 30px 19px 15px;
     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
 
     &:hover {
@@ -27,35 +27,6 @@
     &:active {
       outline: 0;
     }
-  }
-
-  & > .toast:before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 24px;
-    line-height: 24px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 50px;
-    margin-top: -12px;
-    text-align: center;
-    color: #fff;
-  }
-
-  & > .toast-warning:before {
-    content: fa-content($fa-var-comment);
-  }
-  & > .toast-error:before {
-    font-weight: bold;
-    content: fa-content($fa-var-exclamation-triangle);
-  }
-  & > .toast-info:before {
-    font-weight: bold;
-    content: fa-content($fa-var-info);
-  }
-  & > .toast-success:before {
-    font-weight: bold;
-    content: fa-content($fa-var-check);
   }
 
   & > .toast-error {

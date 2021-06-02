@@ -59,7 +59,7 @@ const getImageItems = (element, selector) => {
   return items;
 };
 
-const openPhotoSwipe = function (items, index, galleryElement, click_element, options) {
+const openPhotoSwipe = function (items, index, galleryElement, clickElement, options) {
   let pswpElement = document.querySelector('.pswp');
 
   options = Object.assign({}, options, {
@@ -83,10 +83,10 @@ const openPhotoSwipe = function (items, index, galleryElement, click_element, op
     return;
   }
 
-  if (!click_element) {
+  if (!clickElement) {
     options.showAnimationDuration = 0;
   } else {
-    let size = getElementSize(click_element);
+    let size = getElementSize(clickElement);
     if (size.w < 1 || size.h < 1) {
       options.showAnimationDuration = 0;
     }
@@ -127,7 +127,7 @@ export default function (element, options, selector) {
       element.addEventListener('click', (evt) => {
         evt.preventDefault();
         let key = Array.prototype.indexOf.call(gallery.querySelectorAll(selector), element);
-        openPhotoSwipe(items, key, gallery, this, options);
+        openPhotoSwipe(items, key, gallery, element, options);
         return false;
       });
     });

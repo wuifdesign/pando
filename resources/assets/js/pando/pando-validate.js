@@ -1,91 +1,90 @@
 import $ from 'jquery';
 
-import 'jquery-validation';
-//import 'jquery-validation/dist/localization/messages_de';
-
 $.fn.pandoValidate = function (rules, lang, as_form_data) {
   if (typeof as_form_data === 'undefined') {
     as_form_data = false;
   }
 
-  var $form = $(this);
-  if ($form.length > 0) {
-    var showSuccess = function () {
-      $form.find('input').attr('disabled', 'disabled');
-      $form.find('.form-hide-success').hide();
-      $form.find('.form-show-success').show();
-    };
+  import(/* webpackChunkName: "jquery-validation" */ 'jquery-validation').then(({ default: $ }) => { // jshint ignore:line
+    var $form = $(this);
+    if ($form.length > 0) {
+      var showSuccess = function () {
+        $form.find('input').attr('disabled', 'disabled');
+        $form.find('.form-hide-success').hide();
+        $form.find('.form-show-success').show();
+      };
 
-    var showError = function () {
-      $form.find('.form-show-error').show();
-    };
+      var showError = function () {
+        $form.find('.form-show-error').show();
+      };
 
-    var getAllElementsByElement = function (element) {
-      return $form.find('[name="' + $(element).attr('name') + '"]');
-    };
+      var getAllElementsByElement = function (element) {
+        return $form.find('[name="' + $(element).attr('name') + '"]');
+      };
 
-    $form.validate({
-      lang: lang,
-      rules: rules,
-      submitHandler: function (form, event) {
-        event.preventDefault();
-        $form.find('.form-show-error').hide();
+      $form.validate({
+        lang: lang,
+        rules: rules,
+        submitHandler: function (form, event) {
+          event.preventDefault();
+          $form.find('.form-show-error').hide();
 
-        var formOptions = {};
-        if (as_form_data) {
-          formOptions = {
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: new FormData($form.get(0)),
-            dataType: false,
-            cache: false,
-            contentType: false,
-            processData: false,
-          };
-        } else {
-          formOptions = {
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize(),
-            dataType: 'json',
-            cache: false,
-          };
-        }
-
-        var submit_button = $form.find('button[type="submit"]');
-        submit_button.addClass('disabled');
-
-        $.ajax(formOptions).done(function (data) {
-          submit_button.removeClass('disabled');
-          if (data.success === true) {
-            showSuccess();
+          var formOptions = {};
+          if (as_form_data) {
+            formOptions = {
+              type: $form.attr('method'),
+              url: $form.attr('action'),
+              data: new FormData($form.get(0)),
+              dataType: false,
+              cache: false,
+              contentType: false,
+              processData: false,
+            };
           } else {
-            showError();
+            formOptions = {
+              type: $form.attr('method'),
+              url: $form.attr('action'),
+              data: $form.serialize(),
+              dataType: 'json',
+              cache: false,
+            };
           }
-        }).fail(function () {
-          submit_button.removeClass('disabled');
-          showError();
-        });
-      },
-      highlight: function (element) {
-        getAllElementsByElement(element).addClass('is-invalid');
-      },
-      unhighlight: function (element) {
-        getAllElementsByElement(element).removeClass('is-invalid');
-      },
-      errorElement: 'div',
-      errorClass: 'invalid-feedback',
-      errorPlacement: function (error, element) {
-        if (element.attr('type') === 'radio') {
-          getAllElementsByElement(element).last().closest('.form-check').append(error);
-        } else if (element.attr('type') === 'checkbox') {
-          element.closest('.form-check').append(error);
-        } else {
-          error.insertAfter(element);
-        }
-      },
-    });
-  }
+
+          var submit_button = $form.find('button[type="submit"]');
+          submit_button.addClass('disabled');
+
+          $.ajax(formOptions).done(function (data) {
+            submit_button.removeClass('disabled');
+            if (data.success === true) {
+              showSuccess();
+            } else {
+              showError();
+            }
+          }).fail(function () {
+            submit_button.removeClass('disabled');
+            showError();
+          });
+        },
+        highlight: function (element) {
+          getAllElementsByElement(element).addClass('is-invalid');
+        },
+        unhighlight: function (element) {
+          getAllElementsByElement(element).removeClass('is-invalid');
+        },
+        errorElement: 'div',
+        errorClass: 'invalid-feedback',
+        errorPlacement: function (error, element) {
+          if (element.attr('type') === 'radio') {
+            getAllElementsByElement(element).last().closest('.form-check').append(error);
+          } else if (element.attr('type') === 'checkbox') {
+            element.closest('.form-check').append(error);
+          } else {
+            error.insertAfter(element);
+          }
+        },
+      });
+    }
+  });
 };
 
 $(document).ready(function () {

@@ -3,7 +3,7 @@
     "copyfiles": "^2.4.1"
   },
   "scripts": {
-    "copy-files": "copyfiles -u 3 '../public/assets/**/*.*' assets",
+    "copy-files": "rm -rf ./assets/generated && copyfiles -u 3 '../public/assets/**/*.*' assets",
     "jekyll": "env LANG=\"en_US.UTF-8\" bundle exec jekyll serve"
   },
   "license": "MIT"
