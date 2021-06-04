@@ -6,12 +6,7 @@ import toastr from 'toastr';
 
 import 'bootstrap';
 
-import './js/pando/pando-cookie-banner.js';
-import './js/pando/pando-equalizer.js';
-import './js/pando/pando-layout.js';
-import './js/pando/pando-validate.js';
-import './js/pando/pando-parallax.js';
-import './js/pando/pando-util.js';
+import './js/pando';
 
 import './js/custom/main';
 import './js/custom/font-awesome';

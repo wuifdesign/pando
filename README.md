@@ -14,10 +14,13 @@ Pando CSS
 - [bootstrap](https://github.com/twbs/bootstrap)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [Animate.css](https://github.com/daneden/animate.css)
-- [Slick.js](https://github.com/kenwheeler/slick)
 - [Toastr](https://github.com/CodeSeven/toastr)
 - [Photoswipe](https://github.com/dimsemenov/photoswipe)
 - [jQuery Validation](https://github.com/jquery-validation/jquery-validation)
+
+#### Recommendations:
+
+- [Splide](https://splidejs.com/)
 
 ## Installation
 

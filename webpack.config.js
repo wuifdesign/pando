@@ -27,7 +27,6 @@ const modernConfig = (env, argv) => {
             'show',
           ],
           deep: [
-            /^slick-/,
             /^pswp-/,
             /^pswp_/,
             /^is-scrolled$/,
