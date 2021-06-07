@@ -6,6 +6,4 @@ excerpt: External JS scripts and CSS styles included in Pando. You can get some 
 ---
 
 {% include external/font-awesome.html %}
-{% include external/toastr.html %}
 {% include external/photoswipe.html %}
-{% include external/validate.html %} 

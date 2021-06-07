@@ -10,18 +10,18 @@ input[type=checkbox] {
     display: none;
 
     & + .form-add {
-      @include border-radius(12px);
       @include transition(all .3s ease);
 
+      border-radius: 12px;
       width: 53px;
       height: 22px;
       margin: 0 5px;
       background-color: $input-border-color;
 
       &:after {
-        @include border-radius(50%);
         @include transition(left .3s ease);
 
+        border-radius: 50%;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 8px;
         line-height: 16px;
@@ -86,8 +86,7 @@ input[type=radio] {
     display: none;
 
     & + .form-add {
-      @include border-radius(50%);
-
+      border-radius: 50%;
       width: 16px;
       height: 16px;
       margin: 0 5px 5px;
@@ -95,9 +94,9 @@ input[type=radio] {
       background: #fff;
 
       &:after {
-        @include border-radius(50%);
         @include transition(all .2s ease);
 
+        border-radius: 50%;
         position: absolute;
         top: 2px;
         left: 2px;

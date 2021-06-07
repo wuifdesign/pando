@@ -9,6 +9,8 @@ const modernConfig = (env, argv) => {
   const devMode = argv.mode !== 'production';
   const purgeCss = false;
 
+  const outputPath = path.resolve(__dirname, 'public/assets/generated') // path.resolve(__dirname, 'docs/assets/generated');
+
   const plugins = [
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',
@@ -97,7 +99,7 @@ const modernConfig = (env, argv) => {
       ],
     },
     output: {
-      path: path.resolve(__dirname, 'public/assets/generated'),
+      path: outputPath,
       filename: 'js/[name].min.js',
       clean: true,
       globalObject: 'this',

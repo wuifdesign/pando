@@ -1,0 +1,113 @@
+<div class="container mb-5">
+  <h1 class="mt-4 mb-4">Form Validation</h1>
+
+  <p>
+    Add the <code>.pando-ajax-form</code> to your form and the use html5 rules.
+    (see <a href="https://getbootstrap.com/docs/5.0/forms/validation/" target="_blank">https://getbootstrap.com/docs/5.0/forms/validation/</a>)
+  </p>
+
+  <p>
+    To hide/show elements after submit you can use the following classes <code>.form-hide-success</code>,
+    <code>.form-show-success</code>, <code>.form-show-error</code>.
+  </p>
+
+  <p>
+    For this to work the post should return at least a JSON including <code>{"success": true}</code>.
+  </p>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-5">
+      <form method="GET" action="{{ site.baseurl }}/assets/post.json" class="pando-ajax-form needs-validation" novalidate>
+        <div class="alert alert-danger form-show-error">
+          <h4 class="alert-heading">Error</h4>
+          <p class="mb-0">Error Message</p>
+        </div>
+        <div class="alert alert-success form-show-success">
+          <h4 class="alert-heading">Success</h4>
+          <p class="mb-0">Success Message</p>
+        </div>
+        <div class="form-hide-success">
+          <div class="mb-3">
+            <input name="firstname" type="text" class="form-control" placeholder="First Name" required>
+            <div class="invalid-feedback">Enter a First Name.</div>
+          </div>
+          <div class="mb-3">
+            <input name="lastname" type="text" class="form-control" placeholder="Last Name" required>
+            <div class="invalid-feedback">Enter a Last Name.</div>
+          </div>
+          <div class="mb-3">
+            <input name="email" type="email" class="form-control" placeholder="Email" required>
+            <div class="invalid-feedback">Invalid Email.</div>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" name="checkbox" class="form-check-input" required>
+              <label class="form-check-label">Checkbox</label>
+              <div class="invalid-feedback">Checkbox is required.</div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radios" value="option1" required>
+            <label class="form-check-label">Option 1</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="radios" value="option2" required>
+            <label class="form-check-label">Option 2</label>
+            <div class="invalid-feedback">Select an Option.</div>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="code-hider">
+    <a href="#">Show Code</a>
+  </div>
+  <div class="code-holder">
+{% highlight html %}<form method="GET" action="{{ site.baseurl }}/assets/post.json" class="pando-ajax-form needs-validation" novalidate>
+  <div class="alert alert-danger form-show-error">
+    <h4 class="alert-heading">Error</h4>
+    <p class="mb-0">Error Message</p>
+  </div>
+  <div class="alert alert-success form-show-success">
+    <h4 class="alert-heading">Success</h4>
+    <p class="mb-0">Success Message</p>
+  </div>
+  <div class="form-hide-success">
+    <div class="mb-3">
+      <input name="firstname" type="text" class="form-control" placeholder="First Name" required>
+      <div class="invalid-feedback">Enter a First Name.</div>
+    </div>
+    <div class="mb-3">
+      <input name="lastname" type="text" class="form-control" placeholder="Last Name" required>
+      <div class="invalid-feedback">Enter a Last Name.</div>
+    </div>
+    <div class="mb-3">
+      <input name="email" type="email" class="form-control" placeholder="Email" required>
+      <div class="invalid-feedback">Invalid Email.</div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input type="checkbox" name="checkbox" class="form-check-input" required>
+        <label class="form-check-label">Checkbox</label>
+        <div class="invalid-feedback">Checkbox is required.</div>
+      </div>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radios" value="option1" required>
+      <label class="form-check-label">Option 1</label>
+    </div>
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="radio" name="radios" value="option2" required>
+      <label class="form-check-label">Option 2</label>
+      <div class="invalid-feedback">Select an Option.</div>
+    </div>
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</form>{% endhighlight %}
+</div>

@@ -10,17 +10,6 @@
   }
 </style>
 
-<script>
-  const initParallax = function () {
-    if(typeof parallax !== 'undefined') {
-      window.parallax(document.querySelector('.parallax-demo'));
-    } else {
-      setTimeout(initParallax, 10);
-    }
-  }
-  initParallax();
-</script>
-
 <div class="parallax parallax-demo text-center mb-3">
   <h1>Pando Parallax</h1>
   <p class="lead">Parallax Styles</p>
@@ -41,9 +30,7 @@
 </style>
 
 <script>
-  $(document).ready(function() {
-    $('.parallax-demo').parallax();
-  });
+  parallax(document.querySelector('.parallax-demo'));
 </script>
 
 <div class="parallax parallax-demo text-center mb-3">

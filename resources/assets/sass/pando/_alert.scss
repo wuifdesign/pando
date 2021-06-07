@@ -8,8 +8,7 @@
   border-color: $border-color;
 
   .icon {
-    @include border-radius($border-radius 0 0 $border-radius);
-
+    border-radius: $border-radius 0 0 $border-radius;
     font-size: 20px;
     display: flex;
     position: absolute;

@@ -3,18 +3,6 @@
   display: none;
 }
 
-.custom-loading {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-top: -.15em;
-  animation: custom-loading-spin 1s infinite linear;
-  vertical-align: middle;
-  border: .2em solid transparentize(#fff, .8);
-  border-top-color: #fff;
-  border-radius: 50%;
-}
-
 .pando-ajax-file-form,
 .pando-ajax-form {
   button[type='submit'].disabled {

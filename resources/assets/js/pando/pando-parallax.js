@@ -1,6 +1,7 @@
 const parallax = function (element, options = {}) {
   const settings = Object.assign({ speed: 0.3 }, options);
-  document.addEventListener('scroll', function () {
+
+  document.addEventListener('scroll', () => {
     scrollCheck(element, settings);
   });
   scrollCheck(element, settings);
@@ -8,12 +9,13 @@ const parallax = function (element, options = {}) {
 };
 
 const scrollCheck = function (element, settings) {
-  const window_height = window.innerHeight;
-  const scrollTop = window.scrollTop;
+  const windowHeight = window.innerHeight;
+  const scrollTop = window.scrollY;
 
-  const elementOffset = element.top + window.scrollY;
+  const elementOffset = element.getBoundingClientRect().top + scrollTop;
   const elementHeight = element.offsetHeight;
-  if (elementOffset + elementHeight <= scrollTop || elementOffset >= scrollTop + window_height) {
+
+  if (elementOffset + elementHeight <= scrollTop || elementOffset >= scrollTop + windowHeight) {
     return;
   }
   const yBbPosition = Math.round((elementOffset - scrollTop) * settings.speed);
